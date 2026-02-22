@@ -199,6 +199,29 @@
       .footer-note {
         border-top: 1px solid rgba(10, 10, 10, 0.08);
       }
+
+      .footer-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .footer-meta .footer-presenters {
+        margin-left: auto;
+        text-align: right;
+      }
+
+      @media (max-width: 768px) {
+        .footer-meta {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .footer-meta .footer-presenters {
+          margin-left: 0;
+          text-align: left;
+        }
+      }
     </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -940,13 +963,32 @@ Only edit the card and spacing styles.</pre
       </div>
     </main>
 
-    <footer class="footer footer-note">
+    <!-- <footer class="footer footer-note">
       <div class="content has-text-centered has-text-grey">
         Built for workshop participants using AI coding tools. Inspired by
         <a
           href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
           >UXPin's UI elements article</a
         >.
+      </div>
+    </footer> -->
+    <footer class="footer-note">
+      <div class="container py-3 text-secondary footer-meta">
+        <span>NCTIES Workshop Demo • AI Page Design Upgrade</span>
+        <span class="footer-presenters">
+          <a
+            class="focus-ring"
+            href="mailto:jremington@ncmcs.org?subject=NCTIES%20Workshop"
+          >
+            Jocelyn Remington</a
+          >
+          and
+          <a
+            class="focus-ring"
+            href="mailto:rday@ncmcs.org?subject=NCTIES%20Workshop"
+            >Rebekah Day</a
+          >
+        </span>
       </div>
     </footer>
   </body>
