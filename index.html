@@ -199,29 +199,6 @@
       .footer-note {
         border-top: 1px solid rgba(10, 10, 10, 0.08);
       }
-
-      .footer-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .footer-meta .footer-presenters {
-        margin-left: auto;
-        text-align: right;
-      }
-
-      @media (max-width: 768px) {
-        .footer-meta {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .footer-meta .footer-presenters {
-          margin-left: 0;
-          text-align: left;
-        }
-      }
     </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -449,6 +426,9 @@
                 <a class="button is-soft is-rounded" href="#structure"
                   >Page structure</a
                 >
+                <a class="button is-soft is-rounded" href="#devtools"
+                  >DevTools</a
+                >
                 <a class="button is-soft is-rounded" href="#design-systems"
                   >Design systems</a
                 >
@@ -518,16 +498,9 @@
                     </p>
                   </div>
 
-                  <article class="message is-warning is-light mt-3">
-                    <div class="message-header">
-                      <p>DevTools shortcut</p>
-                    </div>
-                    <div class="message-body">
-                      Open DevTools and click <strong>Select element</strong>
-                      to get the exact element name (or class/id), then paste
-                      that name into your AI prompt.
-                    </div>
-                  </article>
+                  <p class="is-size-7 muted mt-3 mb-0">
+                    DevTools steps are in the next section.
+                  </p>
                 </div>
 
                 <div class="column is-6-desktop">
@@ -616,6 +589,61 @@
           </div>
         </section>
 
+        <section id="devtools" class="mt-5" aria-labelledby="devtools-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="devtools-title" class="title is-4">
+                2) DevTools: 2 actions you need
+              </h2>
+              <p class="muted mb-4">
+                DevTools can do a lot, but we'll only do two tasks: find the
+                exact element, and preview different screen sizes.
+              </p>
+              <div class="columns is-multiline is-variable is-4">
+                <div class="column is-12-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Open DevTools</p>
+                      <p class="mb-1">
+                        <strong>Mac:</strong> <kbd>Cmd</kbd> +
+                        <kbd>Option</kbd> + <kbd>I</kbd>
+                      </p>
+                      <p class="mb-0">
+                        <strong>Windows/PC:</strong> <kbd>Ctrl</kbd> +
+                        <kbd>Shift</kbd> + <kbd>I</kbd>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-12-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Action 1</p>
+                      <h3 class="title is-6 mb-2">Select element</h3>
+                      <p class="muted mb-0">
+                        Click the pointer icon, then click the page part you
+                        want to edit. Use that name in your AI prompt.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-12-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Action 2</p>
+                      <h3 class="title is-6 mb-2">Toggle device toolbar</h3>
+                      <p class="muted mb-0">
+                        Check phone/tablet views to spot spacing and readability
+                        issues on smaller screens.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section
           id="design-systems"
           class="mt-5"
@@ -624,7 +652,7 @@
           <div class="card section-card">
             <div class="card-content">
               <h2 id="systems-title" class="title is-4">
-                2) Design systems (the simple version)
+                3) Design systems (the simple version)
               </h2>
               <p class="muted mb-4">
                 A design system is a shortcut to a better-looking page. Instead
@@ -689,7 +717,7 @@
           <div class="card section-card">
             <div class="card-content">
               <h2 id="spacing-title" class="title is-4">
-                3) Padding vs Margin (easy rule)
+                4) Padding vs Margin (easy rule)
               </h2>
               <p class="muted mb-3">
                 Keep using this simple rule: <strong>padding</strong> is space
@@ -746,7 +774,7 @@
           <div class="card section-card">
             <div class="card-content">
               <h2 id="elements-title" class="title is-4">
-                4) Most-used UI elements
+                5) Most-used UI elements
               </h2>
               <p class="muted mb-4">
                 Think of these as element names you can say directly in AI
@@ -862,7 +890,7 @@
           <div class="card section-card">
             <div class="card-content">
               <h2 id="a11y-title" class="title is-4">
-                5) Quick accessibility checklist
+                6) Quick accessibility checklist
               </h2>
               <p class="mb-2">
                 Accessibility means making your page easier for more people to
@@ -915,7 +943,7 @@
           <div class="card section-card">
             <div class="card-content">
               <h2 id="prompting-title" class="title is-4">
-                6) Prompt AI in plain language
+                7) Prompt AI in plain language
               </h2>
               <p class="muted mb-3">
                 Clear intent beats technical jargon. You do not need \"developer
@@ -950,10 +978,9 @@ Only edit the card and spacing styles.</pre
                 </div>
                 <div class="column is-5-desktop">
                   <div class="prompt-tip">
-                    <strong>Tip:</strong> If you are unsure what to edit, open
-                    DevTools and use \"Select element\" to find the exact page
-                    part name first. Adding that name to your prompt helps AI
-                    make a precise change in the right place.
+                    <strong>Tip:</strong> Need an exact element name? Use the
+                    DevTools steps in section 2, then include that name in your
+                    prompt for more precise edits.
                   </div>
                 </div>
               </div>
@@ -963,19 +990,12 @@ Only edit the card and spacing styles.</pre
       </div>
     </main>
 
-    <!-- <footer class="footer footer-note">
-      <div class="content has-text-centered has-text-grey">
-        Built for workshop participants using AI coding tools. Inspired by
-        <a
-          href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
-          >UXPin's UI elements article</a
-        >.
-      </div>
-    </footer> -->
     <footer class="footer-note">
-      <div class="container py-3 text-secondary footer-meta">
-        <span>NCTIES Workshop Demo • AI Page Design Upgrade</span>
-        <span class="footer-presenters">
+      <div
+        class="container py-3 text-secondary d-flex flex-column flex-md-row justify-content-between gap-2"
+      >
+        <span>NCTIES Workshop Demo • AI Coding + DevTools</span>
+        <span class="text-md-end">
           <a
             class="focus-ring"
             href="mailto:jremington@ncmcs.org?subject=NCTIES%20Workshop"
