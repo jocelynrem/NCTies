@@ -61,6 +61,16 @@
         border-radius: 16px;
       }
 
+      .columns.is-multiline > .column > .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card .card-content {
+        flex: 1 1 auto;
+      }
+
       .card.section-card {
         border-left: 6px solid var(--brand);
       }
@@ -199,6 +209,7 @@
       .footer-note {
         border-top: 1px solid rgba(10, 10, 10, 0.08);
       }
+
     </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -423,26 +434,26 @@
                 are clear.
               </p>
               <div class="buttons is-flex-wrap-wrap mt-4">
+                <a class="button is-soft is-rounded" href="#prompting"
+                  >How to ask AI</a
+                >
+                <a class="button is-soft is-rounded" href="#design-systems"
+                  >Design systems</a
+                >
+                <a class="button is-soft is-rounded" href="#elements"
+                  >UI elements</a
+                >
+                <a class="button is-soft is-rounded" href="#spacing"
+                  >Padding vs margin</a
+                >
                 <a class="button is-soft is-rounded" href="#structure"
                   >Page structure</a
                 >
                 <a class="button is-soft is-rounded" href="#devtools"
                   >DevTools</a
                 >
-                <a class="button is-soft is-rounded" href="#design-systems"
-                  >Design systems</a
-                >
-                <a class="button is-soft is-rounded" href="#spacing"
-                  >Padding vs margin</a
-                >
-                <a class="button is-soft is-rounded" href="#elements"
-                  >UI elements</a
-                >
                 <a class="button is-soft is-rounded" href="#a11y"
                   >Accessibility</a
-                >
-                <a class="button is-soft is-rounded" href="#prompting"
-                  >How to ask AI</a
                 >
               </div>
             </div>
@@ -453,11 +464,306 @@
 
     <main id="main" class="section">
       <div class="container">
-        <section id="structure" aria-labelledby="structure-title">
+
+        <section id="prompting" class="mt-5" aria-labelledby="prompting-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="prompting-title" class="title is-4">
+                1) Prompt AI in plain language
+              </h2>
+              <p class="muted mb-3">
+                Clear intent beats technical jargon. You do not need \"developer
+                words\" to get good results.
+              </p>
+              <p class="mb-4">
+                A strong beginner prompt has 3 parts:
+                <strong>what to change</strong>,
+                <strong>where to change it</strong>, and
+                <strong>what to keep the same</strong>.
+              </p>
+              <div class="columns is-variable is-4">
+                <div class="column is-7-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Example prompt</h3>
+                      <pre
+                        style="
+                          white-space: pre-wrap;
+                          overflow: auto;
+                          padding: 12px;
+                          border-radius: 12px;
+                          background: #f7f7f7;
+                        "
+                      >
+In the resources section card, add more padding inside each card and more margin between sections.
+Keep the current colors and typography.
+Only edit the card and spacing styles.</pre
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-5-desktop">
+                  <div class="prompt-tip">
+                    <strong>Tip:</strong> Need an exact element name? Use the
+                    DevTools steps in section 6, then include that name in your
+                    prompt for more precise edits.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section
+          id="design-systems"
+          class="mt-5"
+          aria-labelledby="systems-title"
+        >
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="systems-title" class="title is-4">
+                2) Design systems (the simple version)
+              </h2>
+              <p class="muted mb-4">
+                A design system is a shortcut to a better-looking page. Instead
+                of styling everything from scratch, you use pre-built layout and
+                UI styles (buttons, cards, spacing) so your page looks polished
+                fast.
+              </p>
+
+              <div class="columns is-multiline is-variable is-4">
+                <div class="column is-12-mobile is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Framework</p>
+                      <h3 class="title is-5">Bootstrap</h3>
+                      <p class="muted mb-0">
+                        Best when you want a polished, \"finished app\" look
+                        quickly.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Framework</p>
+                      <h3 class="title is-5">Bulma</h3>
+                      <p class="muted mb-0">
+                        Best when you want clean layout with easy-to-read class
+                        labels.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Framework</p>
+                      <h3 class="title is-5">Pico</h3>
+                      <p class="muted mb-0">
+                        Best when you want simple, minimal code with great
+                        default text styling.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <article class="message is-light mt-3">
+                <div class="message-body">
+                  <strong>Why this helps with AI coding:</strong> AI already
+                  understands these design systems. You can ask it to \"build
+                  this with Bootstrap,\" or \"swap this page to Bulma/Pico,\"
+                  and it can restyle the same content much faster and more
+                  consistently.
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="elements" class="mt-5" aria-labelledby="elements-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="elements-title" class="title is-4">
+                3) Most-used UI elements
+              </h2>
+              <p class="muted mb-4">
+                Think of these as element names you can say directly in AI
+                prompts. Name the element, then say what to change.
+              </p>
+              <div class="columns is-multiline is-variable is-4">
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Button</h3>
+                      <button class="demo-button" type="button">
+                        Primary action
+                      </button>
+                      <p class="muted mt-2 mb-1">
+                        Use for actions (submit, open, start).
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Make the primary button larger and
+                        purple."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Card</h3>
+                      <div class="visual-box">
+                        <strong>Card title</strong>
+                        <p class="mb-0">Grouped content in one container.</p>
+                      </div>
+                      <p class="is-size-7 mt-2 mb-0">
+                        Prompt hint: "Add more padding inside each card."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Callout</h3>
+                      <div class="demo-callout">
+                        Important note: focus attention here.
+                      </div>
+                      <p class="muted mt-2 mb-1">
+                        Great for tips and reminders.
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Turn this note into a callout with a left
+                        border."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Link list</h3>
+                      <ul>
+                        <li><a href="#">Resource 1</a></li>
+                        <li><a href="#">Resource 2</a></li>
+                      </ul>
+                      <p class="muted mb-1">
+                        Use links for navigation (go to another page/section).
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Style the resource links with more
+                        spacing."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Icons</h3>
+                      <p class="is-size-4 mb-1">⬅︎ ▶︎ ⚙︎ ✉︎</p>
+                      <p class="muted mb-1">
+                        Small visuals that support labels.
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Add an icon before each section heading."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Navigation</h3>
+                      <p class="mb-1">
+                        Keep labels short: <code>Prompt</code>
+                        <code>DevTools</code> <code>Resources</code>
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Make the top navigation sticky and easier
+                        to read."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="spacing-title" class="title is-4">
+                4) Padding vs Margin (easy rule)
+              </h2>
+              <p class="muted mb-3">
+                Keep using this simple rule: <strong>padding</strong> is space
+                inside a box, <strong>margin</strong> is space outside a box.
+                Using the right word in your AI prompt helps AI change the
+                correct spacing faster.
+              </p>
+              <div class="columns is-variable is-4">
+                <div class="column is-6-desktop">
+                  <div class="visual-box">
+                    <div class="margin-box">
+                      Margin (outside space)
+                      <div class="padding-box">
+                        Padding (inside space)
+                        <div class="content-box">
+                          Content (text, button, image)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Prompt wording you can copy</h3>
+                      <ul>
+                        <li>
+                          "Add more <strong>padding</strong> inside this card."
+                        </li>
+                        <li>
+                          "Add more <strong>margin-top</strong> between these
+                          sections."
+                        </li>
+                      </ul>
+                      <p class="mb-2">
+                        <strong>Quick choice:</strong> if content feels cramped,
+                        use padding. If sections feel too close together, use
+                        margin.
+                      </p>
+                      <p class="muted mb-0">
+                        Simple rule: padding is <strong>inside</strong>, margin
+                        is <strong>outside</strong>. This works the same in
+                        Bootstrap, Bulma, and Pico.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="structure" class="mt-5" aria-labelledby="structure-title">
           <div class="card section-card">
             <div class="card-content">
               <h2 id="structure-title" class="title is-4">
-                1) Basic page structure
+                5) Basic page structure
               </h2>
               <p class="muted mb-4">
                 Think of a page as a simple stack: <strong>header</strong>,
@@ -589,11 +895,12 @@
           </div>
         </section>
 
+
         <section id="devtools" class="mt-5" aria-labelledby="devtools-title">
           <div class="card section-card">
             <div class="card-content">
               <h2 id="devtools-title" class="title is-4">
-                2) DevTools: 2 actions you need
+                6) DevTools: 2 actions you need
               </h2>
               <p class="muted mb-4">
                 DevTools can do a lot, but we'll only do two tasks: find the
@@ -644,253 +951,12 @@
           </div>
         </section>
 
-        <section
-          id="design-systems"
-          class="mt-5"
-          aria-labelledby="systems-title"
-        >
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="systems-title" class="title is-4">
-                3) Design systems (the simple version)
-              </h2>
-              <p class="muted mb-4">
-                A design system is a shortcut to a better-looking page. Instead
-                of styling everything from scratch, you use pre-built layout and
-                UI styles (buttons, cards, spacing) so your page looks polished
-                fast.
-              </p>
-
-              <div class="columns is-multiline is-variable is-4">
-                <div class="column is-12-mobile is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <p class="heading">Framework</p>
-                      <h3 class="title is-5">Bootstrap</h3>
-                      <p class="muted mb-0">
-                        Best when you want a polished, \"finished app\" look
-                        quickly.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-mobile is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <p class="heading">Framework</p>
-                      <h3 class="title is-5">Bulma</h3>
-                      <p class="muted mb-0">
-                        Best when you want clean layout with easy-to-read class
-                        labels.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-mobile is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <p class="heading">Framework</p>
-                      <h3 class="title is-5">Pico</h3>
-                      <p class="muted mb-0">
-                        Best when you want simple, minimal code with great
-                        default text styling.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <article class="message is-light mt-3">
-                <div class="message-body">
-                  <strong>Why this helps with AI coding:</strong> AI already
-                  understands these design systems. You can ask it to \"build
-                  this with Bootstrap,\" or \"swap this page to Bulma/Pico,\"
-                  and it can restyle the same content much faster and more
-                  consistently.
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="spacing-title" class="title is-4">
-                4) Padding vs Margin (easy rule)
-              </h2>
-              <p class="muted mb-3">
-                Keep using this simple rule: <strong>padding</strong> is space
-                inside a box, <strong>margin</strong> is space outside a box.
-                Using the right word in your AI prompt helps AI change the
-                correct spacing faster.
-              </p>
-              <div class="columns is-variable is-4">
-                <div class="column is-6-desktop">
-                  <div class="visual-box">
-                    <div class="margin-box">
-                      Margin (outside space)
-                      <div class="padding-box">
-                        Padding (inside space)
-                        <div class="content-box">
-                          Content (text, button, image)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Prompt wording you can copy</h3>
-                      <ul>
-                        <li>
-                          "Add more <strong>padding</strong> inside this card."
-                        </li>
-                        <li>
-                          "Add more <strong>margin-top</strong> between these
-                          sections."
-                        </li>
-                      </ul>
-                      <p class="mb-2">
-                        <strong>Quick choice:</strong> if content feels cramped,
-                        use padding. If sections feel too close together, use
-                        margin.
-                      </p>
-                      <p class="muted mb-0">
-                        Simple rule: padding is <strong>inside</strong>, margin
-                        is <strong>outside</strong>. This works the same in
-                        Bootstrap, Bulma, and Pico.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="elements" class="mt-5" aria-labelledby="elements-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="elements-title" class="title is-4">
-                5) Most-used UI elements
-              </h2>
-              <p class="muted mb-4">
-                Think of these as element names you can say directly in AI
-                prompts. Name the element, then say what to change.
-              </p>
-              <div class="columns is-multiline is-variable is-4">
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Button</h3>
-                      <button class="demo-button" type="button">
-                        Primary action
-                      </button>
-                      <p class="muted mt-2 mb-1">
-                        Use for actions (submit, open, start).
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Make the primary button larger and
-                        purple."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Card</h3>
-                      <div class="visual-box">
-                        <strong>Card title</strong>
-                        <p class="mb-0">Grouped content in one container.</p>
-                      </div>
-                      <p class="is-size-7 mt-2 mb-0">
-                        Prompt hint: "Add more padding inside each card."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Callout</h3>
-                      <div class="demo-callout">
-                        Important note: focus attention here.
-                      </div>
-                      <p class="muted mt-2 mb-1">
-                        Great for tips and reminders.
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Turn this note into a callout with a left
-                        border."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Link list</h3>
-                      <ul>
-                        <li><a href="#">Resource 1</a></li>
-                        <li><a href="#">Resource 2</a></li>
-                      </ul>
-                      <p class="muted mb-1">
-                        Use links for navigation (go to another page/section).
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Style the resource links with more
-                        spacing."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Icons</h3>
-                      <p class="is-size-4 mb-1">⬅︎ ▶︎ ⚙︎ ✉︎</p>
-                      <p class="muted mb-1">
-                        Small visuals that support labels.
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Add an icon before each section heading."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Navigation</h3>
-                      <p class="mb-1">
-                        Keep labels short: <code>Prompt</code>
-                        <code>DevTools</code> <code>Resources</code>
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Make the top navigation sticky and easier
-                        to read."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section id="a11y" class="mt-5" aria-labelledby="a11y-title">
           <div class="card section-card">
             <div class="card-content">
               <h2 id="a11y-title" class="title is-4">
-                6) Quick accessibility checklist
+                7) Quick accessibility checklist
               </h2>
               <p class="mb-2">
                 Accessibility means making your page easier for more people to
@@ -933,55 +999,6 @@
                       focus style for that part.
                     </div>
                   </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="prompting" class="mt-5" aria-labelledby="prompting-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="prompting-title" class="title is-4">
-                7) Prompt AI in plain language
-              </h2>
-              <p class="muted mb-3">
-                Clear intent beats technical jargon. You do not need \"developer
-                words\" to get good results.
-              </p>
-              <p class="mb-4">
-                A strong beginner prompt has 3 parts:
-                <strong>what to change</strong>,
-                <strong>where to change it</strong>, and
-                <strong>what to keep the same</strong>.
-              </p>
-              <div class="columns is-variable is-4">
-                <div class="column is-7-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Example prompt</h3>
-                      <pre
-                        style="
-                          white-space: pre-wrap;
-                          overflow: auto;
-                          padding: 12px;
-                          border-radius: 12px;
-                          background: #f7f7f7;
-                        "
-                      >
-In the resources section card, add more padding inside each card and more margin between sections.
-Keep the current colors and typography.
-Only edit the card and spacing styles.</pre
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-5-desktop">
-                  <div class="prompt-tip">
-                    <strong>Tip:</strong> Need an exact element name? Use the
-                    DevTools steps in section 2, then include that name in your
-                    prompt for more precise edits.
-                  </div>
                 </div>
               </div>
             </div>
