@@ -8,6 +8,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..700"
+    />
     <style>
       :root {
         --brand: #4f164c;
@@ -17,6 +25,22 @@
       }
 
       body {
+        font-family: 'Roboto Flex', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+          'slnt' 0,
+          'wdth' 25,
+          'GRAD' 0,
+          'XOPQ' 96,
+          'XTRA' 468,
+          'YOPQ' 79,
+          'YTAS' 750,
+          'YTDE' -203,
+          'YTFI' 738,
+          'YTLC' 514,
+          'YTUC' 712;
         color: var(--ink);
         background: #fdfbfe;
       }
@@ -181,6 +205,29 @@
         padding: 0.7rem;
       }
 
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+
+      .a11y-head {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .a11y-why {
+        margin: 0 0 0.5rem;
+        padding-left: 1.1rem;
+        list-style-type: disc;
+        list-style-position: outside;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
       .muted {
         color: var(--muted);
       }
@@ -209,7 +256,6 @@
       .footer-note {
         border-top: 1px solid rgba(10, 10, 10, 0.08);
       }
-
     </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -464,7 +510,6 @@
 
     <main id="main" class="section">
       <div class="container">
-
         <section id="prompting" class="mt-5" aria-labelledby="prompting-title">
           <div class="card section-card">
             <div class="card-content">
@@ -514,7 +559,6 @@ Only edit the card and spacing styles.</pre
           </div>
         </section>
 
-
         <section
           id="design-systems"
           class="mt-5"
@@ -538,7 +582,11 @@ Only edit the card and spacing styles.</pre
                     href="https://getbootstrap.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style="text-decoration: none; color: inherit; display: block"
+                    style="
+                      text-decoration: none;
+                      color: inherit;
+                      display: block;
+                    "
                   >
                     <div class="card">
                       <div class="card-content">
@@ -557,15 +605,19 @@ Only edit the card and spacing styles.</pre
                     href="https://bulma.io/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style="text-decoration: none; color: inherit; display: block"
+                    style="
+                      text-decoration: none;
+                      color: inherit;
+                      display: block;
+                    "
                   >
                     <div class="card">
                       <div class="card-content">
                         <p class="heading">Framework</p>
                         <h3 class="title is-5">Bulma</h3>
                         <p class="muted mb-0">
-                          Best when you want clean layout with easy-to-read class
-                          labels.
+                          Best when you want clean layout with easy-to-read
+                          class labels.
                         </p>
                       </div>
                     </div>
@@ -576,7 +628,11 @@ Only edit the card and spacing styles.</pre
                     href="https://picocss.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style="text-decoration: none; color: inherit; display: block"
+                    style="
+                      text-decoration: none;
+                      color: inherit;
+                      display: block;
+                    "
                   >
                     <div class="card">
                       <div class="card-content">
@@ -604,7 +660,6 @@ Only edit the card and spacing styles.</pre
             </div>
           </div>
         </section>
-
 
         <section id="elements" class="mt-5" aria-labelledby="elements-title">
           <div class="card section-card">
@@ -721,7 +776,6 @@ Only edit the card and spacing styles.</pre
             </div>
           </div>
         </section>
-
 
         <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
           <div class="card section-card">
@@ -916,7 +970,6 @@ Only edit the card and spacing styles.</pre
           </div>
         </section>
 
-
         <section id="devtools" class="mt-5" aria-labelledby="devtools-title">
           <div class="card section-card">
             <div class="card-content">
@@ -972,7 +1025,6 @@ Only edit the card and spacing styles.</pre
           </div>
         </section>
 
-
         <section id="a11y" class="mt-5" aria-labelledby="a11y-title">
           <div class="card section-card">
             <div class="card-content">
@@ -987,39 +1039,129 @@ Only edit the card and spacing styles.</pre
                 Treat this as a quick confidence check, not a full audit. If
                 something looks off, ask AI to fix that one item.
               </p>
-              <div class="columns is-variable is-4">
-                <div class="column is-7-desktop">
+              <div class="columns is-multiline is-variable is-3">
+                <div class="column is-12-tablet is-6-desktop">
                   <div class="card">
-                    <div class="card-content content">
-                      <ol>
-                        <li>
-                          Use one <code>h1</code>, then clear
-                          <code>h2</code> section headings.
-                        </li>
-                        <li>Keep body text easy to read (about 16px).</li>
-                        <li>Make sure text stands out from its background.</li>
-                        <li>
-                          Make links and buttons easy to see and understand.
-                        </li>
-                        <li>
-                          Press <kbd>Tab</kbd> and check that focus is always
-                          visible.
-                        </li>
-                      </ol>
+                    <div class="card-content">
+                      <h3 class="title is-6 mb-2 a11y-head">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                          >check</span
+                        >
+                        <span
+                          >Use clear heading order: <code>h1</code>, then
+                          <code>h2</code>, then <code>h3</code>.</span
+                        >
+                      </h3>
+                      <ul class="a11y-why">
+                        <li>Improves readability for everyone.</li>
+                        <li>Helps AI and tools target edits accurately.</li>
+                      </ul>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Make sure the heading order is screen
+                        reader accessible."
+                      </p>
                     </div>
                   </div>
                 </div>
-                <div class="column is-5-desktop">
-                  <article class="message is-success is-light">
-                    <div class="message-header">
-                      <p>Fast check</p>
+                <div class="column is-12-tablet is-6-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6 mb-2 a11y-head">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                          >check</span
+                        >
+                        <span>Keep body text easy to read (about 16px).</span>
+                      </h3>
+                      <ul class="a11y-why">
+                        <li>Small text is harder to read on phones.</li>
+                        <li>
+                          Larger text reduces strain for low-vision users.
+                        </li>
+                      </ul>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Increase body text to around 16px and keep
+                        line spacing readable."
+                      </p>
                     </div>
-                    <div class="message-body">
-                      Press <kbd>Tab</kbd> from the top of the page. If any
-                      button or link is hard to track, ask AI to improve the
-                      focus style for that part.
+                  </div>
+                </div>
+                <div class="column is-12-tablet is-6-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6 mb-2 a11y-head">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                          >check</span
+                        >
+                        <span
+                          >Make sure text stands out from the background.</span
+                        >
+                      </h3>
+                      <ul class="a11y-why">
+                        <li>Low contrast text looks faded.</li>
+                        <li>Better contrast improves quick readability.</li>
+                      </ul>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Improve text/background contrast in this
+                        section so content is easier to read."
+                      </p>
                     </div>
-                  </article>
+                  </div>
+                </div>
+                <div class="column is-12-tablet is-6-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6 mb-2 a11y-head">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                          >check</span
+                        >
+                        <span
+                          >Make links and buttons easy to spot and
+                          understand.</span
+                        >
+                      </h3>
+                      <ul class="a11y-why">
+                        <li>Users can quickly tell what is clickable.</li>
+                        <li>Clear labels reduce confusion.</li>
+                      </ul>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Make all links and buttons look clearly
+                        clickable and use clear labels."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-12">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6 mb-2 a11y-head">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                          >check</span
+                        >
+                        <span
+                          >Press <kbd>Tab</kbd> and check that focus is
+                          visible.</span
+                        >
+                      </h3>
+                      <ul class="a11y-why">
+                        <li>Keyboard users need to track position.</li>
+                        <li>Visible focus prevents navigation mistakes.</li>
+                      </ul>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Improve focus styles so keyboard
+                        navigation is always easy to see."
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
