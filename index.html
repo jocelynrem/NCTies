@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page Design Basics for AI Builders (Bulma)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <style>
+      :root {
+        --brand: #4f164c;
+        --brand-soft: rgba(79, 22, 76, 0.1);
+        --ink: #2f3240;
+        --muted: #5f6776;
+      }
+
+      body {
+        color: var(--ink);
+        background: #fdfbfe;
+      }
+
+      .hero.is-basics {
+        background:
+          linear-gradient(135deg, rgba(79, 22, 76, 0.12), transparent 60%),
+          linear-gradient(0deg, #ffffff, #fdf8fb);
+        border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+      }
+
+      .tag.is-brand {
+        background: var(--brand);
+        color: #fff;
+      }
+
+      .button.is-brand {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+      }
+
+      .button.is-brand:hover,
+      .button.is-brand:focus {
+        filter: brightness(0.95);
+      }
+
+      .button.is-soft {
+        background: #fff;
+        border-color: rgba(79, 22, 76, 0.35);
+        color: var(--brand);
+      }
+
+      .button.is-soft:hover,
+      .button.is-soft:focus {
+        border-color: var(--brand);
+        color: var(--brand);
+      }
+
+      .card {
+        box-shadow: 0 10px 22px rgba(10, 10, 10, 0.08);
+        border-radius: 16px;
+      }
+
+      .card.section-card {
+        border-left: 6px solid var(--brand);
+      }
+
+      .visual-box {
+        border: 1px dashed rgba(79, 22, 76, 0.35);
+        background: var(--brand-soft);
+        border-radius: 12px;
+        padding: 0.8rem;
+      }
+
+      .mini-page {
+        border: 1px solid rgba(47, 50, 64, 0.2);
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .mini-row {
+        padding: 0.65rem 0.75rem;
+        border-top: 1px solid rgba(47, 50, 64, 0.15);
+      }
+
+      .mini-row:first-child {
+        border-top: 0;
+        background: rgba(79, 22, 76, 0.11);
+        font-weight: 700;
+      }
+
+      .mini-main-box {
+        margin-top: 0.55rem;
+        margin-left: 0.7rem;
+        border-left: 3px solid rgba(79, 22, 76, 0.35);
+        padding-left: 0.6rem;
+      }
+
+      .mini-nested-row {
+        border: 1px solid rgba(47, 50, 64, 0.2);
+        border-radius: 8px;
+        padding: 0.45rem 0.55rem;
+        background: #fff;
+        margin-top: 0.45rem;
+      }
+
+      .mini-sub-nested-row {
+        margin-top: 0.45rem;
+        margin-left: 0.6rem;
+        border-left: 2px solid rgba(79, 22, 76, 0.35);
+        padding-left: 0.5rem;
+      }
+
+      .mini-tag {
+        display: inline-block;
+        border: 1px solid rgba(47, 50, 64, 0.25);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
+        padding: 0.1rem 0.5rem;
+        font-size: 0.74rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .margin-box {
+        background: rgba(79, 22, 76, 0.12);
+        border: 2px dashed rgba(79, 22, 76, 0.6);
+        border-radius: 10px;
+        padding: 0.8rem;
+      }
+
+      .padding-box {
+        margin-top: 0.5rem;
+        background: rgba(47, 122, 87, 0.14);
+        border: 2px dashed rgba(47, 122, 87, 0.72);
+        border-radius: 10px;
+        padding: 0.9rem;
+      }
+
+      .content-box {
+        margin-top: 0.5rem;
+        background: #fff;
+        border: 1px solid rgba(47, 50, 64, 0.2);
+        border-radius: 8px;
+        padding: 0.6rem;
+        font-weight: 600;
+      }
+
+      .demo-button {
+        border: 0;
+        border-radius: 10px;
+        padding: 0.5rem 0.9rem;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .demo-callout {
+        border-left: 4px solid var(--brand);
+        background: rgba(79, 22, 76, 0.09);
+        border-radius: 8px;
+        padding: 0.65rem 0.75rem;
+      }
+
+      .prompt-tip {
+        border: 1px solid rgba(47, 122, 87, 0.35);
+        border-left: 4px solid #2f7a57;
+        background: rgba(47, 122, 87, 0.08);
+        border-radius: 8px;
+        padding: 0.7rem;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      code {
+        background: #f3f2f6;
+        border-radius: 4px;
+        padding: 0.08rem 0.28rem;
+      }
+
+      kbd {
+        background: #f1f1f5;
+        border: 1px solid #d7d7e0;
+        border-bottom-width: 2px;
+        border-radius: 6px;
+        color: #212529;
+        padding: 0.08rem 0.35rem;
+      }
+
+      a:focus-visible,
+      .button:focus-visible {
+        outline: 3px solid #000;
+        outline-offset: 2px;
+      }
+
+      .footer-note {
+        border-top: 1px solid rgba(10, 10, 10, 0.08);
+      }
+      .sidebar-toggle {
+        position: fixed;
+        left: 12px;
+        top: 78px;
+        z-index: 1101;
+      }
+      .page-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 260px;
+        background: #fff;
+        border-right: 1px solid rgba(79, 22, 76, 0.24);
+        box-shadow: 12px 0 24px rgba(0, 0, 0, 0.14);
+        transform: translateX(-100%);
+        transition: transform 0.2s ease;
+        z-index: 1102;
+        display: flex;
+        flex-direction: column;
+      }
+      body.sidebar-open .page-sidebar {
+        transform: translateX(0);
+      }
+      .page-sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        border-bottom: 1px solid rgba(79, 22, 76, 0.2);
+      }
+      .page-sidebar-links {
+        padding: 10px 12px 14px;
+        overflow: auto;
+      }
+      .page-sidebar-links a {
+        display: block;
+        text-decoration: none;
+        color: var(--brand);
+        padding: 6px 2px;
+      }
+      .page-sidebar-links a[aria-current='page'] {
+        font-weight: 800;
+      }
+      .page-sidebar-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1100;
+      }
+      @media (max-width: 991.98px) {
+        .page-sidebar {
+          width: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="is-sr-only is-sr-only-focusable button is-brand m-3" href="#main"
+      >Skip to content</a
+    >
+
+    <button
+      id="pageSidebarToggle"
+      class="button is-small is-brand is-rounded sidebar-toggle"
+      type="button"
+      aria-controls="pageSidebar"
+      aria-expanded="false"
+      aria-label="Open pages menu"
+    >
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+
+    <aside id="pageSidebar" class="page-sidebar" aria-label="Workshop pages">
+      <div class="page-sidebar-header">
+        <strong>Workshop Pages</strong>
+        <button
+          id="pageSidebarClose"
+          class="button is-small is-light is-rounded"
+          type="button"
+          aria-label="Close pages menu"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <nav class="page-sidebar-links">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="frankenstein.html">Frankenstein</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="bulma.html">Bulma</a>
+        <a href="pico.html">Pico</a>
+        <a href="baseline.html">Baseline</a>
+      </nav>
+    </aside>
+    <div id="pageSidebarBackdrop" class="page-sidebar-backdrop" hidden></div>
+
+    <section class="hero is-basics">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered is-variable is-6">
+            <div class="column is-8-desktop">
+              <span class="tag is-brand is-rounded"
+                >Beginner Guide • for AI page building</span
+              >
+              <h1 class="title is-2 mt-3 mb-2">
+                Page Design Basics (No coding background needed)
+              </h1>
+              <p class="subtitle is-5 muted">
+                Use this as a cheat sheet when you ask AI to build or edit a
+                page. Learn a few key terms and visual patterns so your prompts
+                are clear.
+              </p>
+              <div class="buttons is-flex-wrap-wrap mt-4">
+                <a class="button is-soft is-rounded" href="#structure"
+                  >Page structure</a
+                >
+                <a class="button is-soft is-rounded" href="#design-systems"
+                  >Design systems</a
+                >
+                <a class="button is-soft is-rounded" href="#spacing"
+                  >Padding vs margin</a
+                >
+                <a class="button is-soft is-rounded" href="#elements"
+                  >UI elements</a
+                >
+                <a class="button is-soft is-rounded" href="#a11y"
+                  >Accessibility</a
+                >
+                <a class="button is-soft is-rounded" href="#prompting"
+                  >How to ask AI</a
+                >
+              </div>
+            </div>
+
+            <div class="column is-4-desktop">
+              <article class="message is-info is-light">
+                <div class="message-header">
+                  <p>How to use this page</p>
+                </div>
+                <div class="message-body">
+                  Skim each section, then copy the wording into your AI prompt
+                  when you want to change your page.
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="main" class="section">
+      <div class="container">
+        <section id="structure" aria-labelledby="structure-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="structure-title" class="title is-4">1) Basic page structure</h2>
+              <p class="muted mb-4">
+                Think of a page as a simple stack: <strong>header</strong>,
+                <strong>main</strong>, and <strong>footer</strong>. Inside
+                <code>main</code>, you usually have multiple
+                <code>section</code> blocks.
+              </p>
+
+              <div class="columns is-variable is-4">
+                <div class="column is-6-desktop">
+                  <div class="visual-box">
+                    <div class="mini-page" aria-label="Simple page map">
+                      <div class="mini-row">
+                        <span class="mini-tag">header</span><br />
+                        Contains <code>h1</code> (main title) + top nav
+                      </div>
+                      <div class="mini-row">
+                        <span class="mini-tag">main</span><br />
+                        Parent container for page content
+                        <div class="mini-main-box">
+                          <div class="mini-nested-row">
+                            <span class="mini-tag">section</span><br />
+                            Child block inside <code>main</code>
+                            <div class="mini-sub-nested-row">
+                              <span class="mini-tag">h2</span><br />
+                              Section title inside <code>section</code>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mini-row" style="background: #faf9fc">
+                        <span class="mini-tag">footer</span><br />
+                        Bottom area (contact info, links)
+                      </div>
+                    </div>
+                    <p class="is-size-7 muted mt-2 mb-0">
+                      Nesting path example: <code>main > section > h2</code>
+                    </p>
+                  </div>
+
+                  <article class="message is-warning is-light mt-3">
+                    <div class="message-header">
+                      <p>DevTools shortcut</p>
+                    </div>
+                    <div class="message-body">
+                      Open DevTools and click <strong>Select element</strong>
+                      to get the exact element name (or class/id), then paste
+                      that name into your AI prompt.
+                    </div>
+                  </article>
+                </div>
+
+                <div class="column is-6-desktop">
+                  <div class="columns is-multiline is-variable is-3">
+                    <div class="column is-6">
+                      <div class="card">
+                        <div class="card-content p-4">
+                          <p class="heading">Heading</p>
+                          <p class="title is-6 mb-1"><code>h1</code> -> <code>h2</code> -> <code>h3</code></p>
+                          <p class="muted is-size-7 mb-0">Title -> section title -> sub-section title</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="card">
+                        <div class="card-content p-4">
+                          <p class="heading">Page area</p>
+                          <p class="title is-6 mb-1"><code>header</code> / <code>main</code> / <code>footer</code></p>
+                          <p class="muted is-size-7 mb-0">Top, content, bottom structure</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="card">
+                        <div class="card-content p-4">
+                          <p class="heading">Nesting</p>
+                          <p class="title is-6 mb-1">parent -> child</p>
+                          <p class="muted is-size-7 mb-0">Example: <code>main</code> contains <code>section</code>, and <code>section</code> contains <code>h2</code></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="card">
+                        <div class="card-content p-4">
+                          <p class="heading">Targeting hook</p>
+                          <p class="title is-6 mb-1"><code>class</code> / <code>id</code></p>
+                          <p class="muted is-size-7 mb-0">Names AI can target exactly</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <article class="message is-light mt-4">
+                    <div class="message-header">
+                      <p>Vibe coder tip</p>
+                    </div>
+                    <div class="message-body">
+                      <p class="mb-2">Use simple location + action prompts:</p>
+                      <ul>
+                        <li>"Change the <code>h1</code> in the header."</li>
+                        <li>"Update the button with class <code>.cta</code>."</li>
+                        <li>
+                          "Make the second <code>section</code> in
+                          <code>main</code> two columns."
+                        </li>
+                      </ul>
+                      <p class="mb-0">
+                        If AI misses the target, include the parent + child
+                        path (example: <code>main > section > h2</code>).
+                      </p>
+                    </div>
+                  </article>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="design-systems" class="mt-5" aria-labelledby="systems-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="systems-title" class="title is-4">2) Design systems (the simple version)</h2>
+              <p class="muted mb-4">
+                A design system is a shortcut to a better-looking page. Instead
+                of styling everything from scratch, you use pre-built layout and
+                UI styles (buttons, cards, spacing) so your page looks polished
+                fast.
+              </p>
+
+              <div class="columns is-multiline is-variable is-4">
+                <div class="column is-12-mobile is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Framework</p>
+                      <h3 class="title is-5">Bootstrap</h3>
+                      <p class="muted mb-0">Best when you want a polished, \"finished app\" look quickly.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Framework</p>
+                      <h3 class="title is-5">Bulma</h3>
+                      <p class="muted mb-0">Best when you want clean layout with easy-to-read class labels.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="heading">Framework</p>
+                      <h3 class="title is-5">Pico</h3>
+                      <p class="muted mb-0">Best when you want simple, minimal code with great default text styling.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <article class="message is-light mt-3">
+                <div class="message-body">
+                  <strong>Why this helps with AI coding:</strong> AI already
+                  understands these design systems. You can ask it to
+                  \"build this with Bootstrap,\" or \"swap this page to Bulma/Pico,\"
+                  and it can restyle the same content much faster and more
+                  consistently.
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="spacing-title" class="title is-4">3) Padding vs Margin (easy rule)</h2>
+              <p class="muted mb-3">
+                Keep using this simple rule: <strong>padding</strong> is space
+                inside a box, <strong>margin</strong> is space outside a box.
+                Using the right word in your AI prompt helps AI change the
+                correct spacing faster.
+              </p>
+              <div class="columns is-variable is-4">
+                <div class="column is-6-desktop">
+                  <div class="visual-box">
+                    <div class="margin-box">
+                      Margin (outside space)
+                      <div class="padding-box">
+                        Padding (inside space)
+                        <div class="content-box">Content (text, button, image)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Prompt wording you can copy</h3>
+                      <ul>
+                        <li>"Add more <strong>padding</strong> inside this card."</li>
+                        <li>
+                          "Add more <strong>margin-top</strong> between these
+                          sections."
+                        </li>
+                      </ul>
+                      <p class="mb-2">
+                        <strong>Quick choice:</strong> if content feels cramped,
+                        use padding. If sections feel too close together, use
+                        margin.
+                      </p>
+                      <p class="muted mb-0">
+                        Simple rule: padding is <strong>inside</strong>, margin is
+                        <strong>outside</strong>. This works the same in
+                        Bootstrap, Bulma, and Pico.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="elements" class="mt-5" aria-labelledby="elements-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="elements-title" class="title is-4">4) Most-used UI elements</h2>
+              <p class="muted mb-4">
+                Think of these as element names you can say directly in AI
+                prompts. Name the element, then say what to change.
+              </p>
+              <div class="columns is-multiline is-variable is-4">
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Button</h3>
+                      <button class="demo-button" type="button">Primary action</button>
+                      <p class="muted mt-2 mb-1">
+                        Use for actions (submit, open, start).
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Make the primary button larger and purple."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Card</h3>
+                      <div class="visual-box">
+                        <strong>Card title</strong>
+                        <p class="mb-0">Grouped content in one container.</p>
+                      </div>
+                      <p class="is-size-7 mt-2 mb-0">
+                        Prompt hint: "Add more padding inside each card."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Callout</h3>
+                      <div class="demo-callout">Important note: focus attention here.</div>
+                      <p class="muted mt-2 mb-1">Great for tips and reminders.</p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Turn this note into a callout with a left border."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Link list</h3>
+                      <ul>
+                        <li><a href="#">Resource 1</a></li>
+                        <li><a href="#">Resource 2</a></li>
+                      </ul>
+                      <p class="muted mb-1">
+                        Use links for navigation (go to another page/section).
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Style the resource links with more spacing."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Icons</h3>
+                      <p class="is-size-4 mb-1">⬅︎ ▶︎ ⚙︎ ✉︎</p>
+                      <p class="muted mb-1">Small visuals that support labels.</p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Add an icon before each section heading."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Navigation</h3>
+                      <p class="mb-1">
+                        Keep labels short: <code>Prompt</code>
+                        <code>DevTools</code> <code>Resources</code>
+                      </p>
+                      <p class="is-size-7 mb-0">
+                        Prompt hint: "Make the top navigation sticky and easier to read."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="a11y" class="mt-5" aria-labelledby="a11y-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="a11y-title" class="title is-4">5) Quick accessibility checklist</h2>
+              <p class="mb-2">
+                Accessibility means making your page easier for more people to
+                read, use, and navigate.
+              </p>
+              <p class="muted mb-4">
+                Treat this as a quick confidence check, not a full audit. If
+                something looks off, ask AI to fix that one item.
+              </p>
+              <div class="columns is-variable is-4">
+                <div class="column is-7-desktop">
+                  <div class="card">
+                    <div class="card-content content">
+                      <ol>
+                        <li>Use one <code>h1</code>, then clear <code>h2</code> section headings.</li>
+                        <li>Keep body text easy to read (about 16px).</li>
+                        <li>Make sure text stands out from its background.</li>
+                        <li>Make links and buttons easy to see and understand.</li>
+                        <li>Press <kbd>Tab</kbd> and check that focus is always visible.</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-5-desktop">
+                  <article class="message is-success is-light">
+                    <div class="message-header">
+                      <p>Fast check</p>
+                    </div>
+                    <div class="message-body">
+                      Press <kbd>Tab</kbd> from the top of the page. If any
+                      button or link is hard to track, ask AI to improve the
+                      focus style for that part.
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="prompting" class="mt-5" aria-labelledby="prompting-title">
+          <div class="card section-card">
+            <div class="card-content">
+              <h2 id="prompting-title" class="title is-4">6) Prompt AI in plain language</h2>
+              <p class="muted mb-3">
+                Clear intent beats technical jargon. You do not need \"developer
+                words\" to get good results.
+              </p>
+              <p class="mb-4">
+                A strong beginner prompt has 3 parts:
+                <strong>what to change</strong>, <strong>where to change it</strong>,
+                and <strong>what to keep the same</strong>.
+              </p>
+              <div class="columns is-variable is-4">
+                <div class="column is-7-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Example prompt</h3>
+                      <pre
+                        style="white-space: pre-wrap; overflow: auto; padding: 12px; border-radius: 12px; background: #f7f7f7"
+                      >In the resources section card, add more padding inside each card and more margin between sections.
+Keep the current colors and typography.
+Only edit the card and spacing styles.</pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-5-desktop">
+                  <div class="prompt-tip">
+                    <strong>Tip:</strong> If you are unsure what to edit, open
+                    DevTools and use \"Select element\" to find the exact page
+                    part name first. Adding that name to your prompt helps AI
+                    make a precise change in the right place.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer footer-note">
+      <div class="content has-text-centered has-text-grey">
+        Built for workshop participants using AI coding tools. Inspired by
+        <a
+          href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
+          >UXPin's UI elements article</a
+        >.
+      </div>
+    </footer>
+    <script>
+      (function () {
+        const toggle = document.getElementById('pageSidebarToggle');
+        const closeBtn = document.getElementById('pageSidebarClose');
+        const backdrop = document.getElementById('pageSidebarBackdrop');
+        if (!toggle || !closeBtn || !backdrop) return;
+
+        function setOpen(open) {
+          document.body.classList.toggle('sidebar-open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+          backdrop.hidden = !open;
+        }
+
+        toggle.addEventListener('click', () => {
+          setOpen(!document.body.classList.contains('sidebar-open'));
+        });
+        closeBtn.addEventListener('click', () => setOpen(false));
+        backdrop.addEventListener('click', () => setOpen(false));
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') setOpen(false);
+        });
+      })();
+    </script>
+  </body>
+</html>
