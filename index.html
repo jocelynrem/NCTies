@@ -256,6 +256,17 @@
       .footer-note {
         border-top: 1px solid rgba(10, 10, 10, 0.08);
       }
+
+      .footer-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .footer-presenters {
+        margin-left: auto;
+        text-align: right;
+      }
     </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -1171,11 +1182,9 @@ Only edit the card and spacing styles.</pre
     </main>
 
     <footer class="footer-note">
-      <div
-        class="container py-3 text-secondary d-flex flex-column flex-md-row justify-content-between gap-2"
-      >
-        <span>NCTIES Workshop Demo • AI Coding + DevTools</span>
-        <span class="text-md-end">
+      <div class="container py-3 text-secondary footer-meta">
+        <span>NCTIES 2026 • AI Page Design Upgrade</span>
+        <span class="footer-presenters">
           <a
             class="focus-ring"
             href="mailto:jremington@ncmcs.org?subject=NCTIES%20Workshop"
