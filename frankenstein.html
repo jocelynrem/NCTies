@@ -132,65 +132,6 @@
         outline-color: #f2eef7 !important;
       }
 
-      .sidebar-toggle {
-        position: fixed;
-        left: 12px;
-        top: 80px;
-        z-index: 1101;
-      }
-      .page-sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 265px;
-        background: var(--surface);
-        border-right: 1px solid var(--border);
-        box-shadow: 12px 0 24px rgba(0, 0, 0, 0.18);
-        transform: translateX(-100%);
-        transition: transform 0.2s ease;
-        z-index: 1102;
-        display: flex;
-        flex-direction: column;
-      }
-      body.sidebar-open .page-sidebar {
-        transform: translateX(0);
-      }
-      .page-sidebar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
-        padding: 12px;
-        border-bottom: 1px solid var(--border);
-      }
-      .page-sidebar-links {
-        padding: 10px 12px 14px;
-        overflow: auto;
-      }
-      .page-sidebar-links a {
-        display: block;
-        color: var(--accent-text);
-        text-decoration: none;
-        padding: 6px 2px;
-        font-size: 0.92rem;
-      }
-      .page-sidebar-links a[aria-current='page'] {
-        font-weight: 900;
-        color: var(--a1);
-      }
-      .page-sidebar-backdrop {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 1100;
-      }
-      @media (max-width: 991.98px) {
-        .page-sidebar {
-          width: 220px;
-        }
-      }
-
       /* =========================
          HERO BG + NAV DARK MODE
       ========================== */
@@ -1224,9 +1165,10 @@
         color: var(--heading-color);
       }
     </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
+  <body class="with-side-rail">
     <a
       class="visually-hidden-focusable focus-ring position-absolute top-0 start-0 m-3 p-2 rounded text-bg-dark"
       href="#main"
@@ -1288,38 +1230,70 @@
       </div>
     </nav>
 
-    <button
-      id="pageSidebarToggle"
-      class="btn btn-sm btn-outline-secondary rounded-pill focus-ring sidebar-toggle"
-      type="button"
-      aria-controls="pageSidebar"
-      aria-expanded="false"
-      aria-label="Open pages menu"
-    >
-      <span aria-hidden="true">&#9776;</span>
-    </button>
-    <aside id="pageSidebar" class="page-sidebar" aria-label="Workshop pages">
-      <div class="page-sidebar-header">
-        <strong>Workshop Pages</strong>
-        <button
-          id="pageSidebarClose"
-          class="btn btn-sm btn-outline-secondary focus-ring"
-          type="button"
-          aria-label="Close pages menu"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <nav class="page-sidebar-links">
-        <a class="focus-ring" href="index.html">Home</a>
-        <a class="focus-ring" href="frankenstein.html" aria-current="page">Frankenstein</a>
-        <a class="focus-ring" href="bootstrap.html">Bootstrap</a>
-        <a class="focus-ring" href="bulma.html">Bulma</a>
-        <a class="focus-ring" href="pico.html">Pico</a>
-        <a class="focus-ring" href="baseline.html">Baseline</a>
+    <aside class="side-rail" aria-label="Workshop pages">
+      <nav class="side-rail-links">
+        <a class="side-rail-link focus-ring" href="index.html">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
+              <polygon points="20 8.5 20 22 4 22 4 8.5 12 2 20 8.5" fill="#059cf7" opacity="0.1"></polygon>
+              <polyline points="2 10 12 2 22 10"></polyline>
+              <polyline points="4 8.5 4 22 20 22 20 8.5" stroke-linecap="round"></polyline>
+            </svg>
+          </span>
+          <span class="label">Home</span>
+        </a>
+        <a class="side-rail-link focus-ring" href="baseline.html">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle cx="12" cy="12" r="11" fill="#059cf7" opacity="0.1" stroke="none"></circle>
+              <text x="12" y="12.5" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" stroke="none">1</text>
+            </svg>
+          </span>
+          <span class="label">Baseline</span>
+        </a>
+        <a class="side-rail-link focus-ring" href="pico.html">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle cx="12" cy="12" r="11" fill="#059cf7" opacity="0.1" stroke="none"></circle>
+              <text x="12" y="12.5" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" stroke="none">2</text>
+            </svg>
+          </span>
+          <span class="label">Pico</span>
+        </a>
+        <a class="side-rail-link focus-ring" href="bootstrap.html">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle cx="12" cy="12" r="11" fill="#059cf7" opacity="0.1" stroke="none"></circle>
+              <text x="12" y="12.5" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" stroke="none">3</text>
+            </svg>
+          </span>
+          <span class="label">Bootstrap</span>
+        </a>
+        <a class="side-rail-link focus-ring" href="bulma.html">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle cx="12" cy="12" r="11" fill="#059cf7" opacity="0.1" stroke="none"></circle>
+              <text x="12" y="12.5" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" stroke="none">4</text>
+            </svg>
+          </span>
+          <span class="label">Bulma</span>
+        </a>
+        <a class="side-rail-link focus-ring" href="frankenstein.html" aria-current="page">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter">
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle cx="12" cy="12" r="11" fill="#059cf7" opacity="0.1" stroke="none"></circle>
+              <text x="12" y="12.5" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" stroke="none">5</text>
+            </svg>
+          </span>
+          <span class="label">Frankenstein</span>
+        </a>
       </nav>
     </aside>
-    <div id="pageSidebarBackdrop" class="page-sidebar-backdrop" hidden></div>
 
     <header class="bg-soft border-bottom">
       <div class="container py-5">
@@ -1964,29 +1938,6 @@ Output a single index.html file.</pre
       </div>
     </footer>
 
-    <script>
-      (function () {
-        const toggle = document.getElementById('pageSidebarToggle');
-        const closeBtn = document.getElementById('pageSidebarClose');
-        const backdrop = document.getElementById('pageSidebarBackdrop');
-        if (!toggle || !closeBtn || !backdrop) return;
-
-        function setOpen(open) {
-          document.body.classList.toggle('sidebar-open', open);
-          toggle.setAttribute('aria-expanded', String(open));
-          backdrop.hidden = !open;
-        }
-
-        toggle.addEventListener('click', () => {
-          setOpen(!document.body.classList.contains('sidebar-open'));
-        });
-        closeBtn.addEventListener('click', () => setOpen(false));
-        backdrop.addEventListener('click', () => setOpen(false));
-        document.addEventListener('keydown', (event) => {
-          if (event.key === 'Escape') setOpen(false);
-        });
-      })();
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       (function () {

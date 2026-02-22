@@ -199,110 +199,220 @@
       .footer-note {
         border-top: 1px solid rgba(10, 10, 10, 0.08);
       }
-      .sidebar-toggle {
-        position: fixed;
-        left: 12px;
-        top: 78px;
-        z-index: 1101;
-      }
-      .page-sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 260px;
-        background: #fff;
-        border-right: 1px solid rgba(79, 22, 76, 0.24);
-        box-shadow: 12px 0 24px rgba(0, 0, 0, 0.14);
-        transform: translateX(-100%);
-        transition: transform 0.2s ease;
-        z-index: 1102;
-        display: flex;
-        flex-direction: column;
-      }
-      body.sidebar-open .page-sidebar {
-        transform: translateX(0);
-      }
-      .page-sidebar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
-        padding: 12px;
-        border-bottom: 1px solid rgba(79, 22, 76, 0.2);
-      }
-      .page-sidebar-links {
-        padding: 10px 12px 14px;
-        overflow: auto;
-      }
-      .page-sidebar-links a {
-        display: block;
-        text-decoration: none;
-        color: var(--brand);
-        padding: 6px 2px;
-      }
-      .page-sidebar-links a[aria-current='page'] {
-        font-weight: 800;
-      }
-      .page-sidebar-backdrop {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 1100;
-      }
-      @media (max-width: 991.98px) {
-        .page-sidebar {
-          width: 220px;
-        }
-      }
     </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="with-side-rail">
     <a class="is-sr-only is-sr-only-focusable button is-brand m-3" href="#main"
       >Skip to content</a
     >
 
-    <button
-      id="pageSidebarToggle"
-      class="button is-small is-brand is-rounded sidebar-toggle"
-      type="button"
-      aria-controls="pageSidebar"
-      aria-expanded="false"
-      aria-label="Open pages menu"
-    >
-      <span aria-hidden="true">&#9776;</span>
-    </button>
-
-    <aside id="pageSidebar" class="page-sidebar" aria-label="Workshop pages">
-      <div class="page-sidebar-header">
-        <strong>Workshop Pages</strong>
-        <button
-          id="pageSidebarClose"
-          class="button is-small is-light is-rounded"
-          type="button"
-          aria-label="Close pages menu"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <nav class="page-sidebar-links">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="frankenstein.html">Frankenstein</a>
-        <a href="bootstrap.html">Bootstrap</a>
-        <a href="bulma.html">Bulma</a>
-        <a href="pico.html">Pico</a>
-        <a href="baseline.html">Baseline</a>
+    <aside class="side-rail" aria-label="Workshop pages">
+      <nav class="side-rail-links">
+        <a class="side-rail-link" href="index.html" aria-current="page">
+          <span class="icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="miter"
+            >
+              <polygon
+                points="20 8.5 20 22 4 22 4 8.5 12 2 20 8.5"
+                fill="#059cf7"
+                opacity="0.1"
+              ></polygon>
+              <polyline points="2 10 12 2 22 10"></polyline>
+              <polyline
+                points="4 8.5 4 22 20 22 20 8.5"
+                stroke-linecap="round"
+              ></polyline>
+            </svg>
+          </span>
+          <span class="label">Home</span>
+        </a>
+        <a class="side-rail-link" href="baseline.html">
+          <span class="icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="miter"
+            >
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle
+                cx="12"
+                cy="12"
+                r="11"
+                fill="#059cf7"
+                opacity="0.1"
+                stroke="none"
+              ></circle>
+              <text
+                x="12"
+                y="12.5"
+                text-anchor="middle"
+                font-size="11"
+                font-weight="700"
+                fill="currentColor"
+                stroke="none"
+              >
+                1
+              </text>
+            </svg>
+          </span>
+          <span class="label">Baseline</span>
+        </a>
+        <a class="side-rail-link" href="pico.html">
+          <span class="icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="miter"
+            >
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle
+                cx="12"
+                cy="12"
+                r="11"
+                fill="#059cf7"
+                opacity="0.1"
+                stroke="none"
+              ></circle>
+              <text
+                x="12"
+                y="12.5"
+                text-anchor="middle"
+                font-size="11"
+                font-weight="700"
+                fill="currentColor"
+                stroke="none"
+              >
+                2
+              </text>
+            </svg>
+          </span>
+          <span class="label">Pico</span>
+        </a>
+        <a class="side-rail-link" href="bootstrap.html">
+          <span class="icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="miter"
+            >
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle
+                cx="12"
+                cy="12"
+                r="11"
+                fill="#059cf7"
+                opacity="0.1"
+                stroke="none"
+              ></circle>
+              <text
+                x="12"
+                y="12.5"
+                text-anchor="middle"
+                font-size="11"
+                font-weight="700"
+                fill="currentColor"
+                stroke="none"
+              >
+                3
+              </text>
+            </svg>
+          </span>
+          <span class="label">Bootstrap</span>
+        </a>
+        <a class="side-rail-link" href="bulma.html">
+          <span class="icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="miter"
+            >
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle
+                cx="12"
+                cy="12"
+                r="11"
+                fill="#059cf7"
+                opacity="0.1"
+                stroke="none"
+              ></circle>
+              <text
+                x="12"
+                y="12.5"
+                text-anchor="middle"
+                font-size="11"
+                font-weight="700"
+                fill="currentColor"
+                stroke="none"
+              >
+                4
+              </text>
+            </svg>
+          </span>
+          <span class="label">Bulma</span>
+        </a>
+        <a class="side-rail-link" href="frankenstein.html">
+          <span class="icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="miter"
+            >
+              <circle cx="12" cy="12" r="11"></circle>
+              <circle
+                cx="12"
+                cy="12"
+                r="11"
+                fill="#059cf7"
+                opacity="0.1"
+                stroke="none"
+              ></circle>
+              <text
+                x="12"
+                y="12.5"
+                text-anchor="middle"
+                font-size="11"
+                font-weight="700"
+                fill="currentColor"
+                stroke="none"
+              >
+                5
+              </text>
+            </svg>
+          </span>
+          <span class="label">Frankenstein</span>
+        </a>
       </nav>
     </aside>
-    <div id="pageSidebarBackdrop" class="page-sidebar-backdrop" hidden></div>
 
     <section class="hero is-basics">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-vcentered is-variable is-6">
-            <div class="column is-8-desktop">
+            <div class="column is-10-desktop">
               <span class="tag is-brand is-rounded"
-                >Beginner Guide • for AI page building</span
+                >Beginner Guide • AI Page Design Upgrade</span
               >
               <h1 class="title is-2 mt-3 mb-2">
                 Page Design Basics (No coding background needed)
@@ -333,18 +443,6 @@
                 >
               </div>
             </div>
-
-            <div class="column is-4-desktop">
-              <article class="message is-info is-light">
-                <div class="message-header">
-                  <p>How to use this page</p>
-                </div>
-                <div class="message-body">
-                  Skim each section, then copy the wording into your AI prompt
-                  when you want to change your page.
-                </div>
-              </article>
-            </div>
           </div>
         </div>
       </div>
@@ -355,7 +453,9 @@
         <section id="structure" aria-labelledby="structure-title">
           <div class="card section-card">
             <div class="card-content">
-              <h2 id="structure-title" class="title is-4">1) Basic page structure</h2>
+              <h2 id="structure-title" class="title is-4">
+                1) Basic page structure
+              </h2>
               <p class="muted mb-4">
                 Think of a page as a simple stack: <strong>header</strong>,
                 <strong>main</strong>, and <strong>footer</strong>. Inside
@@ -413,8 +513,13 @@
                       <div class="card">
                         <div class="card-content p-4">
                           <p class="heading">Heading</p>
-                          <p class="title is-6 mb-1"><code>h1</code> -> <code>h2</code> -> <code>h3</code></p>
-                          <p class="muted is-size-7 mb-0">Title -> section title -> sub-section title</p>
+                          <p class="title is-6 mb-1">
+                            <code>h1</code> -> <code>h2</code> ->
+                            <code>h3</code>
+                          </p>
+                          <p class="muted is-size-7 mb-0">
+                            Title -> section title -> sub-section title
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -422,8 +527,13 @@
                       <div class="card">
                         <div class="card-content p-4">
                           <p class="heading">Page area</p>
-                          <p class="title is-6 mb-1"><code>header</code> / <code>main</code> / <code>footer</code></p>
-                          <p class="muted is-size-7 mb-0">Top, content, bottom structure</p>
+                          <p class="title is-6 mb-1">
+                            <code>header</code> / <code>main</code> /
+                            <code>footer</code>
+                          </p>
+                          <p class="muted is-size-7 mb-0">
+                            Top, content, bottom structure
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -432,7 +542,11 @@
                         <div class="card-content p-4">
                           <p class="heading">Nesting</p>
                           <p class="title is-6 mb-1">parent -> child</p>
-                          <p class="muted is-size-7 mb-0">Example: <code>main</code> contains <code>section</code>, and <code>section</code> contains <code>h2</code></p>
+                          <p class="muted is-size-7 mb-0">
+                            Example: <code>main</code> contains
+                            <code>section</code>, and
+                            <code>section</code> contains <code>h2</code>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -440,8 +554,12 @@
                       <div class="card">
                         <div class="card-content p-4">
                           <p class="heading">Targeting hook</p>
-                          <p class="title is-6 mb-1"><code>class</code> / <code>id</code></p>
-                          <p class="muted is-size-7 mb-0">Names AI can target exactly</p>
+                          <p class="title is-6 mb-1">
+                            <code>class</code> / <code>id</code>
+                          </p>
+                          <p class="muted is-size-7 mb-0">
+                            Names AI can target exactly
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -455,29 +573,36 @@
                       <p class="mb-2">Use simple location + action prompts:</p>
                       <ul>
                         <li>"Change the <code>h1</code> in the header."</li>
-                        <li>"Update the button with class <code>.cta</code>."</li>
+                        <li>
+                          "Update the button with class <code>.cta</code>."
+                        </li>
                         <li>
                           "Make the second <code>section</code> in
                           <code>main</code> two columns."
                         </li>
                       </ul>
                       <p class="mb-0">
-                        If AI misses the target, include the parent + child
-                        path (example: <code>main > section > h2</code>).
+                        If AI misses the target, include the parent + child path
+                        (example: <code>main > section > h2</code>).
                       </p>
                     </div>
                   </article>
-
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="design-systems" class="mt-5" aria-labelledby="systems-title">
+        <section
+          id="design-systems"
+          class="mt-5"
+          aria-labelledby="systems-title"
+        >
           <div class="card section-card">
             <div class="card-content">
-              <h2 id="systems-title" class="title is-4">2) Design systems (the simple version)</h2>
+              <h2 id="systems-title" class="title is-4">
+                2) Design systems (the simple version)
+              </h2>
               <p class="muted mb-4">
                 A design system is a shortcut to a better-looking page. Instead
                 of styling everything from scratch, you use pre-built layout and
@@ -491,7 +616,10 @@
                     <div class="card-content">
                       <p class="heading">Framework</p>
                       <h3 class="title is-5">Bootstrap</h3>
-                      <p class="muted mb-0">Best when you want a polished, \"finished app\" look quickly.</p>
+                      <p class="muted mb-0">
+                        Best when you want a polished, \"finished app\" look
+                        quickly.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -500,7 +628,10 @@
                     <div class="card-content">
                       <p class="heading">Framework</p>
                       <h3 class="title is-5">Bulma</h3>
-                      <p class="muted mb-0">Best when you want clean layout with easy-to-read class labels.</p>
+                      <p class="muted mb-0">
+                        Best when you want clean layout with easy-to-read class
+                        labels.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -509,7 +640,10 @@
                     <div class="card-content">
                       <p class="heading">Framework</p>
                       <h3 class="title is-5">Pico</h3>
-                      <p class="muted mb-0">Best when you want simple, minimal code with great default text styling.</p>
+                      <p class="muted mb-0">
+                        Best when you want simple, minimal code with great
+                        default text styling.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -518,8 +652,8 @@
               <article class="message is-light mt-3">
                 <div class="message-body">
                   <strong>Why this helps with AI coding:</strong> AI already
-                  understands these design systems. You can ask it to
-                  \"build this with Bootstrap,\" or \"swap this page to Bulma/Pico,\"
+                  understands these design systems. You can ask it to \"build
+                  this with Bootstrap,\" or \"swap this page to Bulma/Pico,\"
                   and it can restyle the same content much faster and more
                   consistently.
                 </div>
@@ -531,7 +665,9 @@
         <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
           <div class="card section-card">
             <div class="card-content">
-              <h2 id="spacing-title" class="title is-4">3) Padding vs Margin (easy rule)</h2>
+              <h2 id="spacing-title" class="title is-4">
+                3) Padding vs Margin (easy rule)
+              </h2>
               <p class="muted mb-3">
                 Keep using this simple rule: <strong>padding</strong> is space
                 inside a box, <strong>margin</strong> is space outside a box.
@@ -545,7 +681,9 @@
                       Margin (outside space)
                       <div class="padding-box">
                         Padding (inside space)
-                        <div class="content-box">Content (text, button, image)</div>
+                        <div class="content-box">
+                          Content (text, button, image)
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -555,7 +693,9 @@
                     <div class="card-content">
                       <h3 class="title is-6">Prompt wording you can copy</h3>
                       <ul>
-                        <li>"Add more <strong>padding</strong> inside this card."</li>
+                        <li>
+                          "Add more <strong>padding</strong> inside this card."
+                        </li>
                         <li>
                           "Add more <strong>margin-top</strong> between these
                           sections."
@@ -567,8 +707,8 @@
                         margin.
                       </p>
                       <p class="muted mb-0">
-                        Simple rule: padding is <strong>inside</strong>, margin is
-                        <strong>outside</strong>. This works the same in
+                        Simple rule: padding is <strong>inside</strong>, margin
+                        is <strong>outside</strong>. This works the same in
                         Bootstrap, Bulma, and Pico.
                       </p>
                     </div>
@@ -582,7 +722,9 @@
         <section id="elements" class="mt-5" aria-labelledby="elements-title">
           <div class="card section-card">
             <div class="card-content">
-              <h2 id="elements-title" class="title is-4">4) Most-used UI elements</h2>
+              <h2 id="elements-title" class="title is-4">
+                4) Most-used UI elements
+              </h2>
               <p class="muted mb-4">
                 Think of these as element names you can say directly in AI
                 prompts. Name the element, then say what to change.
@@ -592,12 +734,15 @@
                   <div class="card">
                     <div class="card-content">
                       <h3 class="title is-6">Button</h3>
-                      <button class="demo-button" type="button">Primary action</button>
+                      <button class="demo-button" type="button">
+                        Primary action
+                      </button>
                       <p class="muted mt-2 mb-1">
                         Use for actions (submit, open, start).
                       </p>
                       <p class="is-size-7 mb-0">
-                        Prompt hint: "Make the primary button larger and purple."
+                        Prompt hint: "Make the primary button larger and
+                        purple."
                       </p>
                     </div>
                   </div>
@@ -622,10 +767,15 @@
                   <div class="card">
                     <div class="card-content">
                       <h3 class="title is-6">Callout</h3>
-                      <div class="demo-callout">Important note: focus attention here.</div>
-                      <p class="muted mt-2 mb-1">Great for tips and reminders.</p>
+                      <div class="demo-callout">
+                        Important note: focus attention here.
+                      </div>
+                      <p class="muted mt-2 mb-1">
+                        Great for tips and reminders.
+                      </p>
                       <p class="is-size-7 mb-0">
-                        Prompt hint: "Turn this note into a callout with a left border."
+                        Prompt hint: "Turn this note into a callout with a left
+                        border."
                       </p>
                     </div>
                   </div>
@@ -643,7 +793,8 @@
                         Use links for navigation (go to another page/section).
                       </p>
                       <p class="is-size-7 mb-0">
-                        Prompt hint: "Style the resource links with more spacing."
+                        Prompt hint: "Style the resource links with more
+                        spacing."
                       </p>
                     </div>
                   </div>
@@ -654,7 +805,9 @@
                     <div class="card-content">
                       <h3 class="title is-6">Icons</h3>
                       <p class="is-size-4 mb-1">⬅︎ ▶︎ ⚙︎ ✉︎</p>
-                      <p class="muted mb-1">Small visuals that support labels.</p>
+                      <p class="muted mb-1">
+                        Small visuals that support labels.
+                      </p>
                       <p class="is-size-7 mb-0">
                         Prompt hint: "Add an icon before each section heading."
                       </p>
@@ -671,7 +824,8 @@
                         <code>DevTools</code> <code>Resources</code>
                       </p>
                       <p class="is-size-7 mb-0">
-                        Prompt hint: "Make the top navigation sticky and easier to read."
+                        Prompt hint: "Make the top navigation sticky and easier
+                        to read."
                       </p>
                     </div>
                   </div>
@@ -684,7 +838,9 @@
         <section id="a11y" class="mt-5" aria-labelledby="a11y-title">
           <div class="card section-card">
             <div class="card-content">
-              <h2 id="a11y-title" class="title is-4">5) Quick accessibility checklist</h2>
+              <h2 id="a11y-title" class="title is-4">
+                5) Quick accessibility checklist
+              </h2>
               <p class="mb-2">
                 Accessibility means making your page easier for more people to
                 read, use, and navigate.
@@ -698,11 +854,19 @@
                   <div class="card">
                     <div class="card-content content">
                       <ol>
-                        <li>Use one <code>h1</code>, then clear <code>h2</code> section headings.</li>
+                        <li>
+                          Use one <code>h1</code>, then clear
+                          <code>h2</code> section headings.
+                        </li>
                         <li>Keep body text easy to read (about 16px).</li>
                         <li>Make sure text stands out from its background.</li>
-                        <li>Make links and buttons easy to see and understand.</li>
-                        <li>Press <kbd>Tab</kbd> and check that focus is always visible.</li>
+                        <li>
+                          Make links and buttons easy to see and understand.
+                        </li>
+                        <li>
+                          Press <kbd>Tab</kbd> and check that focus is always
+                          visible.
+                        </li>
                       </ol>
                     </div>
                   </div>
@@ -727,15 +891,18 @@
         <section id="prompting" class="mt-5" aria-labelledby="prompting-title">
           <div class="card section-card">
             <div class="card-content">
-              <h2 id="prompting-title" class="title is-4">6) Prompt AI in plain language</h2>
+              <h2 id="prompting-title" class="title is-4">
+                6) Prompt AI in plain language
+              </h2>
               <p class="muted mb-3">
                 Clear intent beats technical jargon. You do not need \"developer
                 words\" to get good results.
               </p>
               <p class="mb-4">
                 A strong beginner prompt has 3 parts:
-                <strong>what to change</strong>, <strong>where to change it</strong>,
-                and <strong>what to keep the same</strong>.
+                <strong>what to change</strong>,
+                <strong>where to change it</strong>, and
+                <strong>what to keep the same</strong>.
               </p>
               <div class="columns is-variable is-4">
                 <div class="column is-7-desktop">
@@ -743,10 +910,18 @@
                     <div class="card-content">
                       <h3 class="title is-6">Example prompt</h3>
                       <pre
-                        style="white-space: pre-wrap; overflow: auto; padding: 12px; border-radius: 12px; background: #f7f7f7"
-                      >In the resources section card, add more padding inside each card and more margin between sections.
+                        style="
+                          white-space: pre-wrap;
+                          overflow: auto;
+                          padding: 12px;
+                          border-radius: 12px;
+                          background: #f7f7f7;
+                        "
+                      >
+In the resources section card, add more padding inside each card and more margin between sections.
 Keep the current colors and typography.
-Only edit the card and spacing styles.</pre>
+Only edit the card and spacing styles.</pre
+                      >
                     </div>
                   </div>
                 </div>
@@ -774,28 +949,5 @@ Only edit the card and spacing styles.</pre>
         >.
       </div>
     </footer>
-    <script>
-      (function () {
-        const toggle = document.getElementById('pageSidebarToggle');
-        const closeBtn = document.getElementById('pageSidebarClose');
-        const backdrop = document.getElementById('pageSidebarBackdrop');
-        if (!toggle || !closeBtn || !backdrop) return;
-
-        function setOpen(open) {
-          document.body.classList.toggle('sidebar-open', open);
-          toggle.setAttribute('aria-expanded', String(open));
-          backdrop.hidden = !open;
-        }
-
-        toggle.addEventListener('click', () => {
-          setOpen(!document.body.classList.contains('sidebar-open'));
-        });
-        closeBtn.addEventListener('click', () => setOpen(false));
-        backdrop.addEventListener('click', () => setOpen(false));
-        document.addEventListener('keydown', (event) => {
-          if (event.key === 'Escape') setOpen(false);
-        });
-      })();
-    </script>
   </body>
 </html>

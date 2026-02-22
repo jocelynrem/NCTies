@@ -1,0 +1,216 @@
+/* Shared left rail across all pages */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
+body.with-side-rail {
+  padding-left: 92px;
+}
+
+.side-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 92px;
+  background: #ffffff;
+  border-right: 1px solid #dadce0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.04);
+  padding: 12px 8px;
+  overflow: auto;
+  z-index: 1000;
+}
+
+.side-rail-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.side-rail-link {
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #3a4454;
+  font-size: 12px;
+  font-family: 'Roboto Flex', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    'slnt' 0,
+    'wdth' 25,
+    'GRAD' 0,
+    'XOPQ' 96,
+    'XTRA' 468,
+    'YOPQ' 79,
+    'YTAS' 750,
+    'YTDE' -203,
+    'YTFI' 738,
+    'YTLC' 514,
+    'YTUC' 712;
+  border-radius: 999px;
+  padding: 6px 4px;
+}
+
+.side-rail-link:visited {
+  color: #3a4454;
+}
+
+.side-rail-link .icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #f9f5ff;
+  display: grid;
+  place-items: center;
+}
+
+.side-rail-link .icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+  color: #6b4e71;
+  stroke: #6b4e71;
+}
+
+.side-rail-link .icon svg circle:not([fill]) {
+  display: none;
+}
+
+.side-rail-link .icon svg polygon {
+  fill: currentColor !important;
+  opacity: 0.1;
+}
+
+.side-rail-link .icon svg circle[fill] {
+  fill: #ffffff !important;
+  opacity: 1;
+  stroke: #6b4e71;
+  stroke-width: 1;
+}
+
+.side-rail-link .icon svg text {
+  fill: #6b4e71;
+  stroke: none;
+  font-size: 18px;
+  dominant-baseline: middle;
+  alignment-baseline: middle;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.side-rail-link .label {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #3a4454;
+  font-family: 'Roboto Flex', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.side-rail-link[aria-current='page'] {
+  color: #3a4454;
+  font-weight: 300;
+  background: transparent;
+}
+
+.side-rail-link[aria-current='page'] .icon {
+  background: #6b4e71;
+}
+
+.side-rail-link[aria-current='page'] .icon svg {
+  color: #f9f5ff;
+  stroke: #f9f5ff;
+}
+
+.side-rail-link[aria-current='page'] .icon svg circle[fill] {
+  fill: #6b4e71 !important;
+  stroke: #6b4e71;
+}
+
+.side-rail-link[aria-current='page'] .icon svg text {
+  fill: #f9f5ff;
+}
+
+.side-rail-link:focus {
+  outline: none;
+}
+
+.side-rail-link:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.side-rail-link:focus-visible {
+  outline: 2px solid #53687e;
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+.side-rail-link[href='index.html'][aria-current='page'] .icon {
+  background: transparent;
+}
+
+.side-rail-link[href='index.html']:not([aria-current='page']) .icon {
+  background: transparent;
+}
+
+.side-rail-link[href='index.html'][aria-current='page'] .icon svg {
+  color: #6b4e71;
+  stroke: #6b4e71;
+}
+
+.side-rail-link[href='index.html'][aria-current='page'] .icon svg polygon {
+  fill: #6b4e71 !important;
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .side-rail {
+    position: static;
+    width: auto;
+    border-right: 0;
+    border-bottom: 1px solid #dadce0;
+    box-shadow: none;
+    background: #ffffff;
+  }
+
+  .side-rail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .side-rail-link {
+    width: auto;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .side-rail-link .icon {
+    width: auto;
+    height: auto;
+  }
+
+  .side-rail-link .icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  body.with-side-rail {
+    padding-left: 0;
+  }
+}
