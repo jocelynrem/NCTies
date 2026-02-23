@@ -83,7 +83,7 @@
               <a class="nav-link focus-ring" href="#prompt">Prompt</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link focus-ring" href="#devtools">DevTools</a>
+              <a class="nav-link focus-ring" href="#challenge">Challenge</a>
             </li>
             <li class="nav-item">
               <a class="nav-link focus-ring" href="#system">Design system</a>
@@ -317,11 +317,11 @@
                 href="#prompt"
                 >Copy Prompt</a
               >
-              <a
+              <!-- <a
                 class="btn btn-outline-secondary rounded-pill px-4 focus-ring"
                 href="#devtools"
                 >DevTools Steps</a
-              >
+              > -->
               <a
                 class="btn btn-light rounded-pill px-4 focus-ring"
                 href="#resources"
@@ -411,8 +411,38 @@ Output a single bootstrap.html file.</pre
             </div>
           </div>
         </section>
-
         <section
+          class="col-12 col-lg-5"
+          id="system"
+          aria-labelledby="system-title"
+        >
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h2 id="system-title" class="h5">Design System: Bootstrap</h2>
+              <p class="text-secondary">
+                Bootstrap shines when you want a
+                <strong>“finished UI”</strong> quickly: navbars, cards, buttons,
+                spacing utilities, and responsive layout.
+              </p>
+              <ul class="text-secondary mb-0">
+                <li>
+                  <strong>Best for:</strong> quick professional layouts,
+                  dashboards, school “hub” pages
+                </li>
+                <li>
+                  <strong>AI-friendly:</strong> predictable classes + tons of
+                  examples in docs
+                </li>
+                <li>
+                  <strong>Teacher takeaway:</strong> less design guessing — more
+                  consistent structure
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section
           class="col-12 col-lg-5"
           id="devtools"
           aria-labelledby="devtools-title"
@@ -473,7 +503,7 @@ Output a single bootstrap.html file.</pre
               </ol>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
 
       <section
@@ -557,40 +587,10 @@ Output a single bootstrap.html file.</pre
         <div class="card-body">
           <h2 id="challenge-title" class="h5">Try This Challenge</h2>
           <p class="mb-0">
-            Ask AI to change the primary button color, add one
-            icon to the hero heading, and slightly round the cards. Then use
-            DevTools to find one Bootstrap class and ask AI to edit only that
-            class.
+            Ask AI to change the primary button color, add one icon to the hero
+            heading, and slightly round the cards. Then use DevTools to find one
+            Bootstrap class and ask AI to edit only that class.
           </p>
-        </div>
-      </section>
-
-      <section
-        class="card shadow-sm mt-3"
-        id="system"
-        aria-labelledby="system-title"
-      >
-        <div class="card-body">
-          <h2 id="system-title" class="h5">Design System: Bootstrap</h2>
-          <p class="text-secondary mb-2">
-            Bootstrap shines when you want a
-            <strong>“finished UI”</strong> quickly: navbars, cards, buttons,
-            spacing utilities, and responsive layout.
-          </p>
-          <ul class="text-secondary mb-0">
-            <li>
-              <strong>Best for:</strong> quick professional layouts, dashboards,
-              school “hub” pages
-            </li>
-            <li>
-              <strong>AI-friendly:</strong> predictable classes + tons of
-              examples in docs
-            </li>
-            <li>
-              <strong>Teacher takeaway:</strong> less design guessing — more
-              consistent structure
-            </li>
-          </ul>
         </div>
       </section>
     </main>
