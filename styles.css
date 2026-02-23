@@ -189,12 +189,17 @@ body.with-side-rail {
 
   .side-rail-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
     gap: 0.65rem;
   }
 
   .side-rail-link {
     width: auto;
+    flex: 0 0 auto;
     border-radius: 999px;
     padding: 6px 10px;
     font-size: 13px;
