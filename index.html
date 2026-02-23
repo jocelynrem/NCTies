@@ -205,6 +205,46 @@
         padding: 0.7rem;
       }
 
+      .bonus-tip-card {
+        border-left-color: rgba(79, 22, 76, 0.5) !important;
+        background: linear-gradient(
+          135deg,
+          rgba(79, 22, 76, 0.1),
+          rgba(79, 22, 76, 0.03) 45%,
+          #fff 100%
+        );
+      }
+
+      .bonus-tip-badge {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        border: 1px dashed rgba(79, 22, 76, 0.4);
+        background: rgba(79, 22, 76, 0.09);
+        color: var(--brand);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .spacing-equal {
+        align-items: stretch;
+      }
+
+      .spacing-equal > .column {
+        display: flex;
+        align-self: stretch;
+      }
+
+      .spacing-equal > .column > .visual-box,
+      .spacing-equal > .column > .card {
+        display: flex;
+        flex: 1 1 auto;
+        width: 100%;
+      }
+
       .material-symbols-outlined {
         font-variation-settings:
           'FILL' 0,
@@ -788,64 +828,7 @@ Only edit the card and spacing styles.</pre
           </div>
         </section>
 
-        <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="spacing-title" class="title is-4">
-                4) Padding vs Margin (easy rule)
-              </h2>
-              <p class="muted mb-3">
-                Keep using this simple rule: <strong>padding</strong> is space
-                inside a box, <strong>margin</strong> is space outside a box.
-                Using the right word in your AI prompt helps AI change the
-                correct spacing faster.
-              </p>
-              <div class="columns is-variable is-4">
-                <div class="column is-6-desktop">
-                  <div class="visual-box">
-                    <div class="margin-box">
-                      Margin (outside space)
-                      <div class="padding-box">
-                        Padding (inside space)
-                        <div class="content-box">
-                          Content (text, button, image)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Prompt wording you can copy</h3>
-                      <ul>
-                        <li>
-                          "Add more <strong>padding</strong> inside this card."
-                        </li>
-                        <li>
-                          "Add more <strong>margin-top</strong> between these
-                          sections."
-                        </li>
-                      </ul>
-                      <p class="mb-2">
-                        <strong>Quick choice:</strong> if content feels cramped,
-                        use padding. If sections feel too close together, use
-                        margin.
-                      </p>
-                      <p class="muted mb-0">
-                        Simple rule: padding is <strong>inside</strong>, margin
-                        is <strong>outside</strong>. This works the same in
-                        Bootstrap, Bulma, and Pico.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="structure" class="mt-5" aria-labelledby="structure-title">
+        <!-- <section id="structure" class="mt-5" aria-labelledby="structure-title">
           <div class="card section-card">
             <div class="card-content">
               <h2 id="structure-title" class="title is-4">
@@ -858,7 +841,7 @@ Only edit the card and spacing styles.</pre
                 <code>section</code> blocks.
               </p>
 
-              <div class="columns is-variable is-4">
+              <div class="columns is-variable is-4 spacing-equal">
                 <div class="column is-6-desktop">
                   <div class="visual-box">
                     <div class="mini-page" aria-label="Simple page map">
@@ -979,13 +962,13 @@ Only edit the card and spacing styles.</pre
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <section id="devtools" class="mt-5" aria-labelledby="devtools-title">
           <div class="card section-card">
             <div class="card-content">
               <h2 id="devtools-title" class="title is-4">
-                6) DevTools: 2 actions you need
+                4) DevTools: 2 actions you need
               </h2>
               <p class="muted mb-4">
                 DevTools can do a lot, but we'll only do two tasks: find the
@@ -1040,7 +1023,7 @@ Only edit the card and spacing styles.</pre
           <div class="card section-card">
             <div class="card-content">
               <h2 id="a11y-title" class="title is-4">
-                7) Quick accessibility checklist
+                5) Quick accessibility checklist
               </h2>
               <p class="mb-2">
                 Accessibility means making your page easier for more people to
@@ -1195,6 +1178,59 @@ Only edit the card and spacing styles.</pre
                       <p class="is-size-7 mb-0">
                         Prompt hint: "Improve focus styles so keyboard
                         navigation is always easy to see."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
+          <div class="card section-card bonus-tip-card">
+            <div class="card-content">
+              <span class="bonus-tip-badge">Bonus tip</span>
+              <h2 id="spacing-title" class="title is-4">
+                Padding vs Margin (easy rule)
+              </h2>
+              <p class="muted mb-3">
+                Use this simple rule: <strong>padding</strong> is space inside a
+                box, <strong>margin</strong> is space outside a box. Using the
+                right word in your AI prompt helps AI change the correct spacing
+                faster.
+              </p>
+              <div class="columns is-variable is-4">
+                <div class="column is-6-desktop">
+                  <div class="visual-box">
+                    <div class="margin-box">
+                      Margin (outside space)
+                      <div class="padding-box">
+                        Padding (inside space)
+                        <div class="content-box">
+                          Content (text, button, image)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6-desktop">
+                  <div class="card">
+                    <div class="card-content">
+                      <h3 class="title is-6">Prompt wording you can copy</h3>
+                      <ul>
+                        <li>
+                          "Add more <strong>padding</strong> inside this card."
+                        </li>
+                        <li>
+                          "Add more <strong>margin-top</strong> between these
+                          sections."
+                        </li>
+                      </ul>
+                      <p class="mb-2">
+                        <strong>Quick choice:</strong> if content feels cramped,
+                        use padding. If sections feel too close together, use
+                        margin.
                       </p>
                     </div>
                   </div>
