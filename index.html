@@ -3,345 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Page Design Basics for AI Builders (Bulma)</title>
+    <title>NCTIES Workshop: AI Coding + Design Systems (Baseline)</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..700"
-    />
-    <style>
-      :root {
-        --brand: #4f164c;
-        --brand-soft: rgba(79, 22, 76, 0.1);
-        --ink: #2f3240;
-        --muted: #5f6776;
-      }
-
-      body {
-        font-family: 'Roboto Flex', sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings:
-          'slnt' 0,
-          'wdth' 25,
-          'GRAD' 0,
-          'XOPQ' 96,
-          'XTRA' 468,
-          'YOPQ' 79,
-          'YTAS' 750,
-          'YTDE' -203,
-          'YTFI' 738,
-          'YTLC' 514,
-          'YTUC' 712;
-        color: var(--ink);
-        background: #fdfbfe;
-      }
-
-      .hero.is-basics {
-        background:
-          linear-gradient(135deg, rgba(79, 22, 76, 0.12), transparent 60%),
-          linear-gradient(0deg, #ffffff, #fdf8fb);
-        border-bottom: 1px solid rgba(10, 10, 10, 0.08);
-      }
-
-      .tag.is-brand {
-        background: var(--brand);
-        color: #fff;
-      }
-
-      .button.is-brand {
-        background: var(--brand);
-        border-color: var(--brand);
-        color: #fff;
-      }
-
-      .button.is-brand:hover,
-      .button.is-brand:focus {
-        filter: brightness(0.95);
-      }
-
-      .button.is-soft {
-        background: #fff;
-        border-color: rgba(79, 22, 76, 0.35);
-        color: var(--brand);
-      }
-
-      .button.is-soft:hover,
-      .button.is-soft:focus {
-        border-color: var(--brand);
-        color: var(--brand);
-      }
-
-      .card {
-        box-shadow: 0 10px 22px rgba(10, 10, 10, 0.08);
-        border-radius: 16px;
-      }
-
-      .columns.is-multiline > .column > .card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .card .card-content {
-        flex: 1 1 auto;
-      }
-
-      .card.section-card {
-        border-left: 6px solid var(--brand);
-      }
-
-      .visual-box {
-        border: 1px dashed rgba(79, 22, 76, 0.35);
-        background: var(--brand-soft);
-        border-radius: 12px;
-        padding: 0.8rem;
-      }
-
-      .mini-page {
-        border: 1px solid rgba(47, 50, 64, 0.2);
-        border-radius: 12px;
-        overflow: hidden;
-        background: #fff;
-      }
-
-      .mini-row {
-        padding: 0.65rem 0.75rem;
-        border-top: 1px solid rgba(47, 50, 64, 0.15);
-      }
-
-      .mini-row:first-child {
-        border-top: 0;
-        background: rgba(79, 22, 76, 0.11);
-        font-weight: 700;
-      }
-
-      .mini-main-box {
-        margin-top: 0.55rem;
-        margin-left: 0.7rem;
-        border-left: 3px solid rgba(79, 22, 76, 0.35);
-        padding-left: 0.6rem;
-      }
-
-      .mini-nested-row {
-        border: 1px solid rgba(47, 50, 64, 0.2);
-        border-radius: 8px;
-        padding: 0.45rem 0.55rem;
-        background: #fff;
-        margin-top: 0.45rem;
-      }
-
-      .mini-sub-nested-row {
-        margin-top: 0.45rem;
-        margin-left: 0.6rem;
-        border-left: 2px solid rgba(79, 22, 76, 0.35);
-        padding-left: 0.5rem;
-      }
-
-      .mini-tag {
-        display: inline-block;
-        border: 1px solid rgba(47, 50, 64, 0.25);
-        border-radius: 999px;
-        background: #fff;
-        color: var(--muted);
-        padding: 0.1rem 0.5rem;
-        font-size: 0.74rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .margin-box {
-        background: rgba(79, 22, 76, 0.12);
-        border: 2px dashed rgba(79, 22, 76, 0.6);
-        border-radius: 10px;
-        padding: 0.8rem;
-      }
-
-      .padding-box {
-        margin-top: 0.5rem;
-        background: rgba(47, 122, 87, 0.14);
-        border: 2px dashed rgba(47, 122, 87, 0.72);
-        border-radius: 10px;
-        padding: 0.9rem;
-      }
-
-      .content-box {
-        margin-top: 0.5rem;
-        background: #fff;
-        border: 1px solid rgba(47, 50, 64, 0.2);
-        border-radius: 8px;
-        padding: 0.6rem;
-        font-weight: 600;
-      }
-
-      .demo-button {
-        border: 0;
-        border-radius: 10px;
-        padding: 0.5rem 0.9rem;
-        background: var(--brand);
-        color: #fff;
-        font-weight: 700;
-      }
-
-      .demo-callout {
-        border-left: 4px solid var(--brand);
-        background: rgba(79, 22, 76, 0.09);
-        border-radius: 8px;
-        padding: 0.65rem 0.75rem;
-      }
-
-      .prompt-tip {
-        border: 1px solid rgba(47, 122, 87, 0.35);
-        border-left: 4px solid #2f7a57;
-        background: rgba(47, 122, 87, 0.08);
-        border-radius: 8px;
-        padding: 0.7rem;
-      }
-
-      .bonus-tip-card {
-        border-left-color: rgba(79, 22, 76, 0.5) !important;
-        background: linear-gradient(
-          135deg,
-          rgba(79, 22, 76, 0.1),
-          rgba(79, 22, 76, 0.03) 45%,
-          #fff 100%
-        );
-      }
-
-      .bonus-tip-badge {
-        display: inline-block;
-        margin-bottom: 0.5rem;
-        padding: 0.2rem 0.6rem;
-        border-radius: 999px;
-        border: 1px dashed rgba(79, 22, 76, 0.4);
-        background: rgba(79, 22, 76, 0.09);
-        color: var(--brand);
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-      }
-
-      .spacing-equal {
-        align-items: stretch;
-      }
-
-      .spacing-equal > .column {
-        display: flex;
-        align-self: stretch;
-      }
-
-      .spacing-equal > .column > .visual-box,
-      .spacing-equal > .column > .card {
-        display: flex;
-        flex: 1 1 auto;
-        width: 100%;
-      }
-
-      .material-symbols-outlined {
-        font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 24;
-      }
-
-      .a11y-head {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-      }
-
-      .a11y-why {
-        margin: 0 0 0.5rem;
-        padding-left: 1.1rem;
-        list-style-type: disc;
-        list-style-position: outside;
-        color: var(--muted);
-        font-size: 0.82rem;
-      }
-
-      .muted {
-        color: var(--muted);
-      }
-
-      code {
-        background: #f3f2f6;
-        border-radius: 4px;
-        padding: 0.08rem 0.28rem;
-      }
-
-      kbd {
-        background: #f1f1f5;
-        border: 1px solid #d7d7e0;
-        border-bottom-width: 2px;
-        border-radius: 6px;
-        color: #212529;
-        padding: 0.08rem 0.35rem;
-      }
-
-      a:focus-visible,
-      .button:focus-visible {
-        outline: 3px solid #000;
-        outline-offset: 2px;
-      }
-
-      .footer-note {
-        border-top: 1px solid rgba(10, 10, 10, 0.08);
-      }
-
-      .footer-meta {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .footer-presenters {
-        margin-left: auto;
-        text-align: right;
-      }
-    </style>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/pages/index.css" />
+    <link rel="stylesheet" href="css/shared/styles.css" />
   </head>
   <body class="with-side-rail">
-    <a class="is-sr-only is-sr-only-focusable button is-brand m-3" href="#main"
-      >Skip to content</a
-    >
+    <a class="skip" href="#main">Skip to content</a>
 
     <aside class="side-rail" aria-label="Workshop pages">
       <nav class="side-rail-links">
         <a class="side-rail-link" href="index.html" aria-current="page">
-          <span class="icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1"
-              stroke-linecap="round"
-              stroke-linejoin="miter"
-            >
-              <polygon
-                points="20 8.5 20 22 4 22 4 8.5 12 2 20 8.5"
-                fill="#059cf7"
-                opacity="0.1"
-              ></polygon>
-              <polyline points="2 10 12 2 22 10"></polyline>
-              <polyline
-                points="4 8.5 4 22 20 22 20 8.5"
-                stroke-linecap="round"
-              ></polyline>
-            </svg>
-          </span>
-          <span class="label">Home</span>
-        </a>
-        <a class="side-rail-link" href="baseline.html">
           <span class="icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -511,752 +186,195 @@
           </span>
           <span class="label">Frankenstein</span>
         </a>
+        <a class="side-rail-link basics-link" href="basics.html">
+          <span class="icon" aria-hidden="true">
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >rocket</span
+            >
+          </span>
+          <span class="label">Quick<br />Reference</span>
+        </a>
       </nav>
     </aside>
 
-    <section class="hero is-basics">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered is-variable is-6">
-            <div class="column is-10-desktop">
-              <span class="tag is-brand is-rounded"
-                >Beginner Guide • AI Page Design Upgrade</span
-              >
-              <h1 class="title is-2 mt-3 mb-2">
-                Page Design Basics (No coding background needed)
-              </h1>
-              <p class="subtitle is-5 muted">
-                Use this as a cheat sheet when you ask AI to build or edit a
-                page. Learn a few key terms and visual patterns so your prompts
-                are clear.
-              </p>
-              <div class="buttons is-flex-wrap-wrap mt-4">
-                <a class="button is-soft is-rounded" href="#prompting"
-                  >How to ask AI</a
-                >
-                <a class="button is-soft is-rounded" href="#design-systems"
-                  >Design systems</a
-                >
-                <a class="button is-soft is-rounded" href="#elements"
-                  >UI elements</a
-                >
+    <header>
+      <div class="wrap">
+        <span class="badge">NCTIES • AI + DevTools + Design Systems</span>
+        <h1>Same page. Four styles.</h1>
+        <p class="lead">
+          This is the <strong>baseline</strong> version (no framework). In the
+          workshop, we’ll rebuild the exact same content using different design
+          systems to see how much polish you can get instantly — and how AI can
+          help you customize it.
+        </p>
 
-                <!-- <a class="button is-soft is-rounded" href="#structure"
-                  >Page structure</a
-                > -->
-                <a class="button is-soft is-rounded" href="#devtools"
-                  >DevTools</a
-                >
-                <a class="button is-soft is-rounded" href="#a11y"
-                  >Accessibility</a
-                >
-                <a class="button is-soft is-rounded" href="#spacing"
-                  >Padding vs margin</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="actions" aria-label="Primary actions">
+          <a class="btn primary" href="#prompt">Copy the Prompt</a>
+          <a class="btn" href="#devtools">DevTools Steps</a>
+          <a class="btn ghost" href="#systems">Design Systems</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <main id="main" class="section">
-      <div class="container">
-        <section id="prompting" class="mt-5" aria-labelledby="prompting-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="prompting-title" class="title is-4">
-                1) Prompt AI in plain language
-              </h2>
-              <p class="muted mb-3">
-                Clear intent beats technical jargon. You do not need \"developer
-                words\" to get good results.
-              </p>
-              <p class="mb-4">
-                A strong beginner prompt has 3 parts:
-                <strong>what to change</strong>,
-                <strong>where to change it</strong>, and
-                <strong>what to keep the same</strong>.
-              </p>
-              <div class="columns is-variable is-4">
-                <div class="column is-7-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Example prompt</h3>
-                      <pre
-                        style="
-                          white-space: pre-wrap;
-                          overflow: auto;
-                          padding: 12px;
-                          border-radius: 12px;
-                          background: #f7f7f7;
-                        "
-                      >
-In the resources section card, add more padding inside each card and more margin between sections.
-Keep the current colors and typography.
-Only edit the card and spacing styles.</pre
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-5-desktop">
-                  <div class="prompt-tip">
-                    <strong>Tip:</strong> Need an exact element name? Use the
-                    DevTools steps in section 6, then include that name in your
-                    prompt for more precise edits.
-                  </div>
-                </div>
-              </div>
-            </div>
+    <main id="main" class="wrap">
+      <div class="grid" role="list" aria-label="Workshop overview cards">
+        <section class="card span4" role="listitem" aria-labelledby="card-goal">
+          <h2 id="card-goal">Workshop Goal</h2>
+          <p>
+            Use AI to generate code, then use DevTools only to find element
+            names so AI can make targeted updates.
+          </p>
+          <div class="kpi">
+            <span class="pill">45 minutes</span>
+            <span class="pill">Beginner-friendly</span>
+            <span class="pill">Copy/paste ready</span>
           </div>
+        </section>
+
+        <section class="card span4" role="listitem" aria-labelledby="card-flow">
+          <h2 id="card-flow">Flow</h2>
+          <ul>
+            <li>Generate a simple page</li>
+            <li>Swap in a design system</li>
+            <li>Use DevTools to identify the element/class name</li>
+            <li>Publish in Google Sites/Canva</li>
+          </ul>
         </section>
 
         <section
-          id="design-systems"
-          class="mt-5"
-          aria-labelledby="systems-title"
+          class="card span4"
+          role="listitem"
+          aria-labelledby="card-tools"
         >
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="systems-title" class="title is-4">
-                2) Design systems (the simple version)
-              </h2>
-              <p class="muted mb-4">
-                A design system is a shortcut to a better-looking page. Instead
-                of styling everything from scratch, you use pre-built layout and
-                UI styles (buttons, cards, spacing) so your page looks polished
-                fast.
-              </p>
-
-              <div class="columns is-multiline is-variable is-4">
-                <div class="column is-12-mobile is-4-desktop">
-                  <a
-                    href="https://getbootstrap.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style="
-                      text-decoration: none;
-                      color: inherit;
-                      display: block;
-                    "
-                  >
-                    <div class="card">
-                      <div class="card-content">
-                        <p class="heading">Framework</p>
-                        <h3 class="title is-5">Bootstrap</h3>
-                        <p class="muted mb-0">
-                          Best when you want a polished, \"finished app\" look
-                          quickly.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-12-mobile is-4-desktop">
-                  <a
-                    href="https://bulma.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style="
-                      text-decoration: none;
-                      color: inherit;
-                      display: block;
-                    "
-                  >
-                    <div class="card">
-                      <div class="card-content">
-                        <p class="heading">Framework</p>
-                        <h3 class="title is-5">Bulma</h3>
-                        <p class="muted mb-0">
-                          Best when you want clean layout with easy-to-read
-                          class labels.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="column is-12-mobile is-4-desktop">
-                  <a
-                    href="https://picocss.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style="
-                      text-decoration: none;
-                      color: inherit;
-                      display: block;
-                    "
-                  >
-                    <div class="card">
-                      <div class="card-content">
-                        <p class="heading">Framework</p>
-                        <h3 class="title is-5">Pico</h3>
-                        <p class="muted mb-0">
-                          Best when you want simple, minimal code with great
-                          default text styling.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <article class="message is-light mt-3">
-                <div class="message-body">
-                  <strong>Why this helps with AI coding:</strong> AI already
-                  understands these design systems. You can ask it to \"build
-                  this with Bootstrap,\" or \"swap this page to Bulma/Pico,\"
-                  and it can restyle the same content much faster and more
-                  consistently.
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="elements" class="mt-5" aria-labelledby="elements-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="elements-title" class="title is-4">
-                3) Most-used UI elements
-              </h2>
-              <p class="muted mb-4">
-                Think of these as element names you can say directly in AI
-                prompts. Name the element, then say what to change.
-              </p>
-              <div class="columns is-multiline is-variable is-4">
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Button</h3>
-                      <button class="demo-button" type="button">
-                        Primary action
-                      </button>
-                      <p class="muted mt-2 mb-1">
-                        Use for actions (submit, open, start).
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Make the primary button larger and
-                        purple."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Card</h3>
-                      <div class="visual-box">
-                        <strong>Card title</strong>
-                        <p class="mb-0">Grouped content in one container.</p>
-                      </div>
-                      <p class="is-size-7 mt-2 mb-0">
-                        Prompt hint: "Add more padding inside each card."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Callout</h3>
-                      <div class="demo-callout">
-                        Important note: focus attention here.
-                      </div>
-                      <p class="muted mt-2 mb-1">
-                        Great for tips and reminders.
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Turn this note into a callout with a left
-                        border."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Link list</h3>
-                      <ul>
-                        <li><a href="#">Resource 1</a></li>
-                        <li><a href="#">Resource 2</a></li>
-                      </ul>
-                      <p class="muted mb-1">
-                        Use links for navigation (go to another page/section).
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Style the resource links with more
-                        spacing."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Icons</h3>
-                      <p class="is-size-4 mb-1">⬅︎ ▶︎ ⚙︎ ✉︎</p>
-                      <p class="muted mb-1">
-                        Small visuals that support labels.
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Add an icon before each section heading."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Navigation</h3>
-                      <p class="mb-1">
-                        Keep labels short: <code>Prompt</code>
-                        <code>DevTools</code> <code>Resources</code>
-                      </p>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Make the top navigation sticky and easier
-                        to read."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- <section id="structure" class="mt-5" aria-labelledby="structure-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="structure-title" class="title is-4">
-                5) Basic page structure
-              </h2>
-              <p class="muted mb-4">
-                Think of a page as a simple stack: <strong>header</strong>,
-                <strong>main</strong>, and <strong>footer</strong>. Inside
-                <code>main</code>, you usually have multiple
-                <code>section</code> blocks.
-              </p>
-
-              <div class="columns is-variable is-4 spacing-equal">
-                <div class="column is-6-desktop">
-                  <div class="visual-box">
-                    <div class="mini-page" aria-label="Simple page map">
-                      <div class="mini-row">
-                        <span class="mini-tag">header</span><br />
-                        Contains <code>h1</code> (main title) + top nav
-                      </div>
-                      <div class="mini-row">
-                        <span class="mini-tag">main</span><br />
-                        Parent container for page content
-                        <div class="mini-main-box">
-                          <div class="mini-nested-row">
-                            <span class="mini-tag">section</span><br />
-                            Child block inside <code>main</code>
-                            <div class="mini-sub-nested-row">
-                              <span class="mini-tag">h2</span><br />
-                              Section title inside <code>section</code>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mini-row" style="background: #faf9fc">
-                        <span class="mini-tag">footer</span><br />
-                        Bottom area (contact info, links)
-                      </div>
-                    </div>
-                    <p class="is-size-7 muted mt-2 mb-0">
-                      Nesting path example: <code>main > section > h2</code>
-                    </p>
-                  </div>
-
-                  <p class="is-size-7 muted mt-3 mb-0">
-                    DevTools steps are in the next section.
-                  </p>
-                </div>
-
-                <div class="column is-6-desktop">
-                  <div class="columns is-multiline is-variable is-3">
-                    <div class="column is-6">
-                      <div class="card">
-                        <div class="card-content p-4">
-                          <p class="heading">Heading</p>
-                          <p class="title is-6 mb-1">
-                            <code>h1</code> -> <code>h2</code> ->
-                            <code>h3</code>
-                          </p>
-                          <p class="muted is-size-7 mb-0">
-                            Title -> section title -> sub-section title
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column is-6">
-                      <div class="card">
-                        <div class="card-content p-4">
-                          <p class="heading">Page area</p>
-                          <p class="title is-6 mb-1">
-                            <code>header</code> / <code>main</code> /
-                            <code>footer</code>
-                          </p>
-                          <p class="muted is-size-7 mb-0">
-                            Top, content, bottom structure
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column is-6">
-                      <div class="card">
-                        <div class="card-content p-4">
-                          <p class="heading">Nesting</p>
-                          <p class="title is-6 mb-1">parent -> child</p>
-                          <p class="muted is-size-7 mb-0">
-                            Example: <code>main</code> contains
-                            <code>section</code>, and
-                            <code>section</code> contains <code>h2</code>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column is-6">
-                      <div class="card">
-                        <div class="card-content p-4">
-                          <p class="heading">Targeting hook</p>
-                          <p class="title is-6 mb-1">
-                            <code>class</code> / <code>id</code>
-                          </p>
-                          <p class="muted is-size-7 mb-0">
-                            Names AI can target exactly
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <article class="message is-light mt-4">
-                    <div class="message-header">
-                      <p>Vibe coder tip</p>
-                    </div>
-                    <div class="message-body">
-                      <p class="mb-2">Use simple location + action prompts:</p>
-                      <ul>
-                        <li>"Change the <code>h1</code> in the header."</li>
-                        <li>
-                          "Update the button with class <code>.cta</code>."
-                        </li>
-                        <li>
-                          "Make the second <code>section</code> in
-                          <code>main</code> two columns."
-                        </li>
-                      </ul>
-                      <p class="mb-0">
-                        If AI misses the target, include the parent + child path
-                        (example: <code>main > section > h2</code>).
-                      </p>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
-
-        <section id="devtools" class="mt-5" aria-labelledby="devtools-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="devtools-title" class="title is-4">
-                4) DevTools: 2 actions you need
-              </h2>
-              <p class="muted mb-4">
-                DevTools can do a lot, but we'll only do two tasks: find the
-                exact element, and preview different screen sizes.
-              </p>
-              <div class="columns is-multiline is-variable is-4">
-                <div class="column is-12-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <p class="heading">Open DevTools</p>
-                      <p class="mb-1">
-                        <strong>Mac:</strong> <kbd>Cmd</kbd> +
-                        <kbd>Option</kbd> + <kbd>I</kbd>
-                      </p>
-                      <p class="mb-0">
-                        <strong>Windows/PC:</strong> <kbd>Ctrl</kbd> +
-                        <kbd>Shift</kbd> + <kbd>I</kbd>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <p class="heading">Action 1</p>
-                      <h3 class="title is-6 mb-2">Select element</h3>
-                      <p class="muted mb-0">
-                        Click the pointer icon, then click the page part you
-                        want to edit. Use that name in your AI prompt.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-tablet is-4-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <p class="heading">Action 2</p>
-                      <h3 class="title is-6 mb-2">Toggle device toolbar</h3>
-                      <p class="muted mb-0">
-                        Check phone/tablet views to spot spacing and readability
-                        issues on smaller screens.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="a11y" class="mt-5" aria-labelledby="a11y-title">
-          <div class="card section-card">
-            <div class="card-content">
-              <h2 id="a11y-title" class="title is-4">
-                5) Quick accessibility checklist
-              </h2>
-              <p class="mb-2">
-                Accessibility means making your page easier for more people to
-                read, use, and navigate.
-              </p>
-              <p class="muted mb-4">
-                Treat this as a quick confidence check, not a full audit. If
-                something looks off, ask AI to fix that one item.
-              </p>
-              <div class="columns is-multiline is-variable is-3">
-                <div class="column is-12-tablet is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6 mb-2 a11y-head">
-                        <span
-                          class="material-symbols-outlined"
-                          aria-hidden="true"
-                          >check</span
-                        >
-                        <span
-                          >Use clear heading order: <code>h1</code>, then
-                          <code>h2</code>, then <code>h3</code>.</span
-                        >
-                      </h3>
-                      <ul class="a11y-why">
-                        <li>Improves readability for everyone.</li>
-                        <li>Helps AI and tools target edits accurately.</li>
-                      </ul>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Make sure the heading order is screen
-                        reader accessible."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-tablet is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6 mb-2 a11y-head">
-                        <span
-                          class="material-symbols-outlined"
-                          aria-hidden="true"
-                          >check</span
-                        >
-                        <span>Keep body text easy to read (about 16px).</span>
-                      </h3>
-                      <ul class="a11y-why">
-                        <li>Small text is harder to read on phones.</li>
-                        <li>
-                          Larger text reduces strain for low-vision users.
-                        </li>
-                      </ul>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Increase body text to around 16px and keep
-                        line spacing readable."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-tablet is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6 mb-2 a11y-head">
-                        <span
-                          class="material-symbols-outlined"
-                          aria-hidden="true"
-                          >check</span
-                        >
-                        <span
-                          >Make sure text stands out from the background.</span
-                        >
-                      </h3>
-                      <ul class="a11y-why">
-                        <li>Low contrast text looks faded.</li>
-                        <li>Better contrast improves quick readability.</li>
-                      </ul>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Improve text/background contrast in this
-                        section so content is easier to read."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-tablet is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6 mb-2 a11y-head">
-                        <span
-                          class="material-symbols-outlined"
-                          aria-hidden="true"
-                          >check</span
-                        >
-                        <span
-                          >Make links and buttons easy to spot and
-                          understand.</span
-                        >
-                      </h3>
-                      <ul class="a11y-why">
-                        <li>Users can quickly tell what is clickable.</li>
-                        <li>Clear labels reduce confusion.</li>
-                      </ul>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Make all links and buttons look clearly
-                        clickable and use clear labels."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-tablet is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6 mb-2 a11y-head">
-                        <span
-                          class="material-symbols-outlined"
-                          aria-hidden="true"
-                          >check</span
-                        >
-                        <span
-                          >Use simple motion: avoid busy animations and respect
-                          <code>prefers-reduced-motion</code>.</span
-                        >
-                      </h3>
-                      <ul class="a11y-why">
-                        <li>Heavy motion can distract or overwhelm users.</li>
-                        <li>Reduced-motion settings improve comfort.</li>
-                      </ul>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Reduce animation intensity and add
-                        prefers-reduced-motion support."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-12-tablet is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6 mb-2 a11y-head">
-                        <span
-                          class="material-symbols-outlined"
-                          aria-hidden="true"
-                          >check</span
-                        >
-                        <span
-                          >Press <kbd>Tab</kbd> and check that focus is
-                          visible.</span
-                        >
-                      </h3>
-                      <ul class="a11y-why">
-                        <li>Keyboard users need to track position.</li>
-                        <li>Visible focus prevents navigation mistakes.</li>
-                      </ul>
-                      <p class="is-size-7 mb-0">
-                        Prompt hint: "Improve focus styles so keyboard
-                        navigation is always easy to see."
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="spacing" class="mt-5" aria-labelledby="spacing-title">
-          <div class="card section-card bonus-tip-card">
-            <div class="card-content">
-              <span class="bonus-tip-badge">Bonus tip</span>
-              <h2 id="spacing-title" class="title is-4">
-                Padding vs Margin (easy rule)
-              </h2>
-              <p class="muted mb-3">
-                Use this simple rule: <strong>padding</strong> is space inside a
-                box, <strong>margin</strong> is space outside a box. Using the
-                right word in your AI prompt helps AI change the correct spacing
-                faster.
-              </p>
-              <div class="columns is-variable is-4">
-                <div class="column is-6-desktop">
-                  <div class="visual-box">
-                    <div class="margin-box">
-                      Margin (outside space)
-                      <div class="padding-box">
-                        Padding (inside space)
-                        <div class="content-box">
-                          Content (text, button, image)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-6-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Prompt wording you can copy</h3>
-                      <ul>
-                        <li>
-                          "Add more <strong>padding</strong> inside this card."
-                        </li>
-                        <li>
-                          "Add more <strong>margin-top</strong> between these
-                          sections."
-                        </li>
-                      </ul>
-                      <p class="mb-2">
-                        <strong>Quick choice:</strong> if content feels cramped,
-                        use padding. If sections feel too close together, use
-                        margin.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 id="card-tools">Tools</h2>
+          <ul>
+            <li>Colors: Coolors, Adobe Color</li>
+            <li>
+              Icons: Font Awesome, Icons8,
+              <a href="https://www.svgrepo.com/">SVG Repo</a>
+            </li>
+            <li>
+              Patterns:
+              <a
+                href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
+                >UI Design Patterns article</a
+              >
+              ,
+              <a
+                href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
+                >UXPin UI Elements article</a
+              >
+            </li>
+            <li>
+              Components: <a href="https://uiverse.io/elements">UIverse</a>
+            </li>
+            <li>
+              Design systems:
+              <a
+                href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                >Bootstrap docs</a
+              >, <a href="https://bulma.io/documentation/">Bulma docs</a>,
+              <a href="https://picocss.com/docs/">Pico CSS docs</a>
+            </li>
+            <li>
+              Typography: <a href="https://fonts.google.com/">Google Fonts</a>
+            </li>
+          </ul>
         </section>
       </div>
+
+      <div class="grid mt-16">
+        <section class="card" id="prompt" aria-labelledby="prompt-title">
+          <h2 id="prompt-title">Workshop Prompt (copy/paste)</h2>
+          <p class="lead lead-tight">
+            Use this to generate the first version. Then we’ll restyle it with a
+            design system.
+          </p>
+          <pre class="prompt-pre">
+Create a single-page workshop landing page for “AI Coding with DevTools + Design Systems.”
+Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links,
+and a “Try This Challenge” callout. Use semantic HTML and basic accessibility (headings, skip link, focus).
+Output a single index.html file.</pre
+          >
+        </section>
+
+        <!-- <section
+          class="card two"
+          id="devtools"
+          aria-labelledby="devtools-title"
+        >
+          <h2 id="devtools-title">DevTools (quick steps)</h2>
+          <p class="muted quick-note">
+            Mac: <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd><br />
+            PC: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
+          </p>
+          <p class="muted quick-note">
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >ink_selection</span
+            >
+            Select element: click this, then click a part of the page to find
+            its name/class.
+          </p>
+          <p class="muted quick-note">
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >devices</span
+            >
+            Toggle device toolbar: preview how the page looks on phone/tablet
+            widths.
+          </p>
+          <h3 class="small-heading">
+            Action 1: Find the element name for AI
+          </h3>
+          <ol class="compact-list compact-list-spaced">
+            <li>Open DevTools (shortcut above or Right-click → Inspect)</li>
+            <li>Use Select element, then click the part you want to change</li>
+            <li>Find the class/element name</li>
+            <li>Tell AI: “Edit only this class/element”</li>
+            <li>Replace in your file → refresh</li>
+          </ol>
+          <h3 class="small-heading">
+            Action 2: Check different screen sizes
+          </h3>
+          <ol class="compact-list">
+            <li>Click Toggle device toolbar</li>
+            <li>Switch between phone/tablet widths</li>
+            <li>Ask AI to adjust spacing or layout if anything looks off</li>
+          </ol>
+        </section> -->
+      </div>
+
+      <section class="card mt-16" id="systems" aria-labelledby="systems-title">
+        <h2 id="systems-title">Design Systems (what you’ll see today)</h2>
+        <ul>
+          <li>
+            <strong>Bootstrap</strong>: “App-like” UI with strong components and
+            layout utilities.
+          </li>
+          <li>
+            <strong>Bulma</strong>: Readable class names and a clean,
+            content-first layout.
+          </li>
+          <li>
+            <strong>Pico</strong>: Minimal classes with great default typography
+            and spacing.
+          </li>
+        </ul>
+        <p class="muted muted-top-gap">
+          This baseline page is intentionally plain so the differences pop on
+          the other versions.
+        </p>
+      </section>
     </main>
 
-    <footer class="footer-note">
-      <div class="container py-3 text-secondary footer-meta">
+    <footer>
+      <div class="wrap footer-wrap">
         <span>NCTIES 2026 • AI Page Design Upgrade</span>
-        <span class="footer-presenters">
-          <a
-            class="focus-ring"
-            href="mailto:jremington@ncmcs.org?subject=NCTIES%20Workshop"
-          >
-            Jocelyn Remington</a
+        <span>
+          <a href="mailto:jremington@ncmcs.org?subject=NCTIES%20Workshop"
+            >Jocelyn Remington</a
           >
           and
-          <a
-            class="focus-ring"
-            href="mailto:rday@ncmcs.org?subject=NCTIES%20Workshop"
+          <a href="mailto:rday@ncmcs.org?subject=NCTIES%20Workshop"
             >Rebekah Day</a
           >
         </span>

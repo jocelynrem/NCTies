@@ -12,97 +12,15 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <style>
-      :root {
-        --pico-primary: #1b5a9d;
-        --pico-primary-hover: #164a80;
-        --pico-border-radius: 1.1rem;
-      }
-      header.hero {
-        padding: 3rem 0 1.5rem;
-        background:
-          radial-gradient(
-            900px 400px at 20% 0%,
-            rgba(27, 90, 157, 0.18),
-            transparent 60%
-          ),
-          #f9fbff;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        margin-bottom: 1.75rem;
-      }
-      .grid3 {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      @media (min-width: 900px) {
-        .grid3 {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      .kicker {
-        font-size: 0.95rem;
-        opacity: 0.75;
-      }
-      .callout {
-        border-left: 6px solid var(--pico-primary);
-        padding-left: 1rem;
-      }
-      a:focus-visible,
-      button:focus-visible {
-        outline: 3px solid #000;
-        outline-offset: 2px;
-      }
-    </style>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/pages/pico.css" />
+    <link rel="stylesheet" href="css/shared/styles.css" />
   </head>
   <body class="with-side-rail">
-    <a
-      href="#main"
-      class="contrast"
-      style="
-        position: absolute;
-        left: -999px;
-        top: 0;
-        padding: 0.6rem 1rem;
-        border-radius: 999px;
-      "
-      onfocus="
-        this.style.left = '1rem';
-        this.style.top = '1rem';
-      "
-      onblur="this.style.left = '-999px'"
-    >
-      Skip to content
-    </a>
+    <a href="#main" class="contrast skip-link"> Skip to content </a>
 
     <aside class="side-rail" aria-label="Workshop pages">
       <nav class="side-rail-links">
         <a class="side-rail-link" href="index.html">
-          <span class="icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1"
-              stroke-linecap="round"
-              stroke-linejoin="miter"
-            >
-              <polygon
-                points="20 8.5 20 22 4 22 4 8.5 12 2 20 8.5"
-                fill="#059cf7"
-                opacity="0.1"
-              ></polygon>
-              <polyline points="2 10 12 2 22 10"></polyline>
-              <polyline
-                points="4 8.5 4 22 20 22 20 8.5"
-                stroke-linecap="round"
-              ></polyline>
-            </svg>
-          </span>
-          <span class="label">Home</span>
-        </a>
-        <a class="side-rail-link" href="baseline.html">
           <span class="icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -272,6 +190,14 @@
           </span>
           <span class="label">Frankenstein</span>
         </a>
+        <a class="side-rail-link basics-link" href="basics.html">
+          <span class="icon" aria-hidden="true">
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >rocket</span
+            >
+          </span>
+          <span class="label">Quick<br />Reference</span>
+        </a>
       </nav>
     </aside>
 
@@ -289,7 +215,7 @@
 
         <!-- <nav
           aria-label="Quick links"
-          style="display: flex; gap: 0.5rem; flex-wrap: wrap"
+          class="quick-links"
         >
           <a role="button" href="#prompt">Copy Prompt</a>
           <a role="button" class="secondary" href="#devtools">DevTools</a>
@@ -332,14 +258,7 @@
         <p class="kicker">
           Generate the first draft, then ask AI to convert it to Pico.
         </p>
-        <pre
-          style="
-            white-space: pre-wrap;
-            overflow: auto;
-            padding: 1rem 1.1rem;
-            border-radius: 12px;
-          "
-        >
+        <pre class="prompt-pre">
 Create a single-page workshop landing page for “AI Coding with DevTools + Design Systems” using the Pico CSS framework.
 Use the Pico v2 CDN and Pico-friendly semantic HTML for layout and styling (container/main/section/article, simple nav links, buttons, headings, and lists).
 Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links, and a “Try This Challenge” callout.
@@ -451,18 +370,7 @@ Output a single pico.html file.</pre
       </article> -->
     </main>
 
-    <footer
-      class="container"
-      style="
-        padding: 1.5rem 0;
-        opacity: 0.75;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: center;
-      "
-    >
+    <footer class="container footer-row">
       <span>NCTIES 2026 • AI Page Design Upgrade</span>
       <span>
         <a href="mailto:jremington@ncmcs.org?subject=NCTIES%20Workshop"

@@ -1,0 +1,204 @@
+      :root {
+        --bg: #ffffff;
+        --text: #121212;
+        --muted: #5b5b5b;
+        --border: #e6e6e6;
+        --card: #fafafa;
+        --brand: #1b5a9d;
+        --brand2: #4f164c;
+        --radius: 14px;
+        --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        --max: 1050px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      a {
+        color: var(--brand);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      .skip {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        background: #000;
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 999px;
+      }
+      .skip:focus {
+        left: 12px;
+        top: 12px;
+        z-index: 1000;
+      }
+      header {
+        border-bottom: 1px solid var(--border);
+        padding: 28px 0;
+        background: linear-gradient(90deg, #f7f9ff, #fff);
+      }
+      .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      h1 {
+        margin: 10px 0 6px;
+        font-size: 30px;
+      }
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        max-width: 70ch;
+      }
+      .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text);
+      }
+      .btn.primary {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+      }
+      .btn.ghost {
+        background: transparent;
+      }
+      main {
+        padding: 22px 0 38px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+      .card {
+        grid-column: span 12;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 16px;
+        box-shadow: var(--shadow);
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+      .kpi {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 10px 0 0;
+      }
+      .pill {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 8px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .two {
+        grid-column: span 12;
+      }
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 18px 0;
+        color: var(--muted);
+      }
+      @media (min-width: 900px) {
+        .card.span4 {
+          grid-column: span 4;
+        }
+        .two {
+          grid-column: span 6;
+        }
+      }
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.lead-tight {
+  margin-top: -4px;
+}
+
+.prompt-pre {
+  white-space: pre-wrap;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  overflow: auto;
+}
+
+.muted-top-gap {
+  margin: 10px 0 0;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.quick-note {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.small-heading {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.compact-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.compact-list-spaced {
+  margin-bottom: 10px;
+}

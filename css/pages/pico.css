@@ -1,0 +1,76 @@
+      :root {
+        --pico-primary: #1b5a9d;
+        --pico-primary-hover: #164a80;
+        --pico-border-radius: 1.1rem;
+      }
+      header.hero {
+        padding: 3rem 0 1.5rem;
+        background:
+          radial-gradient(
+            900px 400px at 20% 0%,
+            rgba(27, 90, 157, 0.18),
+            transparent 60%
+          ),
+          #f9fbff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        margin-bottom: 1.75rem;
+      }
+      .grid3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      @media (min-width: 900px) {
+        .grid3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .kicker {
+        font-size: 0.95rem;
+        opacity: 0.75;
+      }
+      .callout {
+        border-left: 6px solid var(--pico-primary);
+        padding-left: 1rem;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid #000;
+        outline-offset: 2px;
+      }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.quick-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.prompt-pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+}
+
+.footer-row {
+  padding: 1.5rem 0;
+  opacity: 0.75;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}

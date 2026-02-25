@@ -1,0 +1,39 @@
+      :root {
+        --brand: #4f164c;
+      }
+      .hero.is-workshop {
+        background:
+          linear-gradient(135deg, rgba(79, 22, 76, 0.12), transparent 60%),
+          linear-gradient(0deg, #ffffff, #fdf8fb);
+        border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+      }
+      .tag.is-brand {
+        background: var(--brand);
+        color: #fff;
+      }
+      .button.is-brand {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+      }
+      .button.is-brand:hover,
+      .button.is-brand:focus {
+        filter: brightness(0.95);
+      }
+      a:focus-visible,
+      .button:focus-visible {
+        outline: 3px solid #000;
+        outline-offset: 2px;
+      }
+      .card {
+        box-shadow: 0 10px 22px rgba(10, 10, 10, 0.08);
+        border-radius: 16px;
+      }
+
+.prompt-pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f7f7f7;
+}
