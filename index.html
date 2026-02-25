@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NCTIES Workshop: AI Coding + Design Systems (Baseline)</title>
+    <title>NCTIES Workshop: AI Coding + CSS Frameworks (Baseline)</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -199,19 +199,18 @@
 
     <header>
       <div class="wrap">
-        <span class="badge">NCTIES • AI + DevTools + Design Systems</span>
-        <h1>Same page. Four styles.</h1>
+        <span class="badge">NCTIES • AI + DevTools + CSS Frameworks</span>
+        <h1>Start simple, then level it up.</h1>
         <p class="lead">
-          This is the <strong>baseline</strong> version (no framework). In the
-          workshop, we’ll rebuild the exact same content using different design
-          systems to see how much polish you can get instantly — and how AI can
-          help you customize it.
+          This first page is intentionally plain. You will start with a basic
+          AI-generated page, then run the same content through Pico, Bootstrap,
+          and Bulma before remixing it in Frankenstein.
         </p>
 
         <div class="actions" aria-label="Primary actions">
           <a class="btn primary" href="#prompt">Copy the Prompt</a>
-          <a class="btn" href="#devtools">DevTools Steps</a>
-          <a class="btn ghost" href="#systems">Design Systems</a>
+          <a class="btn" href="#systems">Workshop Flow</a>
+          <a class="btn ghost" href="#card-tools">Tools</a>
         </div>
       </div>
     </header>
@@ -221,23 +220,25 @@
         <section class="card span4" role="listitem" aria-labelledby="card-goal">
           <h2 id="card-goal">Workshop Goal</h2>
           <p>
-            Use AI to generate code, then use DevTools only to find element
-            names so AI can make targeted updates.
+            Build one simple page with AI, then improve it in small steps. Learn
+            how CSS frameworks change the look without changing your core
+            content.
           </p>
           <div class="kpi">
             <span class="pill">45 minutes</span>
             <span class="pill">Beginner-friendly</span>
-            <span class="pill">Copy/paste ready</span>
+            <span class="pill">Keep it simple</span>
           </div>
         </section>
 
         <section class="card span4" role="listitem" aria-labelledby="card-flow">
-          <h2 id="card-flow">Flow</h2>
+          <h2 id="card-flow">Workshop Flow</h2>
           <ul>
-            <li>Generate a simple page</li>
-            <li>Swap in a design system</li>
-            <li>Use DevTools to identify the element/class name</li>
-            <li>Publish in Google Sites/Canva</li>
+            <li>Create a basic starter page with AI</li>
+            <li>Try the same page in Pico</li>
+            <li>Try the same page in Bootstrap</li>
+            <li>Try the same page in Bulma</li>
+            <li>Mix ideas and customize in Frankenstein</li>
           </ul>
         </section>
 
@@ -248,11 +249,10 @@
         >
           <h2 id="card-tools">Tools</h2>
           <ul>
-            <li>Colors: Coolors, Adobe Color</li>
-            <li>
-              Icons: Font Awesome, Icons8,
-              <a href="https://www.svgrepo.com/">SVG Repo</a>
-            </li>
+            <li>AI chat tool (ChatGPT, Copilot, Claude, etc.)</li>
+            <li>Browser + DevTools Inspect tool</li>
+            <li>Color tools: Coolors, Adobe Color</li>
+            <li>Icons: Font Awesome, <a href="https://www.svgrepo.com/">SVG Repo</a></li>
             <li>
               Patterns:
               <a
@@ -269,7 +269,7 @@
               Components: <a href="https://uiverse.io/elements">UIverse</a>
             </li>
             <li>
-              Design systems:
+              CSS frameworks:
               <a
                 href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
                 >Bootstrap docs</a
@@ -285,17 +285,30 @@
 
       <div class="grid mt-16">
         <section class="card" id="prompt" aria-labelledby="prompt-title">
-          <h2 id="prompt-title">Workshop Prompt (copy/paste)</h2>
+          <h2 id="prompt-title">Starter Prompt (copy/paste)</h2>
           <p class="lead lead-tight">
-            Use this to generate the first version. Then we’ll restyle it with a
-            design system.
+            Keep your first page quick and simple. You will improve it in later
+            workshop steps.
+          </p>
+          <p class="muted">
+            Copy the prompt below exactly, then run it in your AI tool.
           </p>
           <pre class="prompt-pre">
-Create a single-page workshop landing page for “AI Coding with DevTools + Design Systems.”
-Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links,
-and a “Try This Challenge” callout. Use semantic HTML and basic accessibility (headings, skip link, focus).
+Create a very simple one-page website for a school-friendly topic (such as a class pet fan page, reading challenge tracker, hobby club, or lunch menu highlights). Include a page title/header, a short intro paragraph, three content sections, one list of links/resources, and one button or call-to-action. Use plain semantic HTML with basic accessibility (headings in order and a skip link). Keep the design basic and clean with no advanced animations or complex layout.
 Output a single index.html file.</pre
           >
+        </section>
+        <section class="card" aria-labelledby="topic-title">
+          <h2 id="topic-title">Choose your own page idea (optional)</h2>
+          <p class="muted">
+            You can use your own idea instead of the sample topic.
+          </p>
+          <ul>
+            <li>Keep it to one page</li>
+            <li>Use only a few sections</li>
+            <li>Avoid advanced features for now</li>
+            <li>Focus on clear content and structure first</li>
+          </ul>
         </section>
 
         <!-- <section
@@ -344,24 +357,28 @@ Output a single index.html file.</pre
       </div>
 
       <section class="card mt-16" id="systems" aria-labelledby="systems-title">
-        <h2 id="systems-title">Design Systems (what you’ll see today)</h2>
+        <h2 id="systems-title">What happens next</h2>
         <ul>
           <li>
-            <strong>Bootstrap</strong>: “App-like” UI with strong components and
-            layout utilities.
+            <strong>Pico:</strong> minimal, clean defaults with very little class
+            setup.
           </li>
           <li>
-            <strong>Bulma</strong>: Readable class names and a clean,
-            content-first layout.
+            <strong>Bootstrap:</strong> strong components and utility classes for
+            polished layouts.
           </li>
           <li>
-            <strong>Pico</strong>: Minimal classes with great default typography
-            and spacing.
+            <strong>Bulma:</strong> readable class names and a content-first
+            structure.
+          </li>
+          <li>
+            <strong>Frankenstein:</strong> mix styles and personalize your final
+            version.
           </li>
         </ul>
         <p class="muted muted-top-gap">
-          This baseline page is intentionally plain so the differences pop on
-          the other versions.
+          You are not trying to perfect this page yet. Keep the starter version
+          basic so the framework differences are easy to notice.
         </p>
       </section>
     </main>

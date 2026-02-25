@@ -194,7 +194,9 @@
         </a>
         <a class="side-rail-link basics-link" href="basics.html">
           <span class="icon" aria-hidden="true">
-            <span class="material-symbols-outlined" aria-hidden="true">rocket</span>
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >rocket</span
+            >
           </span>
           <span class="label">Quick<br />Reference</span>
         </a>
@@ -210,21 +212,21 @@
                 >Bulma demo • readable class names</span
               >
               <h1 class="title is-2 mt-3 mb-2">
-                AI Coding with Design Systems
+                Your Baseline page, now styled with Bulma
               </h1>
               <p class="subtitle is-5 has-text-grey">
-                Bulma leans into a clean, content-first look. It’s a great
-                “teacher-friendly” system because the classes read like English.
+                Keep the same content from your Baseline page and convert the
+                styling to Bulma. This step focuses on readable class names and
+                clean layout structure.
               </p>
               <div class="buttons">
                 <a class="button is-brand is-rounded" href="#prompt"
+                  ><span class="material-symbols-outlined" aria-hidden="true"
+                    >content_copy</span
                   >Copy Prompt</a
                 >
-                <!-- <a class="button is-light is-rounded" href="#devtools"
-                  >DevTools Steps</a
-                > -->
-                <a class="button is-white is-rounded" href="#system"
-                  >Why Bulma</a
+                <a class="button is-link is-light is-rounded" href="#system"
+                  >What Happens Next</a
                 >
               </div>
             </div>
@@ -243,6 +245,12 @@
                   </ul>
                 </div>
               </article>
+              <div class="tags mt-3">
+                <span class="tag is-primary is-light">Columns</span>
+                <span class="tag is-link is-light">Cards</span>
+                <span class="tag is-info is-light">Messages</span>
+                <span class="tag is-success is-light">Readable classes</span>
+              </div>
             </div>
           </div>
         </div>
@@ -254,15 +262,18 @@
         <div
           class="columns is-multiline"
           role="list"
-          aria-label="Workshop feature cards"
+          aria-label="Bulma overview cards"
         >
           <section class="column is-12 is-4-desktop" role="listitem">
             <div class="card">
               <div class="card-content">
-                <p class="heading">Step 1</p>
-                <h2 class="title is-5">Prompting</h2>
+                <div class="tags mb-2">
+                  <span class="tag is-primary is-light">Layout</span>
+                </div>
+                <h2 class="title is-5">What changes in Bulma</h2>
                 <p class="has-text-grey">
-                  Have AI ask clarifying questions before generating code.
+                  Clean class-based layout, clear content hierarchy, and
+                  consistent component styling.
                 </p>
               </div>
             </div>
@@ -270,11 +281,13 @@
           <section class="column is-12 is-4-desktop" role="listitem">
             <div class="card">
               <div class="card-content">
-                <p class="heading">Step 2</p>
-                <h2 class="title is-5">Styling</h2>
+                <div class="tags mb-2">
+                  <span class="tag is-success is-light">Content-safe</span>
+                </div>
+                <h2 class="title is-5">What stays the same</h2>
                 <p class="has-text-grey">
-                  Rebuild the same page using Bulma sections, cards, and
-                  buttons.
+                  Keep the same content from your Baseline page: topic,
+                  sections, links, and overall meaning.
                 </p>
               </div>
             </div>
@@ -282,170 +295,112 @@
           <section class="column is-12 is-4-desktop" role="listitem">
             <div class="card">
               <div class="card-content">
-                <p class="heading">Step 3</p>
-                <h2 class="title is-5">Debugging</h2>
+                <div class="tags mb-2">
+                  <span class="tag is-info is-light">Quick tip</span>
+                </div>
+                <h2 class="title is-5">Bulma quick tip</h2>
                 <p class="has-text-grey">
-                  Use DevTools to find the exact element/class name for AI.
+                  Use Bulma components first, then add only a small amount of
+                  custom CSS for final polish.
                 </p>
               </div>
             </div>
           </section>
         </div>
 
-          <div
-            class="box"
-            id="prompt"
-            aria-labelledby="prompt-title"
-          >
+        <section class="box mt-4" id="prompt" aria-labelledby="prompt-title">
+          <h2 id="prompt-title" class="title is-5 section-title-line">
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >terminal</span
+            >
+            Bulma Update Prompt (copy/paste)
+          </h2>
+          <p class="has-text-grey">
+            Copy this prompt exactly to convert your Baseline page into a Bulma
+            version.
+          </p>
+          <article class="message is-link is-light mb-4">
+            <div class="message-body py-2">
+              Keep your content the same; we'll update the styling layer.
+            </div>
+          </article>
+          <pre class="prompt-pre">
+Take my current Baseline page and make a new version that uses Bulma styling.
+Keep the same topic and content (same sections, same links, same overall message).
 
-                <h2 id="prompt-title" class="title is-5">
-                  Workshop Prompt (copy/paste)
-                </h2>
-                <p class="has-text-grey">
-                  Generate the first version, then ask AI to convert it to
-                  Bulma.
-                </p>
-                <pre class="prompt-pre">
-Create a single-page workshop landing page for “AI Coding with DevTools + Design Systems” using the Bulma CSS framework.
-Use the Bulma 1.0 CDN and Bulma components/utilities for layout and styling (section, container, columns, card, buttons, tags/notifications).
-Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links, and a “Try This Challenge” callout.
-Use semantic HTML and basic accessibility (headings, skip link, keyboard focus styles).
+Make it look cleaner using Bulma-style layout, cards, buttons, and spacing.
+Do not add complicated layout changes or animations.
+Keep basic accessibility (headings in order, skip link, and visible keyboard focus).
+
+Please include whatever is needed in the HTML file so Bulma styling works when I open the page in a browser.
 Output a single bulma.html file.</pre
-                >
-
-  
-
-          <!-- <section
-            class="column is-5"
-            id="devtools"
-            aria-labelledby="devtools-title"
           >
-            <article class="message is-warning">
-              <div class="message-header">
-                <p id="devtools-title">DevTools Steps</p>
-              </div>
-              <div class="message-body content">
-                <p>
-                  <strong>Mac:</strong> <kbd>Cmd</kbd> + <kbd>Option</kbd> +
-                  <kbd>I</kbd><br />
-                  <strong>PC:</strong> <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
-                  <kbd>I</kbd>
-                </p>
-                <p>
-                  <span class="material-symbols-outlined" aria-hidden="true"
-                    >ink_selection</span
-                  >
-                  <strong>Select element:</strong> click this, then click a part
-                  of the page to find its name/class.
-                </p>
-                <p>
-                  <span class="material-symbols-outlined" aria-hidden="true"
-                    >devices</span
-                  >
-                  <strong>Toggle device toolbar:</strong> preview how the page
-                  looks on phone/tablet widths.
-                </p>
-                <h3 class="is-size-6 mb-1">
-                  Action 1: Find the element name for AI
-                </h3>
-                <ol>
-                  <li>
-                    Open DevTools (shortcut above or Right-click → Inspect)
-                  </li>
-                  <li>
-                    Click Select element, then click what you want to change
-                  </li>
-                  <li>
-                    Find the class or element name (example:
-                    <code>.button</code>)
-                  </li>
-                  <li>
-                    Ask AI: “Change only the <code>.button</code> section”
-                  </li>
-                  <li>Paste AI's update back into your file → refresh</li>
-                </ol>
-                <h3 class="is-size-6 mb-1">
-                  Action 2: Check different screen sizes
-                </h3>
-                <ol>
-                  <li>Click Toggle device toolbar</li>
-                  <li>Switch between phone/tablet widths</li>
-                  <li>
-                    Ask AI to adjust spacing or layout if anything looks off
-                  </li>
-                </ol>
-              </div>
-            </article>
-          </section> -->
-        </div>
+        </section>
 
-        <div class="box" id="system" aria-labelledby="system-title">
-          <h2 id="system-title" class="title is-5">Design System: Bulma</h2>
-          <div class="columns">
-            <div class="column">
+        <div class="columns is-variable is-4 mt-1">
+          <section
+            class="column is-12 is-6-desktop"
+            aria-labelledby="topic-title"
+          >
+            <div class="box is-fullheight-card">
+              <h2 id="topic-title" class="title is-5 section-title-line">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >edit_note</span
+                >
+                Choose your own page idea (optional)
+              </h2>
               <p class="has-text-grey">
-                Bulma is a CSS framework with
-                <strong>human-readable class names</strong> that feel
-                approachable. It’s great when teachers want a clean site without
-                lots of “extra UI.”
+                If you picked your own topic in your Baseline page, keep it
+                simple here too.
               </p>
               <ul>
-                <li>
-                  <strong>Best for:</strong> class hubs, resource pages, simple
-                  professional layouts
-                </li>
-                <li>
-                  <strong>AI-friendly:</strong> predictable components and
-                  straightforward markup
-                </li>
-                <li>
-                  <strong>Teacher takeaway:</strong> easier to read and tweak
-                  than many frameworks
-                </li>
+                <li>Keep the same one-page structure</li>
+                <li>Limit it to a few clear sections</li>
+                <li>Focus on readability over decoration</li>
+                <li>Save bigger customizations for Frankenstein</li>
               </ul>
             </div>
-            <div class="column">
-              <p class="mb-2"><strong>Workshop resources</strong></p>
-              <ul>
-                <li><a href="https://coolors.co/">Coolors</a></li>
-                <li><a href="https://color.adobe.com/">Adobe Color</a></li>
-                <li><a href="https://fontawesome.com/">Font Awesome</a></li>
-                <li><a href="https://uiverse.io/elements">UIverse</a></li>
-                <li><a href="https://www.svgrepo.com/">SVG Repo</a></li>
-                <li>
-                  <a
-                    href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
-                    >UI Design Patterns article</a
+          </section>
+
+          <section
+            class="column is-12 is-6-desktop"
+            id="system"
+            aria-labelledby="system-title"
+          >
+            <article class="message is-warning is-fullheight-card">
+              <div class="message-header">
+                <p id="system-title" class="section-title-line mb-0">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >alt_route</span
                   >
-                </li>
-                <li>
-                  <a
-                    href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
-                    >UXPin UI Elements article</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-                    >Bootstrap docs</a
-                  >
-                </li>
-                <li>
-                  <a href="https://bulma.io/documentation/">Bulma docs</a>
-                </li>
-                <li><a href="https://picocss.com/docs/">Pico CSS docs</a></li>
-                <li><a href="https://fonts.google.com/">Google Fonts</a></li>
-              </ul>
-            </div>
-          </div>
+                  What happens next
+                </p>
+              </div>
+              <div class="message-body">
+                <p class="has-text-grey">
+                  Bulma gives you a readable class-based middle ground between
+                  Pico and Bootstrap. Next you will combine your favorite ideas
+                  in Frankenstein.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Bulma takeaway:</strong> clean structure with
+                    easy-to-read class names
+                  </li>
+                  <li>
+                    <strong>Next step:</strong> mix Pico/Bootstrap/Bulma ideas
+                    in Frankenstein
+                  </li>
+                  <li>
+                    <strong>Final:</strong> personalize your page with your own
+                    style choices
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </section>
         </div>
-<!-- 
-        <div class="notification is-link is-light">
-          <strong>Try this challenge:</strong> Ask AI to switch this Bulma page
-          to a new two-color palette and add one icon to the hero. Then use
-          DevTools to find one class name and ask AI to edit only that class.
-        </div>
-      </div> -->
+      </div>
     </main>
 
     <footer class="footer">

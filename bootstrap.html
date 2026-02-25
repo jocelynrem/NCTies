@@ -10,6 +10,10 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
     <link rel="stylesheet" href="css/pages/bootstrap.css" />
@@ -40,10 +44,7 @@
               <a class="nav-link focus-ring" href="#prompt">Prompt</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link focus-ring" href="#challenge">Challenge</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link focus-ring" href="#system">Design system</a>
+              <a class="nav-link focus-ring" href="#system">Framework</a>
             </li>
           </ul>
         </div>
@@ -242,38 +243,39 @@
         <div class="row align-items-center g-4">
           <div class="col-12 col-lg-7">
             <span class="badge badge-soft rounded-pill px-3 py-2"
+              ><i class="bi bi-bootstrap-fill me-1" aria-hidden="true"></i
               >Bootstrap demo • component-driven</span
             >
             <h1 class="display-5 fw-semibold mt-3 mb-2">
-              Design systems make AI output look intentional.
+              Your Baseline page, now styled with Bootstrap
             </h1>
             <p class="lead text-secondary mb-4">
-              Same content as the other pages — but Bootstrap leans into strong
-              components (navbar, badges, cards) so teachers get a “finished
-              app” vibe fast.
+              Keep the same content from your Baseline page and convert the
+              styling to Bootstrap. This step highlights stronger components and
+              utility classes.
             </p>
             <div class="d-flex gap-2 flex-wrap">
               <a
-                class="btn btn-brand text-white rounded-pill px-4 focus-ring"
+                class="btn btn-primary rounded-pill px-4 focus-ring"
                 href="#prompt"
-                >Copy Prompt</a
+                ><i class="bi bi-clipboard-check me-2" aria-hidden="true"></i>Copy
+                Prompt</a
               >
-              <!-- <a
-                class="btn btn-outline-secondary rounded-pill px-4 focus-ring"
-                href="#devtools"
-                >DevTools Steps</a
-              > -->
               <a
-                class="btn btn-light rounded-pill px-4 focus-ring"
-                href="#resources"
-                >Resource Links</a
+                class="btn btn-outline-primary rounded-pill px-4 focus-ring"
+                href="#system"
+                ><i class="bi bi-arrow-right-circle me-2" aria-hidden="true"></i
+                >What Happens Next</a
               >
             </div>
           </div>
           <div class="col-12 col-lg-5">
             <div class="card shadow-sm">
               <div class="card-body">
-                <h2 class="h5 mb-2">Why Bootstrap pops</h2>
+                <h2 class="h5 mb-2">
+                  <i class="bi bi-stars me-2" aria-hidden="true"></i>Why
+                  Bootstrap pops
+                </h2>
                 <ul class="mb-0 text-secondary">
                   <li>Instant layout grid</li>
                   <li>Consistent buttons/forms/cards</li>
@@ -288,14 +290,18 @@
     </header>
 
     <main id="main" class="container py-4">
-      <div class="row g-3" role="list" aria-label="Workshop feature cards">
+      <div class="row g-3" role="list" aria-label="Bootstrap overview cards">
         <section class="col-12 col-lg-4" role="listitem">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <span class="badge text-bg-primary rounded-pill mb-2">1</span>
-              <h2 class="h5">Prompting</h2>
+              <span class="badge text-bg-primary-subtle text-primary-emphasis mb-2"
+                ><i class="bi bi-grid-3x3-gap me-1" aria-hidden="true"></i
+                >Component-first</span
+              >
+              <h2 class="h5">What changes in Bootstrap</h2>
               <p class="text-secondary mb-0">
-                Get AI to ask you questions first, then generate cleaner code.
+                Strong components, consistent spacing utilities, and a
+                structured layout grid.
               </p>
             </div>
           </div>
@@ -303,11 +309,14 @@
         <section class="col-12 col-lg-4" role="listitem">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <span class="badge text-bg-success rounded-pill mb-2">2</span>
-              <h2 class="h5">Styling</h2>
+              <span class="badge text-bg-success-subtle text-success-emphasis mb-2"
+                ><i class="bi bi-bookmark-check me-1" aria-hidden="true"></i
+                >Content-safe</span
+              >
+              <h2 class="h5">What stays the same</h2>
               <p class="text-secondary mb-0">
-                Swap the same page into Bootstrap and apply your palette +
-                icons.
+                Keep the same content from your Baseline page: topic, sections,
+                links, and overall meaning.
               </p>
             </div>
           </div>
@@ -315,222 +324,112 @@
         <section class="col-12 col-lg-4" role="listitem">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <span class="badge text-bg-dark rounded-pill mb-2">3</span>
-              <h2 class="h5">Debugging</h2>
+              <span class="badge text-bg-info-subtle text-info-emphasis mb-2"
+                ><i class="bi bi-lightbulb me-1" aria-hidden="true"></i>Quick
+                tip</span
+              >
+              <h2 class="h5">Bootstrap quick tip</h2>
               <p class="text-secondary mb-0">
-                Use DevTools to find the element/class name so AI edits the
-                right part.
+                Let Bootstrap handle layout with containers/rows/cols before
+                adding extra custom CSS.
               </p>
             </div>
           </div>
         </section>
       </div>
 
-      <div class="row g-3 mt-1">
-        <section
-          class="col-12 col-lg-7"
-          id="prompt"
-          aria-labelledby="prompt-title"
-        >
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h2 id="prompt-title" class="h5">Workshop Prompt (copy/paste)</h2>
-              <p class="text-secondary">
-                Use this to generate your first version before swapping
-                frameworks.
-              </p>
-              <pre class="p-3 rounded bg-light border prompt-pre">
-Create a single-page workshop landing page for “AI Coding with DevTools + Design Systems” using the Bootstrap 5 framework.
-Use the Bootstrap 5.3 CDN and Bootstrap components/utilities for layout and styling (container, row/col grid, navbar, cards, buttons, badges, spacing classes).
-Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links, and a “Try This Challenge” callout.
-Use semantic HTML and basic accessibility (headings, skip link, keyboard focus styles).
-Output a single bootstrap.html file.</pre
-              >
-            </div>
+      <section class="mt-3" aria-labelledby="callout-title">
+        <div class="alert alert-info d-flex align-items-start gap-2 mb-0" role="note">
+          <i class="bi bi-info-circle-fill mt-1" aria-hidden="true"></i>
+          <div>
+            <h2 id="callout-title" class="h6 mb-1">Bootstrap Callout Example</h2>
+            <p class="mb-0">
+              This uses Bootstrap’s built-in <code>alert</code> component for a
+              quick callout pattern.
+            </p>
           </div>
-        </section>
-        <section
-          class="col-12 col-lg-5"
-          id="system"
-          aria-labelledby="system-title"
-        >
+        </div>
+      </section>
+
+      <section class="mt-3" id="prompt" aria-labelledby="prompt-title">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 id="prompt-title" class="h5">
+              <i class="bi bi-code-square me-2" aria-hidden="true"></i>Bootstrap
+              Update Prompt (copy/paste)
+            </h2>
+            <p class="text-secondary">
+              Copy this prompt exactly to convert your Baseline page into a
+              Bootstrap version.
+            </p>
+            <pre class="p-3 rounded bg-light border prompt-pre">
+Take my current Baseline page and make a new version that uses Bootstrap styling.
+Keep the same topic and content (same sections, same links, same overall message).
+
+Make it look more polished using Bootstrap-style layout, cards, buttons, and spacing.
+Do not add complicated layout changes or animations.
+Keep basic accessibility (headings in order, skip link, and visible keyboard focus).
+
+Please include whatever is needed in the HTML file so Bootstrap styling works when I open the page in a browser.
+Output a single bootstrap.html file.</pre
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="row g-3 mt-1">
+        <section class="col-12 col-lg-6" aria-labelledby="topic-title">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <h2 id="system-title" class="h5">Design System: Bootstrap</h2>
+              <h2 id="topic-title" class="h5">
+                <i class="bi bi-pencil-square me-2" aria-hidden="true"></i>Choose
+                your own page idea (optional)
+              </h2>
               <p class="text-secondary">
-                Bootstrap shines when you want a
-                <strong>“finished UI”</strong> quickly: navbars, cards, buttons,
-                spacing utilities, and responsive layout.
+                If you picked your own topic in your Baseline page, keep it simple
+                here too.
               </p>
               <ul class="text-secondary mb-0">
-                <li>
-                  <strong>Best for:</strong> quick professional layouts,
-                  dashboards, school “hub” pages
-                </li>
-                <li>
-                  <strong>AI-friendly:</strong> predictable classes + tons of
-                  examples in docs
-                </li>
-                <li>
-                  <strong>Teacher takeaway:</strong> less design guessing — more
-                  consistent structure
-                </li>
+                <li>Keep the same one-page structure</li>
+                <li>Limit it to a few clear sections</li>
+                <li>Focus on readability over decoration</li>
+                <li>Save bigger customizations for Frankenstein</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <!-- <section
-          class="col-12 col-lg-5"
-          id="devtools"
-          aria-labelledby="devtools-title"
-        >
-          <div class="card shadow-sm h-100 callout">
+        <section class="col-12 col-lg-6" id="system" aria-labelledby="system-title">
+          <div class="card shadow-sm h-100">
             <div class="card-body">
-              <h2 id="devtools-title" class="h5">DevTools Steps</h2>
-              <p class="text-secondary small mb-2">
-                Mac: <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd><br />
-                PC: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
+              <h2 id="system-title" class="h5">
+                <i class="bi bi-signpost-split me-2" aria-hidden="true"></i>What
+                happens next
+              </h2>
+              <p class="text-secondary">
+                Bootstrap shows what a component-heavy framework feels like. Next
+                you will compare this same page in Bulma, then combine ideas in
+                Frankenstein.
               </p>
-              <div class="mb-2">
-                <p
-                  class="mb-1 d-flex align-items-center gap-2 text-secondary small"
-                >
-                  <span class="material-symbols-outlined" aria-hidden="true"
-                    >ink_selection</span
-                  >
-                  <span
-                    >Select element: click this, then click a part of the page
-                    to find its name/class.</span
-                  >
-                </p>
-                <p
-                  class="mb-0 d-flex align-items-center gap-2 text-secondary small"
-                >
-                  <span class="material-symbols-outlined" aria-hidden="true"
-                    >devices</span
-                  >
-                  <span
-                    >Toggle device toolbar: preview how the page looks on
-                    phone/tablet widths.</span
-                  >
-                </p>
-              </div>
-              <h3 class="h6 mb-1">Action 1: Find the element name for AI</h3>
-              <ol class="mb-3">
-                <li>Open DevTools (shortcut above or Right-click → Inspect)</li>
+              <ul class="text-secondary mb-0">
                 <li>
-                  Click Select element, then click what you want to change
+                  <strong>Bootstrap takeaway:</strong> polished structure with
+                  predictable components
                 </li>
                 <li>
-                  Find the class or element name (example:
-                  <code>.card-body</code>)
+                  <strong>Next step:</strong> rebuild this same page in Bulma for a
+                  cleaner class-based style
                 </li>
                 <li>
-                  Tell AI: “Change only the <code>.card-body</code> section”
+                  <strong>Final:</strong> combine ideas in Frankenstein and
+                  personalize your own vibe
                 </li>
-                <li>Paste AI’s update into your file → refresh</li>
-              </ol>
-              <h3 class="h6 mb-1">Action 2: Check different screen sizes</h3>
-              <ol class="mb-2">
-                <li>Click Toggle device toolbar</li>
-                <li>Switch between phone/tablet widths</li>
-                <li>
-                  Ask AI to adjust spacing or layout if anything looks off
-                </li>
-              </ol>
+              </ul>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
 
-      <section
-        class="card shadow-sm mt-3"
-        id="resources"
-        aria-labelledby="resources-title"
-      >
-        <div class="card-body">
-          <h2 id="resources-title" class="h5">Resource Links</h2>
-          <div class="row g-2">
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://coolors.co/"
-                >Coolors (palettes)</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://color.adobe.com/"
-                >Adobe Color</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://fontawesome.com/"
-                >Font Awesome</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://uiverse.io/elements"
-                >UIverse components</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://www.svgrepo.com/"
-                >SVG Repo icons</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a
-                class="focus-ring"
-                href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
-                >UI Design Patterns article</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a
-                class="focus-ring"
-                href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
-                >UXPin UI Elements article</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a
-                class="focus-ring"
-                href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-                >Bootstrap docs</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://bulma.io/documentation/"
-                >Bulma docs</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://picocss.com/docs/"
-                >Pico CSS docs</a
-              >
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <a class="focus-ring" href="https://fonts.google.com/"
-                >Google Fonts</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="card shadow-sm mt-3 callout"
-        id="challenge"
-        aria-labelledby="challenge-title"
-      >
-        <div class="card-body">
-          <h2 id="challenge-title" class="h5">Try This Challenge</h2>
-          <p class="mb-0">
-            Ask AI to change the primary button color, add one icon to the hero
-            heading, and slightly round the cards. Then use DevTools to find one
-            Bootstrap class and ask AI to edit only that class.
-          </p>
-        </div>
-      </section>
     </main>
 
     <footer class="border-top">

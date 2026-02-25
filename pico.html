@@ -204,13 +204,14 @@
     <header class="hero">
       <main class="container">
         <p class="kicker">
-          <strong>Pico demo</strong> • minimal classes • strong typography
+          <strong>Pico step</strong> • same content, cleaner default style
         </p>
-        <h1>AI Coding with Design Systems</h1>
+        <h1>Your Baseline page, now styled with Pico</h1>
         <p>
-          Pico is the “it looks good by default” option. Minimal class clutter,
-          great spacing, and a clean reading experience — ideal for
-          resource-heavy teacher pages.
+          In this step, keep the same page content from your
+          <strong>Baseline</strong> page
+          and ask AI to restyle it with Pico. This helps you see how a design
+          system changes the look without rebuilding your whole page.
         </p>
 
         <!-- <nav
@@ -225,27 +226,28 @@
     </header>
 
     <main id="main" class="container">
-      <section aria-label="Workshop highlights">
+      <section aria-label="Pico overview cards">
         <div class="grid3" role="list">
           <article role="listitem">
-            <h2>Prompting</h2>
+            <h2>What changes in Pico</h2>
             <p>
-              Use AI like a collaborator: ask it to interview you before it
-              writes code.
+              Better default spacing, cleaner typography, and consistent element
+              styling with fewer classes.
             </p>
           </article>
           <article role="listitem">
-            <h2>Styling</h2>
-            <p>
-              Swap in a design system so your page looks consistent without
-              “designing.”
-            </p>
+              <h2>What stays the same</h2>
+              <p>
+              Your topic, sections, links, and core content from the
+              <strong>Baseline</strong> page should remain the same.
+              </p>
           </article>
           <article role="listitem">
-            <h2>Debugging</h2>
+            <h2>Pico quick tip</h2>
             <p>
-              Use DevTools to find element/class names so AI changes the right
-              part.
+              Pico works best with semantic HTML (<code>main</code>,
+              <code>section</code>, <code>article</code>) and minimal utility
+              classes.
             </p>
           </article>
         </div>
@@ -253,111 +255,69 @@
 
       <hr />
 
+      <section aria-labelledby="callout-title">
+        <h2 id="callout-title">Pico Callout Example</h2>
+        <blockquote>
+          This uses Pico's built-in blockquote styling as a lightweight callout
+          pattern for important notes.
+        </blockquote>
+      </section>
+
       <section id="prompt" aria-labelledby="prompt-title">
-        <h2 id="prompt-title">Workshop Prompt (copy/paste)</h2>
+        <h2 id="prompt-title">Pico Update Prompt (copy/paste)</h2>
         <p class="kicker">
-          Generate the first draft, then ask AI to convert it to Pico.
+          Copy this prompt exactly to convert your starter page into a Pico
+          version.
         </p>
         <pre class="prompt-pre">
-Create a single-page workshop landing page for “AI Coding with DevTools + Design Systems” using the Pico CSS framework.
-Use the Pico v2 CDN and Pico-friendly semantic HTML for layout and styling (container/main/section/article, simple nav links, buttons, headings, and lists).
-Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links, and a “Try This Challenge” callout.
-Use semantic HTML and basic accessibility (headings, skip link, keyboard focus styles).
+Take my current Baseline page and make a new version that uses Pico CSS styling.
+Keep the same topic and content (same sections, same links, same overall message).
+
+Make it look cleaner and easier to read by improving spacing, text styling, and button styles.
+Do not add complicated layout changes or animations.
+Keep basic accessibility (headings in order, skip link, and visible keyboard focus).
+
+Please include whatever is needed in the HTML file so Pico styling works when I open the page in a browser.
 Output a single pico.html file.</pre
         >
       </section>
-      <!-- 
-      <section id="devtools" class="callout" aria-labelledby="devtools-title">
-        <h2 id="devtools-title">DevTools Steps</h2>
-        <p class="kicker">
-          Mac: <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd><br />
-          PC: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
-        </p>
-        <p class="kicker">
-          <span class="material-symbols-outlined" aria-hidden="true"
-            >ink_selection</span
-          >
-          Select element: click this, then click a part of the page to find its
-          name/class.
-        </p>
-        <p class="kicker">
-          <span class="material-symbols-outlined" aria-hidden="true"
-            >devices</span
-          >
-          Toggle device toolbar: preview how the page looks on phone/tablet
-          widths.
-        </p>
-        <h3>Action 1: Find the element name for AI</h3>
-        <ol>
-          <li>Open DevTools (shortcut above or Right-click → Inspect)</li>
-          <li>Select element, then click the part you want to change</li>
-          <li>
-            Find its name/class (example: <code>article</code> or
-            <code>.callout</code>)
-          </li>
-          <li>Ask AI: “Change only this part: <code>.callout</code>”</li>
-          <li>Paste AI's update into your file → refresh</li>
-        </ol>
-        <h3>Action 2: Check different screen sizes</h3>
-        <ol>
-          <li>Click Toggle device toolbar</li>
-          <li>Switch between phone/tablet widths</li>
-          <li>Ask AI to adjust spacing or layout if anything looks off</li>
-        </ol>
-      </section> -->
 
-      <section id="system" aria-labelledby="system-title">
-        <h2 id="system-title">Design System: Pico</h2>
-        <p>
-          Pico is a minimal CSS framework that emphasizes
-          <strong>typography + spacing</strong>. It’s great when your page is
-          mostly text and links.
-        </p>
+        <section aria-labelledby="topic-title">
+          <h2 id="topic-title">Choose your own page idea (optional)</h2>
+          <p class="kicker">
+          If you picked your own topic in your <strong>Baseline</strong> page, keep it
+          simple here too.
+          </p>
         <ul>
-          <li>
-            <strong>Best for:</strong> unit hubs, resource collections, parent
-            info pages
-          </li>
-          <li>
-            <strong>AI-friendly:</strong> less class noise → easier for
-            beginners to edit
-          </li>
-          <li>
-            <strong>Teacher takeaway:</strong> “clean and readable” with almost
-            no setup
-          </li>
+          <li>Keep the same one-page structure</li>
+          <li>Limit it to a few clear sections</li>
+          <li>Focus on readability over decoration</li>
+          <li>Save bigger customizations for Frankenstein</li>
         </ul>
       </section>
 
-      <section aria-labelledby="resources-title">
-        <h2 id="resources-title">Resource links</h2>
+      <section id="system" aria-labelledby="system-title">
+        <h2 id="system-title">What happens next</h2>
+        <p>
+          Pico shows how far you can get with minimal class setup and strong
+          defaults. Next, you will compare this same page in other frameworks.
+        </p>
         <ul>
-          <li><a href="https://coolors.co/">Coolors (palettes)</a></li>
-          <li><a href="https://color.adobe.com/">Adobe Color</a></li>
-          <li><a href="https://fontawesome.com/">Font Awesome</a></li>
-          <li><a href="https://uiverse.io/elements">UIverse components</a></li>
-          <li><a href="https://www.svgrepo.com/">SVG Repo icons</a></li>
           <li>
-            <a
-              href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
-              >UI Design Patterns article</a
-            >
+            <strong>Pico takeaway:</strong> readable spacing and typography with
+            less class clutter
           </li>
           <li>
-            <a
-              href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
-              >UXPin UI Elements article</a
-            >
+            <strong>Next step:</strong> rebuild this same page in Bootstrap for
+            a more component-heavy style
           </li>
           <li>
-            <a
-              href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-              >Bootstrap docs</a
-            >
+            <strong>Then:</strong> try Bulma for a clean class-based layout
           </li>
-          <li><a href="https://bulma.io/documentation/">Bulma docs</a></li>
-          <li><a href="https://picocss.com/docs/">Pico CSS docs</a></li>
-          <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+          <li>
+            <strong>Final:</strong> combine ideas in Frankenstein and personalize
+            your own vibe
+          </li>
         </ul>
       </section>
 
