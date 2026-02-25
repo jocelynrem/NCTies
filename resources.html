@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..700"
+    />
     <link rel="stylesheet" href="css/pages/resources.css" />
     <link rel="stylesheet" href="css/shared/styles.css" />
   </head>
@@ -231,67 +235,115 @@
       </nav>
     </aside>
 
-    <header>
-      <div class="wrap">
-        <span class="badge">NCTIES • Resource Toolkit</span>
-        <h1>Tools you'll use in Frankenstein</h1>
-        <p class="lead">
-          Before your final remix page, here are the resource sites used in this
-          workshop. Use them to choose colors, icons, and UI patterns.
-        </p>
+    <section class="hero is-basics">
+      <div class="hero-body">
+        <div class="container">
+          <span class="tag is-brand is-rounded"
+            >NCTIES • Quick Remix Toolkit</span
+          >
+          <h1 class="title is-2 mt-3 mb-2">Resource Challenges</h1>
+          <p class="subtitle is-5 muted">
+            Use these quick challenges to choose a color theme, icon style, and
+            UI pattern before you build your Frankenstein page.
+          </p>
+          <div class="kpi hero-pills">
+            <span class="pill">3 quick challenges</span>
+            <span class="pill">Beginner-friendly</span>
+            <span class="pill">Create Frankenstein</span>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
+    <div class="hero-main-gap" aria-hidden="true"></div>
 
     <main id="main" class="wrap">
-      <div class="grid" role="list" aria-label="Resource groups">
-        <section class="card span4" role="listitem" aria-labelledby="res-colors">
-          <h2 id="res-colors">Color Tools</h2>
+      <div class="grid mt-16" role="list" aria-label="Resource challenges">
+        <section
+          class="card span4 challenge-card challenge-colors"
+          role="listitem"
+          aria-labelledby="challenge-colors"
+        >
+          <h2 id="challenge-colors">Challenge 1: Pick a color theme</h2>
+          <p class="muted">
+            Open <a href="https://coolors.co/">Coolors</a> and choose one
+            palette you like.
+          </p>
           <ul>
-            <li><a href="https://coolors.co/">Coolors</a> for quick palettes</li>
-            <li><a href="https://color.adobe.com/">Adobe Color</a> for harmony and contrast</li>
+            <li>Choose 4-5 colors</li>
+            <li>Save the hex codes</li>
+            <li>Mark one background color and one accent color</li>
           </ul>
         </section>
 
-        <section class="card span4" role="listitem" aria-labelledby="res-icons">
-          <h2 id="res-icons">Icon Libraries</h2>
+        <section
+          class="card span4 challenge-card challenge-icons"
+          role="listitem"
+          aria-labelledby="challenge-icons"
+        >
+          <h2 id="challenge-icons">Challenge 2: Choose an icon library</h2>
+          <p class="muted">
+            Browse <a href="https://fontawesome.com/">Font Awesome</a> and pick
+            a simple icon style for your page.
+          </p>
           <ul>
-            <li><a href="https://fontawesome.com/">Font Awesome</a></li>
-            <li><a href="https://www.svgrepo.com/">SVG Repo</a></li>
+            <li>Pick 3-5 icons that fit your topic</li>
+            <li>Use one icon for buttons or links</li>
+            <li>Keep icon style consistent across the page</li>
           </ul>
         </section>
 
-        <section class="card span4" role="listitem" aria-labelledby="res-ui">
-          <h2 id="res-ui">UI Inspiration</h2>
+        <section
+          class="card span4 challenge-card challenge-ui"
+          role="listitem"
+          aria-labelledby="challenge-ui"
+        >
+          <h2 id="challenge-ui">Challenge 3: Choose one UI pattern</h2>
+          <p class="muted">
+            Look through <a href="https://uiverse.io/elements">UIverse</a> and
+            pick one card/component idea you want to adapt.
+          </p>
           <ul>
-            <li><a href="https://uiverse.io/elements">UIverse</a> components</li>
-            <li>
-              <a
-                href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
-                >UI pattern ideas</a
-              >
-            </li>
+            <li>Pick only one pattern to start</li>
+            <li>Choose a beginner-friendly option</li>
+            <li>Match it to your chosen colors and icons</li>
           </ul>
         </section>
       </div>
 
-      <section class="card mt-16" aria-labelledby="prompt-title">
-        <h2 id="prompt-title">Copy/Paste Prompt for Resource Prep</h2>
-        <p class="muted">Use this before building your Frankenstein page.</p>
-        <pre class="prompt-pre">Help me choose a simple style kit for my one-page site.
+      <section class="card mt-16 section-card" aria-labelledby="prompt-title">
+        <h2 id="prompt-title">
+          Copy/Paste Prompt (customize your favorite page)
+        </h2>
+        <p class="muted">
+          Pick your favorite framework page first (Pico, Bootstrap, or Bulma),
+          then copy this prompt.
+        </p>
+        <pre class="prompt-pre">
+Use my [Pico OR Bootstrap OR Bulma] page as the starting point for customization.
+Keep the same page topic and the same core sections/content.
 
-1) Give me 2 color palette options (5 colors each) with hex codes.
-2) Suggest 6 icon ideas that match my topic.
-3) Suggest 3 UI patterns I can add (example: callout box, card grid, sticky nav).
-4) Keep suggestions beginner-friendly and quick to implement.
+Apply these updates:
+1) Use this color palette: [paste 4-5 hex colors from Coolors]
+2) Use icons from Font Awesome for at least:
+   - one section heading
+   - one button or call-to-action
+   - one list item or card
+3) Add one UI pattern inspired by UIverse (for example: a feature card style, callout panel, or button style)
 
-My page topic is: [replace with your topic]</pre>
+Constraints:
+- Keep it beginner-friendly and readable
+- Do not add complex animations
+- Keep accessibility basics (clear heading order, keyboard focus visible, good text contrast)
+
+Output a single updated HTML file called frankenstein.html</pre
+        >
       </section>
 
       <section class="card mt-16" aria-labelledby="next-title">
         <h2 id="next-title">Next Step</h2>
         <p class="muted">
-          Open <a href="frankenstein.html">Frankenstein</a> and combine the best
-          ideas from Pico, Bootstrap, and Bulma using these resources.
+          Open <a href="frankenstein.html">Frankenstein</a> and build your remix
+          using the framework, palette, icons, and UI pattern you chose here.
         </p>
       </section>
     </main>
