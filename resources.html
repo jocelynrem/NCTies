@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NCTIES Workshop: AI Coding + CSS Frameworks (Baseline)</title>
+    <title>NCTIES Workshop: Resource Toolkit</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <link rel="stylesheet" href="css/pages/index.css" />
+    <link rel="stylesheet" href="css/pages/resources.css" />
     <link rel="stylesheet" href="css/shared/styles.css" />
   </head>
   <body class="with-side-rail">
@@ -16,7 +16,7 @@
 
     <aside class="side-rail" aria-label="Workshop pages">
       <nav class="side-rail-links">
-        <a class="side-rail-link" href="index.html" aria-current="page">
+        <a class="side-rail-link" href="index.html">
           <span class="icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -152,7 +152,7 @@
           </span>
           <span class="label">Bulma</span>
         </a>
-        <a class="side-rail-link" href="resources.html">
+        <a class="side-rail-link" href="resources.html" aria-current="page">
           <span class="icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -233,191 +233,65 @@
 
     <header>
       <div class="wrap">
-        <span class="badge">NCTIES • AI + DevTools + CSS Frameworks</span>
-        <h1>Start simple, then level it up.</h1>
+        <span class="badge">NCTIES • Resource Toolkit</span>
+        <h1>Tools you'll use in Frankenstein</h1>
         <p class="lead">
-          This first page is intentionally plain. You will start with a basic
-          AI-generated page, then run the same content through Pico, Bootstrap,
-          and Bulma, gather ideas in Resources, then remix it in Frankenstein.
+          Before your final remix page, here are the resource sites used in this
+          workshop. Use them to choose colors, icons, and UI patterns.
         </p>
-
-        <div class="actions" aria-label="Primary actions">
-          <a class="btn primary" href="#prompt">Copy the Prompt</a>
-          <a class="btn" href="#systems">Workshop Flow</a>
-          <a class="btn ghost" href="#card-tools">Tools</a>
-        </div>
       </div>
     </header>
 
     <main id="main" class="wrap">
-      <div class="grid" role="list" aria-label="Workshop overview cards">
-        <section class="card span4" role="listitem" aria-labelledby="card-goal">
-          <h2 id="card-goal">Workshop Goal</h2>
-          <p>
-            Build one simple page with AI, then improve it in small steps. Learn
-            how CSS frameworks change the look without changing your core
-            content.
-          </p>
-          <div class="kpi">
-            <span class="pill">45 minutes</span>
-            <span class="pill">Beginner-friendly</span>
-            <span class="pill">Keep it simple</span>
-          </div>
-        </section>
-
-        <section class="card span4" role="listitem" aria-labelledby="card-flow">
-          <h2 id="card-flow">Workshop Flow</h2>
+      <div class="grid" role="list" aria-label="Resource groups">
+        <section class="card span4" role="listitem" aria-labelledby="res-colors">
+          <h2 id="res-colors">Color Tools</h2>
           <ul>
-            <li>Create a basic starter page with AI</li>
-            <li>Try the same page in Pico</li>
-            <li>Try the same page in Bootstrap</li>
-            <li>Try the same page in Bulma</li>
-            <li>Collect colors/icons/UI ideas in Resources</li>
-            <li>Mix ideas and customize in Frankenstein</li>
+            <li><a href="https://coolors.co/">Coolors</a> for quick palettes</li>
+            <li><a href="https://color.adobe.com/">Adobe Color</a> for harmony and contrast</li>
           </ul>
         </section>
 
-        <section
-          class="card span4"
-          role="listitem"
-          aria-labelledby="card-tools"
-        >
-          <h2 id="card-tools">Tools</h2>
+        <section class="card span4" role="listitem" aria-labelledby="res-icons">
+          <h2 id="res-icons">Icon Libraries</h2>
           <ul>
-            <li>AI chat tool (ChatGPT, Copilot, Claude, etc.)</li>
-            <li>Browser + DevTools Inspect tool</li>
-            <li>Color tools: Coolors, Adobe Color</li>
-            <li>Icons: Font Awesome, <a href="https://www.svgrepo.com/">SVG Repo</a></li>
+            <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+            <li><a href="https://www.svgrepo.com/">SVG Repo</a></li>
+          </ul>
+        </section>
+
+        <section class="card span4" role="listitem" aria-labelledby="res-ui">
+          <h2 id="res-ui">UI Inspiration</h2>
+          <ul>
+            <li><a href="https://uiverse.io/elements">UIverse</a> components</li>
             <li>
-              Patterns:
               <a
                 href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
-                >UI Design Patterns article</a
+                >UI pattern ideas</a
               >
-              ,
-              <a
-                href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
-                >UXPin UI Elements article</a
-              >
-            </li>
-            <li>
-              Components: <a href="https://uiverse.io/elements">UIverse</a>
-            </li>
-            <li>
-              CSS frameworks:
-              <a
-                href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-                >Bootstrap docs</a
-              >, <a href="https://bulma.io/documentation/">Bulma docs</a>,
-              <a href="https://picocss.com/docs/">Pico CSS docs</a>
-            </li>
-            <li>
-              Typography: <a href="https://fonts.google.com/">Google Fonts</a>
             </li>
           </ul>
         </section>
       </div>
 
-      <div class="grid mt-16">
-        <section class="card" id="prompt" aria-labelledby="prompt-title">
-          <h2 id="prompt-title">Starter Prompt (copy/paste)</h2>
-          <p class="lead lead-tight">
-            Keep your first page quick and simple. You will improve it in later
-            workshop steps.
-          </p>
-          <p class="muted">
-            Copy the prompt below exactly, then run it in your AI tool.
-          </p>
-          <pre class="prompt-pre">
-Create a very simple one-page website for a school-friendly topic (such as a class pet fan page, reading challenge tracker, hobby club, or lunch menu highlights). Include a page title/header, a short intro paragraph, three content sections, one list of links/resources, and one button or call-to-action. Use plain semantic HTML with basic accessibility (headings in order and a skip link). Keep the design basic and clean with no advanced animations or complex layout.
-Output a single index.html file.</pre
-          >
-        </section>
-        <section class="card" aria-labelledby="topic-title">
-          <h2 id="topic-title">Choose your own page idea (optional)</h2>
-          <p class="muted">
-            You can use your own idea instead of the sample topic.
-          </p>
-          <ul>
-            <li>Keep it to one page</li>
-            <li>Use only a few sections</li>
-            <li>Avoid advanced features for now</li>
-            <li>Focus on clear content and structure first</li>
-          </ul>
-        </section>
+      <section class="card mt-16" aria-labelledby="prompt-title">
+        <h2 id="prompt-title">Copy/Paste Prompt for Resource Prep</h2>
+        <p class="muted">Use this before building your Frankenstein page.</p>
+        <pre class="prompt-pre">Help me choose a simple style kit for my one-page site.
 
-        <!-- <section
-          class="card two"
-          id="devtools"
-          aria-labelledby="devtools-title"
-        >
-          <h2 id="devtools-title">DevTools (quick steps)</h2>
-          <p class="muted quick-note">
-            Mac: <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd><br />
-            PC: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
-          </p>
-          <p class="muted quick-note">
-            <span class="material-symbols-outlined" aria-hidden="true"
-              >ink_selection</span
-            >
-            Select element: click this, then click a part of the page to find
-            its name/class.
-          </p>
-          <p class="muted quick-note">
-            <span class="material-symbols-outlined" aria-hidden="true"
-              >devices</span
-            >
-            Toggle device toolbar: preview how the page looks on phone/tablet
-            widths.
-          </p>
-          <h3 class="small-heading">
-            Action 1: Find the element name for AI
-          </h3>
-          <ol class="compact-list compact-list-spaced">
-            <li>Open DevTools (shortcut above or Right-click → Inspect)</li>
-            <li>Use Select element, then click the part you want to change</li>
-            <li>Find the class/element name</li>
-            <li>Tell AI: “Edit only this class/element”</li>
-            <li>Replace in your file → refresh</li>
-          </ol>
-          <h3 class="small-heading">
-            Action 2: Check different screen sizes
-          </h3>
-          <ol class="compact-list">
-            <li>Click Toggle device toolbar</li>
-            <li>Switch between phone/tablet widths</li>
-            <li>Ask AI to adjust spacing or layout if anything looks off</li>
-          </ol>
-        </section> -->
-      </div>
+1) Give me 2 color palette options (5 colors each) with hex codes.
+2) Suggest 6 icon ideas that match my topic.
+3) Suggest 3 UI patterns I can add (example: callout box, card grid, sticky nav).
+4) Keep suggestions beginner-friendly and quick to implement.
 
-      <section class="card mt-16" id="systems" aria-labelledby="systems-title">
-        <h2 id="systems-title">What happens next</h2>
-        <ul>
-          <li>
-            <strong>Pico:</strong> minimal, clean defaults with very little class
-            setup.
-          </li>
-          <li>
-            <strong>Bootstrap:</strong> strong components and utility classes for
-            polished layouts.
-          </li>
-          <li>
-            <strong>Bulma:</strong> readable class names and a content-first
-            structure.
-          </li>
-          <li>
-            <strong>Resources:</strong> gather palette, icon, and UI pattern
-            ideas for your final remix.
-          </li>
-          <li>
-            <strong>Frankenstein:</strong> combine your framework favorite plus
-            resource picks into your final version.
-          </li>
-        </ul>
-        <p class="muted muted-top-gap">
-          You are not trying to perfect this page yet. Keep the starter version
-          basic so the framework differences are easy to notice.
+My page topic is: [replace with your topic]</pre>
+      </section>
+
+      <section class="card mt-16" aria-labelledby="next-title">
+        <h2 id="next-title">Next Step</h2>
+        <p class="muted">
+          Open <a href="frankenstein.html">Frankenstein</a> and combine the best
+          ideas from Pico, Bootstrap, and Bulma using these resources.
         </p>
       </section>
     </main>
