@@ -67,26 +67,22 @@
 
           <div class="ms-lg-3 mt-3 mt-lg-0">
             <label class="switch" aria-label="Toggle dark mode">
-              <input
-                id="themeToggle"
-                type="checkbox"
-                role="switch"
-                aria-label="Toggle dark mode"
-              />
+              <input checked="true" id="checkbox" type="checkbox" />
               <span class="slider">
-                <span class="star star_1"></span>
-                <span class="star star_2"></span>
-                <span class="star star_3"></span>
+                <div class="star star_1"></div>
+                <div class="star star_2"></div>
+                <div class="star star_3"></div>
                 <svg
-                  class="cloud"
-                  viewBox="0 0 64 24"
+                  viewBox="0 0 16 16"
+                  class="cloud_1 cloud"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M18 19h30a8 8 0 0 0 0-16c-1 0-2 .2-2.9.6A10 10 0 0 0 26 7a7 7 0 0 0-8 12z"
-                    fill="#ffffff"
-                  />
+                    transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+                    fill="#fff"
+                    d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+                  ></path>
                 </svg>
               </span>
             </label>
@@ -1205,7 +1201,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       (function () {
-        const toggle = document.getElementById('themeToggle');
+        const toggle = document.getElementById('checkbox');
         if (!toggle) return;
 
         const STORAGE_KEY = 'ncties_theme';
@@ -1217,7 +1213,6 @@
           const isDark = mode === 'dark';
           document.body.classList.toggle('theme-dark', isDark);
           toggle.checked = isDark;
-          toggle.setAttribute('aria-checked', String(isDark));
           localStorage.setItem(STORAGE_KEY, mode);
         }
 
