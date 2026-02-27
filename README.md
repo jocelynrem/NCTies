@@ -4,18 +4,18 @@
 
 - HTML pages live at the project root:
   - `index.html`
-  - `basics.html`
   - `pico.html`
   - `bootstrap.html`
   - `bulma.html`
+  - `resources.html`
   - `frankenstein.html`
 - Workshop flow order:
   - `index.html` (Baseline start)
   - `pico.html`
   - `bootstrap.html`
   - `bulma.html`
+  - `resources.html`
   - `frankenstein.html` (capstone/challenges)
-  - `basics.html` (quick reference)
 - CSS is split by purpose:
   - `css/pages/` for page-specific styles
   - `css/shared/` for shared styles used by all pages
@@ -26,10 +26,10 @@
   - `css/shared/styles.css`
 - Page stylesheets (one per page):
   - `css/pages/index.css`
-  - `css/pages/basics.css`
   - `css/pages/pico.css`
   - `css/pages/bootstrap.css`
   - `css/pages/bulma.css`
+  - `css/pages/resources.css`
   - `css/pages/frankenstein.css`
 
 ## How To Add A New Page

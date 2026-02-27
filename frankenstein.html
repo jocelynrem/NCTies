@@ -50,13 +50,10 @@
               <a class="nav-link focus-ring" href="#cards">Cards</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link focus-ring" href="#prompt">Prompt</a>
+              <a class="nav-link focus-ring" href="#reference">Reference</a>
             </li>
             <li class="nav-item">
               <a class="nav-link focus-ring" href="#devtools">DevTools</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link focus-ring" href="#challenge">Challenge</a>
             </li>
             <li class="nav-item">
               <a class="nav-link focus-ring" href="#resources">Resources</a>
@@ -295,14 +292,6 @@
           </span>
           <span class="label">Frankenstein</span>
         </a>
-        <a class="side-rail-link focus-ring basics-link" href="basics.html">
-          <span class="icon" aria-hidden="true">
-            <span class="material-symbols-outlined" aria-hidden="true"
-              >rocket</span
-            >
-          </span>
-          <span class="label">Quick<br />Reference</span>
-        </a>
       </nav>
     </aside>
 
@@ -341,7 +330,7 @@
               </a>
               <a
                 class="hero-link-btn hero-link-prompt focus-ring"
-                href="#prompt"
+                href="#reference"
               >
                 <svg
                   class="hero-link-icon"
@@ -350,7 +339,7 @@
                 >
                   <path d="M5 12h12M13 6l6 6-6 6" />
                 </svg>
-                Copy the prompt
+                Open reference guides
               </a>
               <a
                 class="hero-link-btn hero-link-tools focus-ring"
@@ -421,9 +410,9 @@
         <div
           class="row g-4 justify-content-center"
           role="list"
-          aria-label="Workshop feature cards"
+          aria-label="Workshop takeaway cards"
         >
-          <!-- Prompting -->
+          <!-- Takeaway 1 -->
           <div
             class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
             role="listitem"
@@ -446,21 +435,21 @@
                 </svg>
               </div>
 
-              <h3 class="card-title" id="prompting-title">Prompting</h3>
+              <h3 class="card-title" id="prompting-title">Clear prompts win</h3>
               <div class="chip-row" aria-label="Key skills">
-                <span class="chip">Prompt</span>
-                <span class="chip">Structure</span>
+                <span class="chip">Takeaway 1</span>
+                <span class="chip">Clarity</span>
               </div>
               <p class="card-subtitle">
-                Let AI ask questions first so you get code that matches your
-                audience, tone, and layout goals.
+                Be specific about what to change, where to change it, and what
+                should stay the same.
               </p>
 
               <div class="card-divider" aria-hidden="true"></div>
 
               <div class="card-footer">
-                <span class="card-meta">Outcome: better first draft</span>
-                <a class="card-btn" href="#prompt"
+                <span class="card-meta">Outcome: fewer rewrites</span>
+                <a class="card-btn" href="#reference"
                   >Jump
                   <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h12M13 6l6 6-6 6" />
@@ -470,7 +459,7 @@
             </article>
           </div>
 
-          <!-- Styling -->
+          <!-- Takeaway 2 -->
           <div
             class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
             role="listitem"
@@ -493,21 +482,23 @@
                 </svg>
               </div>
 
-              <h3 class="card-title" id="styling-title">Styling</h3>
+              <h3 class="card-title" id="styling-title">
+                Small visual tweaks matter
+              </h3>
               <div class="chip-row" aria-label="Key skills">
-                <span class="chip">CSS</span>
-                <span class="chip">Palette</span>
+                <span class="chip">Takeaway 2</span>
+                <span class="chip">Polish</span>
               </div>
               <p class="card-subtitle">
-                Apply a palette, spacing, and type rules so the page looks
-                intentional — not “AI default.”
+                Fonts, spacing, and color contrast quickly turn a plain page
+                into something readable and intentional.
               </p>
 
               <div class="card-divider" aria-hidden="true"></div>
 
               <div class="card-footer">
-                <span class="card-meta">Outcome: cohesive look</span>
-                <a class="card-btn" href="#resources"
+                <span class="card-meta">Outcome: cleaner design</span>
+                <a class="card-btn" href="#reference-ui"
                   >Jump
                   <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h12M13 6l6 6-6 6" />
@@ -517,7 +508,7 @@
             </article>
           </div>
 
-          <!-- Debugging -->
+          <!-- Takeaway 3 -->
           <div
             class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
             role="listitem"
@@ -540,20 +531,22 @@
                 </svg>
               </div>
 
-              <h3 class="card-title" id="debugging-title">Debugging</h3>
+              <h3 class="card-title" id="debugging-title">
+                Target edits with DevTools
+              </h3>
               <div class="chip-row" aria-label="Key skills">
-                <span class="chip">Inspect</span>
-                <span class="chip">Class name</span>
+                <span class="chip">Takeaway 3</span>
+                <span class="chip">Precision</span>
               </div>
               <p class="card-subtitle">
-                Use DevTools to find the exact element or class name, then ask
-                AI to change only that part.
+                Find the exact part of the page first, then ask AI to edit only
+                that one part.
               </p>
 
               <div class="card-divider" aria-hidden="true"></div>
 
               <div class="card-footer">
-                <span class="card-meta">Outcome: targeted fixes</span>
+                <span class="card-meta">Outcome: predictable edits</span>
                 <a class="card-btn" href="#devtools"
                   >Jump
                   <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
@@ -566,33 +559,124 @@
         </div>
       </section>
 
-      <!-- PROMPT -->
-      <section id="prompt" class="mt-5">
+      <!-- REFERENCE -->
+      <section id="reference" class="mt-5">
+        <div class="card shadow-sm border-0 card-border-p3">
+          <div class="card-body">
+            <h2 class="h5 a11y-title">Reference Guides: Prompting + Frameworks</h2>
+            <p class="text-secondary mb-3">
+              Use these quick reminders when you prompt Gemini. Keep requests
+              specific and beginner-friendly.
+            </p>
+            <div class="row g-3">
+              <article class="col-12 col-lg-6">
+                <div class="challenge-item h-100">
+                  <h3 class="h6 mb-2">How to ask AI</h3>
+                  <p class="small mb-2">
+                    Good prompts include three parts:
+                    <strong>what to change</strong>, <strong>where</strong>, and
+                    <strong>what to keep the same</strong>.
+                  </p>
+                  <p class="small mb-0">
+                    Example: "In the resources card, add more padding and keep
+                    the current colors."
+                  </p>
+                </div>
+              </article>
+              <article class="col-12 col-lg-6">
+                <div class="challenge-item h-100">
+                  <h3 class="h6 mb-2">Framework quick guide</h3>
+                  <ul class="small mb-0">
+                    <li><strong>Bootstrap:</strong> polished app-like look</li>
+                    <li><strong>Bulma:</strong> clean, readable class names</li>
+                    <li><strong>Pico:</strong> simple styling with less setup</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reference-ui" class="mt-4">
         <div class="card shadow-sm border-0 card-border-p1">
           <div class="card-body">
-            <div class="prompt-simple">
-              <h2 class="h5 a11y-title">Prompt you can copy/paste</h2>
-              <p class="text-secondary mb-3">
-                Generate the first version of your page, then refine it with
-                DevTools + AI.
-              </p>
-              <button
-                class="btn btn-outline-primary btn-sm mb-2"
-                type="button"
-                data-copy-target="frankenstein-prompt-text"
-                aria-label="Copy Frankenstein prompt"
-              >
-                Copy Prompt
-              </button>
-              <pre
-                class="p-3 rounded bg-light border prompt-pre"
-                id="frankenstein-prompt-text"
-              >
-Create a single-page workshop landing page for “AI Coding with DevTools + CSS Frameworks.”
-Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links,
-and a “Try This Challenge” callout. Keep accessibility simple: use headings in order, include a skip link, and make sure tabbing clearly shows which link or button is selected.
-Output a single index.html file.</pre
-              >
+            <h2 class="h5 a11y-title">Reference Guides: Common UI Elements</h2>
+            <p class="text-secondary mb-3">
+              These are common UI pieces you can name directly in prompts.
+            </p>
+            <div class="row g-3">
+              <article class="col-12 col-md-6 col-lg-3">
+                <div class="challenge-item h-100">
+                  <svg
+                    class="w-100 rounded border bg-light mb-2"
+                    viewBox="0 0 220 90"
+                    role="img"
+                    aria-label="Button example"
+                  >
+                    <rect x="45" y="28" width="130" height="34" rx="16" fill="#d66853" />
+                    <text x="110" y="50" text-anchor="middle" font-size="12" fill="#ffffff">
+                      Start Here
+                    </text>
+                  </svg>
+                  <h3 class="h6 mb-1">Button</h3>
+                  <p class="small mb-0">Use for actions like Start, Submit, or Save.</p>
+                </div>
+              </article>
+              <article class="col-12 col-md-6 col-lg-3">
+                <div class="challenge-item h-100">
+                  <svg
+                    class="w-100 rounded border bg-light mb-2"
+                    viewBox="0 0 220 90"
+                    role="img"
+                    aria-label="Card example"
+                  >
+                    <rect x="30" y="15" width="160" height="60" rx="10" fill="#ffffff" stroke="#c8ced8" />
+                    <rect x="45" y="28" width="90" height="8" rx="4" fill="#53687e" />
+                    <rect x="45" y="42" width="130" height="6" rx="3" fill="#a6b2c2" />
+                    <rect x="45" y="54" width="110" height="6" rx="3" fill="#a6b2c2" />
+                  </svg>
+                  <h3 class="h6 mb-1">Card</h3>
+                  <p class="small mb-0">Use to group related content into one block.</p>
+                </div>
+              </article>
+              <article class="col-12 col-md-6 col-lg-3">
+                <div class="challenge-item h-100">
+                  <svg
+                    class="w-100 rounded border bg-light mb-2"
+                    viewBox="0 0 220 90"
+                    role="img"
+                    aria-label="Callout example"
+                  >
+                    <rect x="24" y="18" width="172" height="54" rx="8" fill="#fff7e8" stroke="#efd8a4" />
+                    <rect x="24" y="18" width="8" height="54" rx="4" fill="#d66853" />
+                    <circle cx="46" cy="36" r="6" fill="#d66853" />
+                    <rect x="58" y="33" width="92" height="6" rx="3" fill="#6b4e71" />
+                    <rect x="58" y="45" width="112" height="6" rx="3" fill="#9b8ea6" />
+                  </svg>
+                  <h3 class="h6 mb-1">Callout</h3>
+                  <p class="small mb-0">Use to highlight an important note or warning.</p>
+                </div>
+              </article>
+              <article class="col-12 col-md-6 col-lg-3">
+                <div class="challenge-item h-100">
+                  <svg
+                    class="w-100 rounded border bg-light mb-2"
+                    viewBox="0 0 220 90"
+                    role="img"
+                    aria-label="Navigation links example"
+                  >
+                    <rect x="18" y="18" width="184" height="54" rx="10" fill="#ffffff" stroke="#c8ced8" />
+                    <rect x="32" y="30" width="36" height="8" rx="4" fill="#6b4e71" />
+                    <rect x="80" y="30" width="42" height="8" rx="4" fill="#53687e" />
+                    <rect x="134" y="30" width="52" height="8" rx="4" fill="#53687e" />
+                    <rect x="32" y="46" width="78" height="6" rx="3" fill="#a6b2c2" />
+                    <rect x="32" y="56" width="66" height="6" rx="3" fill="#a6b2c2" />
+                  </svg>
+                  <h3 class="h6 mb-1">Navigation links</h3>
+                  <p class="small mb-0">Use short labels so users can scan quickly.</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -666,101 +750,70 @@ Output a single index.html file.</pre
         </div>
       </section>
 
-      <!-- CHALLENGE -->
-      <section id="challenge" class="mt-5">
-        <div class="card shadow-sm border-0 card-border-challenge">
-          <div class="card-body">
-            <h2 class="h5 a11y-title">Workshop Challenges</h2>
-            <p class="text-secondary mb-3">
-              Practice the same skills you used across the workshop: targeted
-              DevTools edits, visual polish, and accessibility checks.
-            </p>
-            <div class="row g-3 challenge-grid">
-              <article class="col-12 col-lg-4">
-                <div class="challenge-item">
-                  <h3 class="h6 mb-2">1) DevTools Targeting</h3>
-                  <ol class="mb-0 small">
-                    <li>Inspect one feature card and copy its class name.</li>
-                    <li>Prompt AI to edit only that class.</li>
-                    <li>Increase padding and add a subtle hover state.</li>
-                  </ol>
-                </div>
-              </article>
-              <article class="col-12 col-lg-4">
-                <div class="challenge-item">
-                  <h3 class="h6 mb-2">2) Framework Remix</h3>
-                  <ol class="mb-0 small">
-                    <li>Pick a new color palette (3-5 colors).</li>
-                    <li>Update buttons, badges, and card accents.</li>
-                    <li>Keep contrast readable for body text.</li>
-                  </ol>
-                </div>
-              </article>
-              <article class="col-12 col-lg-4">
-                <div class="challenge-item">
-                  <h3 class="h6 mb-2">3) Accessibility Pass</h3>
-                  <ol class="mb-0 small">
-                    <li>Tab through every interactive element.</li>
-                    <li>Fix any weak or missing focus states.</li>
-                    <li>Verify heading order stays logical (H1-H2-H3).</li>
-                  </ol>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ACCESSIBILITY -->
       <section id="accessibility" class="mt-5">
         <div class="card shadow-sm border-0 card-border-p3">
           <div class="card-body">
             <div class="a11y-simple">
-              <h2 class="h5 a11y-title">
-                Accessibility: start with these 4 rules
-              </h2>
+              <h2 class="h5 a11y-title">Quick accessibility checklist</h2>
               <p class="text-secondary a11y-intro">
-                Think of accessibility as making sure everyone can use your
-                page. If you do these four things, you are off to a strong
-                start.
+                Accessibility means making your page easier for more people to
+                read and use. Use this as a quick confidence check.
               </p>
-
-              <ol class="a11y-steps">
-                <li class="a11y-step">
-                  <span class="step-num" aria-hidden="true">1</span>
-                  <p class="step-text">
-                    <strong>Use clear headings:</strong> one <code>H1</code>,
-                    then <code>H2</code>, then <code>H3</code> in order.
-                  </p>
-                </li>
-                <li class="a11y-step">
-                  <span class="step-num" aria-hidden="true">2</span>
-                  <p class="step-text">
-                    <strong>Keep text easy to read:</strong> use body text
-                    around 16px and enough contrast between text and background.
-                  </p>
-                </li>
-                <li class="a11y-step">
-                  <span class="step-num" aria-hidden="true">3</span>
-                  <p class="step-text">
-                    <strong>Make keyboard use possible:</strong> users should be
-                    able to move with <kbd>Tab</kbd> and see the focus outline.
-                  </p>
-                </li>
-                <li class="a11y-step">
-                  <span class="step-num" aria-hidden="true">4</span>
-                  <p class="step-text">
-                    <strong>Use simple motion:</strong> avoid busy animations
-                    and respect <code>prefers-reduced-motion</code>.
-                  </p>
-                </li>
-              </ol>
-
-              <p class="a11y-test">
-                <strong>Quick test:</strong> press <kbd>Tab</kbd> from the top
-                of the page and check that every interactive item gets a visible
-                focus state.
-              </p>
+              <div class="row g-3">
+                <article class="col-12 col-lg-6">
+                  <div class="challenge-item h-100">
+                    <h3 class="h6 mb-2">1) Heading order</h3>
+                    <p class="small mb-0">
+                      Use headings in order: <code>h1</code>, then
+                      <code>h2</code>, then <code>h3</code>.
+                    </p>
+                  </div>
+                </article>
+                <article class="col-12 col-lg-6">
+                  <div class="challenge-item h-100">
+                    <h3 class="h6 mb-2">2) Readable text size</h3>
+                    <p class="small mb-0">
+                      Keep body text around 16px so it is easier to read on
+                      phones and laptops.
+                    </p>
+                  </div>
+                </article>
+                <article class="col-12 col-lg-6">
+                  <div class="challenge-item h-100">
+                    <h3 class="h6 mb-2">3) Text contrast</h3>
+                    <p class="small mb-0">
+                      Make sure text stands out clearly from the background.
+                    </p>
+                  </div>
+                </article>
+                <article class="col-12 col-lg-6">
+                  <div class="challenge-item h-100">
+                    <h3 class="h6 mb-2">4) Clear links and buttons</h3>
+                    <p class="small mb-0">
+                      Make clickable items easy to spot and label them clearly.
+                    </p>
+                  </div>
+                </article>
+                <article class="col-12 col-lg-6">
+                  <div class="challenge-item h-100">
+                    <h3 class="h6 mb-2">5) Simple motion</h3>
+                    <p class="small mb-0">
+                      Avoid busy animations and support
+                      <code>prefers-reduced-motion</code>.
+                    </p>
+                  </div>
+                </article>
+                <article class="col-12 col-lg-6">
+                  <div class="challenge-item h-100">
+                    <h3 class="h6 mb-2">6) Keyboard focus check</h3>
+                    <p class="small mb-0">
+                      Press <kbd>Tab</kbd> from the top of the page and confirm
+                      each link/button shows a visible focus state.
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -1018,38 +1071,6 @@ Output a single index.html file.</pre
         btn.addEventListener('click', () => {
           const isDark = document.body.classList.contains('theme-dark');
           setTheme(isDark ? 'light' : 'dark');
-        });
-      })();
-
-      (function () {
-        const copyButtons = document.querySelectorAll('[data-copy-target]');
-
-        copyButtons.forEach((button) => {
-          button.addEventListener('click', async () => {
-            const targetId = button.getAttribute('data-copy-target');
-            const target = targetId ? document.getElementById(targetId) : null;
-            if (!target) return;
-
-            const promptText = target.textContent.trim();
-            const originalLabel = button.innerHTML;
-
-            try {
-              await navigator.clipboard.writeText(promptText);
-              button.innerHTML = 'Copied!';
-            } catch (_error) {
-              const tempTextArea = document.createElement('textarea');
-              tempTextArea.value = promptText;
-              document.body.appendChild(tempTextArea);
-              tempTextArea.select();
-              document.execCommand('copy');
-              document.body.removeChild(tempTextArea);
-              button.innerHTML = 'Copied!';
-            }
-
-            window.setTimeout(() => {
-              button.innerHTML = originalLabel;
-            }, 1500);
-          });
         });
       })();
 
