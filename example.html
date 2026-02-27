@@ -66,19 +66,30 @@
           </ul>
 
           <div class="ms-lg-3 mt-3 mt-lg-0">
-            <button
-              id="themeToggle"
-              class="theme-mode-button focus-ring"
-              type="button"
-              aria-pressed="false"
-            >
-              <span class="button__text">Dark mode</span>
-              <span class="button__icon" aria-hidden="true">
-                <svg class="svg" viewBox="0 0 24 24">
-                  <path d="M12 3a7.5 7.5 0 1 0 9 9 8.5 8.5 0 1 1-9-9z" />
+            <label class="switch" aria-label="Toggle dark mode">
+              <input
+                id="themeToggle"
+                type="checkbox"
+                role="switch"
+                aria-label="Toggle dark mode"
+              />
+              <span class="slider">
+                <span class="star star_1"></span>
+                <span class="star star_2"></span>
+                <span class="star star_3"></span>
+                <svg
+                  class="cloud"
+                  viewBox="0 0 64 24"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 19h30a8 8 0 0 0 0-16c-1 0-2 .2-2.9.6A10 10 0 0 0 26 7a7 7 0 0 0-8 12z"
+                    fill="#ffffff"
+                  />
                 </svg>
               </span>
-            </button>
+            </label>
           </div>
         </div>
       </div>
@@ -1194,8 +1205,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       (function () {
-        const btn = document.getElementById('themeToggle');
-        if (!btn) return;
+        const toggle = document.getElementById('themeToggle');
+        if (!toggle) return;
 
         const STORAGE_KEY = 'ncties_theme';
         const prefersDark =
@@ -1205,19 +1216,16 @@
         function setTheme(mode) {
           const isDark = mode === 'dark';
           document.body.classList.toggle('theme-dark', isDark);
-          btn.setAttribute('aria-pressed', String(isDark));
-          btn.innerHTML = isDark
-            ? '<span class="button__text">Light mode</span><span class="button__icon" aria-hidden="true"><svg class="svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1l2.1-2.1M17 7l2.1-2.1"></path></svg></span>'
-            : '<span class="button__text">Dark mode</span><span class="button__icon" aria-hidden="true"><svg class="svg" viewBox="0 0 24 24"><path d="M12 3a7.5 7.5 0 1 0 9 9 8.5 8.5 0 1 1-9-9z"></path></svg></span>';
+          toggle.checked = isDark;
+          toggle.setAttribute('aria-checked', String(isDark));
           localStorage.setItem(STORAGE_KEY, mode);
         }
 
         const saved = localStorage.getItem(STORAGE_KEY);
         setTheme(saved ? saved : prefersDark ? 'dark' : 'light');
 
-        btn.addEventListener('click', () => {
-          const isDark = document.body.classList.contains('theme-dark');
-          setTheme(isDark ? 'light' : 'dark');
+        toggle.addEventListener('change', () => {
+          setTheme(toggle.checked ? 'dark' : 'light');
         });
       })();
 
