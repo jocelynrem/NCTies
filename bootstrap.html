@@ -396,7 +396,15 @@
               Copy this prompt exactly to convert your Baseline page into a
               Bootstrap version.
             </p>
-            <pre class="p-3 rounded bg-light border prompt-pre">
+            <button
+              class="btn btn-outline-primary btn-sm mb-2"
+              type="button"
+              data-copy-target="bootstrap-prompt-text"
+              aria-label="Copy Bootstrap prompt"
+            >
+              Copy Prompt
+            </button>
+            <pre class="p-3 rounded bg-light border prompt-pre" id="bootstrap-prompt-text">
 Take my current Baseline page and make a new version that uses Bootstrap styling.
 Keep the same topic and content (same sections, same links, same overall message).
 
@@ -488,5 +496,38 @@ Output a single bootstrap.html file.</pre
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (() => {
+        const copyButtons = document.querySelectorAll("[data-copy-target]");
+
+        copyButtons.forEach((button) => {
+          button.addEventListener("click", async () => {
+            const targetId = button.getAttribute("data-copy-target");
+            const target = targetId ? document.getElementById(targetId) : null;
+            if (!target) return;
+
+            const promptText = target.textContent.trim();
+            const originalLabel = button.innerHTML;
+
+            try {
+              await navigator.clipboard.writeText(promptText);
+              button.innerHTML = "Copied!";
+            } catch (_error) {
+              const tempTextArea = document.createElement("textarea");
+              tempTextArea.value = promptText;
+              document.body.appendChild(tempTextArea);
+              tempTextArea.select();
+              document.execCommand("copy");
+              document.body.removeChild(tempTextArea);
+              button.innerHTML = "Copied!";
+            }
+
+            window.setTimeout(() => {
+              button.innerHTML = originalLabel;
+            }, 1500);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

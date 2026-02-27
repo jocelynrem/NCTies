@@ -311,10 +311,18 @@
               </p>
               <div class="columns is-variable is-4">
                 <div class="column is-7-desktop">
-                  <div class="card">
-                    <div class="card-content">
-                      <h3 class="title is-6">Example prompt</h3>
-                      <pre class="prompt-pre">
+                    <div class="card">
+                      <div class="card-content">
+                        <h3 class="title is-6">Example prompt</h3>
+                      <button
+                        class="button is-link is-light is-small mb-3"
+                        type="button"
+                        data-copy-target="basics-prompt-text"
+                        aria-label="Copy example prompt"
+                      >
+                        Copy Prompt
+                      </button>
+                      <pre class="prompt-pre" id="basics-prompt-text">
 In the resources section card, add more padding inside each card and more margin between sections.
 Keep the current colors and typography.
 Only edit the card and spacing styles.</pre
@@ -973,5 +981,38 @@ Only edit the card and spacing styles.</pre
         </span>
       </div>
     </footer>
+    <script>
+      (() => {
+        const copyButtons = document.querySelectorAll("[data-copy-target]");
+
+        copyButtons.forEach((button) => {
+          button.addEventListener("click", async () => {
+            const targetId = button.getAttribute("data-copy-target");
+            const target = targetId ? document.getElementById(targetId) : null;
+            if (!target) return;
+
+            const promptText = target.textContent.trim();
+            const originalLabel = button.innerHTML;
+
+            try {
+              await navigator.clipboard.writeText(promptText);
+              button.innerHTML = "Copied!";
+            } catch (_error) {
+              const tempTextArea = document.createElement("textarea");
+              tempTextArea.value = promptText;
+              document.body.appendChild(tempTextArea);
+              tempTextArea.select();
+              document.execCommand("copy");
+              document.body.removeChild(tempTextArea);
+              button.innerHTML = "Copied!";
+            }
+
+            window.setTimeout(() => {
+              button.innerHTML = originalLabel;
+            }, 1500);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

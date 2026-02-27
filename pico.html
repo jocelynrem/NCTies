@@ -243,9 +243,9 @@
         <h1>Your Baseline page, now styled with Pico</h1>
         <p>
           In this step, keep the same page content from your
-          <strong>Baseline</strong> page
-          and ask AI to restyle it with Pico. This helps you see how a design
-          system changes the look without rebuilding your whole page.
+          <strong>Baseline</strong> page and ask AI to restyle it with Pico.
+          This helps you see how a design system changes the look without
+          rebuilding your whole page.
         </p>
 
         <!-- <nav
@@ -270,11 +270,11 @@
             </p>
           </article>
           <article role="listitem">
-              <h2>What stays the same</h2>
-              <p>
+            <h2>What stays the same</h2>
+            <p>
               Your topic, sections, links, and core content from the
               <strong>Baseline</strong> page should remain the same.
-              </p>
+            </p>
           </article>
           <article role="listitem">
             <h2>Pico quick tip</h2>
@@ -303,25 +303,28 @@
           Copy this prompt exactly to convert your starter page into a Pico
           version.
         </p>
-        <pre class="prompt-pre">
-Take my current Baseline page and make a new version that uses Pico CSS styling.
-Keep the same topic and content (same sections, same links, same overall message).
-
-Make it look cleaner and easier to read by improving spacing, text styling, and button styles.
-Do not add complicated layout changes or animations.
-Keep basic accessibility (headings in order, skip link, and visible keyboard focus).
+        <button
+          type="button"
+          data-copy-target="pico-prompt-text"
+          aria-label="Copy Pico prompt"
+        >
+          Copy Prompt
+        </button>
+        <pre class="prompt-pre" id="pico-prompt-text">
+Update this page so it uses Pico CSS styling. Really show me what the Pico framework looks like.
+Keep the same topic and content.
 
 Please include whatever is needed in the HTML file so Pico styling works when I open the page in a browser.
-Output a single pico.html file.</pre
+</pre
         >
       </section>
 
-        <section aria-labelledby="topic-title">
-          <h2 id="topic-title">Choose your own page idea (optional)</h2>
-          <p class="kicker">
-          If you picked your own topic in your <strong>Baseline</strong> page, keep it
-          simple here too.
-          </p>
+      <section aria-labelledby="topic-title">
+        <h2 id="topic-title">Choose your own page idea (optional)</h2>
+        <p class="kicker">
+          If you picked your own topic in your <strong>Baseline</strong> page,
+          keep it simple here too.
+        </p>
         <ul>
           <li>Keep the same one-page structure</li>
           <li>Limit it to a few clear sections</li>
@@ -353,8 +356,8 @@ Output a single pico.html file.</pre
             and UI patterns
           </li>
           <li>
-            <strong>Final:</strong> combine ideas in Frankenstein and personalize
-            your own vibe
+            <strong>Final:</strong> combine ideas in Frankenstein and
+            personalize your own vibe
           </li>
         </ul>
       </section>
@@ -380,5 +383,39 @@ Output a single pico.html file.</pre
         >
       </span>
     </footer>
+
+    <script>
+      (() => {
+        const copyButtons = document.querySelectorAll('[data-copy-target]');
+
+        copyButtons.forEach((button) => {
+          button.addEventListener('click', async () => {
+            const targetId = button.getAttribute('data-copy-target');
+            const target = targetId ? document.getElementById(targetId) : null;
+            if (!target) return;
+
+            const promptText = target.textContent.trim();
+            const originalLabel = button.innerHTML;
+
+            try {
+              await navigator.clipboard.writeText(promptText);
+              button.innerHTML = 'Copied!';
+            } catch (_error) {
+              const tempTextArea = document.createElement('textarea');
+              tempTextArea.value = promptText;
+              document.body.appendChild(tempTextArea);
+              tempTextArea.select();
+              document.execCommand('copy');
+              document.body.removeChild(tempTextArea);
+              button.innerHTML = 'Copied!';
+            }
+
+            window.setTimeout(() => {
+              button.innerHTML = originalLabel;
+            }, 1500);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

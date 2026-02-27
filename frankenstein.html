@@ -576,7 +576,18 @@
                 Generate the first version of your page, then refine it with
                 DevTools + AI.
               </p>
-              <pre class="p-3 rounded bg-light border prompt-pre">
+              <button
+                class="btn btn-outline-primary btn-sm mb-2"
+                type="button"
+                data-copy-target="frankenstein-prompt-text"
+                aria-label="Copy Frankenstein prompt"
+              >
+                Copy Prompt
+              </button>
+              <pre
+                class="p-3 rounded bg-light border prompt-pre"
+                id="frankenstein-prompt-text"
+              >
 Create a single-page workshop landing page for “AI Coding with DevTools + CSS Frameworks.”
 Include: a hero header, three feature cards (Prompting, Styling, Debugging), a resources section with links,
 and a “Try This Challenge” callout. Use semantic HTML and basic accessibility (headings, skip link, focus).
@@ -1007,6 +1018,38 @@ Output a single index.html file.</pre
         btn.addEventListener('click', () => {
           const isDark = document.body.classList.contains('theme-dark');
           setTheme(isDark ? 'light' : 'dark');
+        });
+      })();
+
+      (function () {
+        const copyButtons = document.querySelectorAll('[data-copy-target]');
+
+        copyButtons.forEach((button) => {
+          button.addEventListener('click', async () => {
+            const targetId = button.getAttribute('data-copy-target');
+            const target = targetId ? document.getElementById(targetId) : null;
+            if (!target) return;
+
+            const promptText = target.textContent.trim();
+            const originalLabel = button.innerHTML;
+
+            try {
+              await navigator.clipboard.writeText(promptText);
+              button.innerHTML = 'Copied!';
+            } catch (_error) {
+              const tempTextArea = document.createElement('textarea');
+              tempTextArea.value = promptText;
+              document.body.appendChild(tempTextArea);
+              tempTextArea.select();
+              document.execCommand('copy');
+              document.body.removeChild(tempTextArea);
+              button.innerHTML = 'Copied!';
+            }
+
+            window.setTimeout(() => {
+              button.innerHTML = originalLabel;
+            }, 1500);
+          });
         });
       })();
 

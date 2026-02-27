@@ -358,7 +358,15 @@
               Keep your content the same; we'll update the styling layer.
             </div>
           </article>
-          <pre class="prompt-pre">
+          <button
+            class="button is-link is-light is-small mb-3"
+            type="button"
+            data-copy-target="bulma-prompt-text"
+            aria-label="Copy Bulma prompt"
+          >
+            Copy Prompt
+          </button>
+          <pre class="prompt-pre" id="bulma-prompt-text">
 Take my current Baseline page and make a new version that uses Bulma styling.
 Keep the same topic and content (same sections, same links, same overall message).
 
@@ -451,5 +459,38 @@ Output a single bulma.html file.</pre
         </p>
       </div>
     </footer>
+    <script>
+      (() => {
+        const copyButtons = document.querySelectorAll("[data-copy-target]");
+
+        copyButtons.forEach((button) => {
+          button.addEventListener("click", async () => {
+            const targetId = button.getAttribute("data-copy-target");
+            const target = targetId ? document.getElementById(targetId) : null;
+            if (!target) return;
+
+            const promptText = target.textContent.trim();
+            const originalLabel = button.innerHTML;
+
+            try {
+              await navigator.clipboard.writeText(promptText);
+              button.innerHTML = "Copied!";
+            } catch (_error) {
+              const tempTextArea = document.createElement("textarea");
+              tempTextArea.value = promptText;
+              document.body.appendChild(tempTextArea);
+              tempTextArea.select();
+              document.execCommand("copy");
+              document.body.removeChild(tempTextArea);
+              button.innerHTML = "Copied!";
+            }
+
+            window.setTimeout(() => {
+              button.innerHTML = originalLabel;
+            }, 1500);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

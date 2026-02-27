@@ -370,7 +370,15 @@
             <p class="text-secondary mb-2">
               Copy this prompt and customize the bracketed parts with your chosen resources.
             </p>
-            <pre class="p-3 rounded bg-light border prompt-pre mb-0">
+            <button
+              class="btn btn-outline-primary btn-sm mb-2"
+              type="button"
+              data-copy-target="resources-prompt-text"
+              aria-label="Copy Resources prompt"
+            >
+              Copy Prompt
+            </button>
+            <pre class="p-3 rounded bg-light border prompt-pre mb-0" id="resources-prompt-text">
 Use my [Pico OR Bootstrap OR Bulma] page as the starting point for customization.
 Keep the same page topic and the same core sections/content.
 
@@ -424,5 +432,38 @@ Output a single updated HTML file called frankenstein.html</pre
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (() => {
+        const copyButtons = document.querySelectorAll("[data-copy-target]");
+
+        copyButtons.forEach((button) => {
+          button.addEventListener("click", async () => {
+            const targetId = button.getAttribute("data-copy-target");
+            const target = targetId ? document.getElementById(targetId) : null;
+            if (!target) return;
+
+            const promptText = target.textContent.trim();
+            const originalLabel = button.innerHTML;
+
+            try {
+              await navigator.clipboard.writeText(promptText);
+              button.innerHTML = "Copied!";
+            } catch (_error) {
+              const tempTextArea = document.createElement("textarea");
+              tempTextArea.value = promptText;
+              document.body.appendChild(tempTextArea);
+              tempTextArea.select();
+              document.execCommand("copy");
+              document.body.removeChild(tempTextArea);
+              button.innerHTML = "Copied!";
+            }
+
+            window.setTimeout(() => {
+              button.innerHTML = originalLabel;
+            }, 1500);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
