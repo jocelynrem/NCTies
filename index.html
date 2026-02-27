@@ -284,7 +284,11 @@
         >
           <h2 id="card-tools">Tools</h2>
           <ul>
-            <li>AI chat tool (ChatGPT, Copilot, Claude, etc.)</li>
+            <li>
+              AI chat tool (ChatGPT, Copilot, Claude, etc.). You will use
+              <a href="https://aistudio.google.com/">Gemini Studio</a> to run
+              prompts and copy the generated code directly into your page.
+            </li>
             <li>Browser + DevTools Inspect tool</li>
             <li>Color tools: Coolors, Adobe Color</li>
             <li>Icons: Font Awesome, <a href="https://www.svgrepo.com/">SVG Repo</a></li>
@@ -328,9 +332,17 @@
           <p class="muted">
             Copy the prompt below exactly, then run it in your AI tool.
           </p>
-          <pre class="prompt-pre">
+          <button
+            class="btn"
+            id="copy-starter-prompt"
+            type="button"
+            aria-label="Copy starter prompt"
+          >
+            Copy Starter Prompt
+          </button>
+          <pre class="prompt-pre" id="starter-prompt-text">
 Create a very simple one-page website for a school-friendly topic (such as a class pet fan page, reading challenge tracker, hobby club, or lunch menu highlights). Include a page title/header, a short intro paragraph, three content sections, one list of links/resources, and one button or call-to-action. Use plain semantic HTML with basic accessibility (headings in order and a skip link). Keep the design basic and clean with no advanced animations or complex layout.
-Output a single index.html file.</pre
+Do not output any files; provide the HTML directly in chat.</pre
           >
         </section>
         <section class="card" aria-labelledby="topic-title">
@@ -421,6 +433,35 @@ Output a single index.html file.</pre
         </p>
       </section>
     </main>
+
+    <script>
+      const copyPromptButton = document.getElementById("copy-starter-prompt");
+      const starterPromptText = document.getElementById("starter-prompt-text");
+
+      if (copyPromptButton && starterPromptText) {
+        copyPromptButton.addEventListener("click", async () => {
+          const promptText = starterPromptText.textContent.trim();
+          const originalLabel = copyPromptButton.textContent;
+
+          try {
+            await navigator.clipboard.writeText(promptText);
+            copyPromptButton.textContent = "Copied!";
+          } catch (_error) {
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = promptText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            copyPromptButton.textContent = "Copied!";
+          }
+
+          window.setTimeout(() => {
+            copyPromptButton.textContent = originalLabel;
+          }, 1500);
+        });
+      }
+    </script>
 
     <footer>
       <div class="wrap footer-wrap">
