@@ -30,6 +30,15 @@
   border-radius: 16px;
 }
 
+.overview-row .column.is-flex .card {
+  width: 100%;
+  display: flex;
+}
+
+.overview-row .column.is-flex .card .card-content {
+  width: 100%;
+}
+
 .section-title-line {
   display: inline-flex;
   align-items: center;
