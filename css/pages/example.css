@@ -1102,6 +1102,28 @@
         fill: #d66853;
       }
 
+      /* Page-only font swap: use Red Hat Display for visible page typography */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .navbar-brand,
+      .nav-link,
+      .lead,
+      .strong-lead,
+      .feature-cards .card-title,
+      .a11y-title,
+      .tools-title,
+      .palette-ref .palette-name {
+        font-family: 'Red Hat Display', sans-serif;
+      }
+
+      .lead strong {
+        font-weight: 700;
+      }
+
       /* Reduce motion */
       @media (prefers-reduced-motion: reduce) {
         .feature-cards .uicard,
