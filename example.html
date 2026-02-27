@@ -47,13 +47,15 @@
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link focus-ring" href="#cards">Cards</a>
+              <a class="nav-link focus-ring" href="#cards">Takeaways</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link focus-ring" href="#reference">Reference</a>
+              <a class="nav-link focus-ring" href="#reference-ui"
+                >Reference guides</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link focus-ring" href="#resources">Resources</a>
+              <a class="nav-link focus-ring" href="#resources">Design tools</a>
             </li>
           </ul>
 
@@ -320,11 +322,11 @@
                 >
                   <path d="M5 12h12M13 6l6 6-6 6" />
                 </svg>
-                View the takeaways
+                Takeaways
               </a>
               <a
                 class="hero-link-btn hero-link-prompt focus-ring"
-                href="#reference"
+                href="#reference-ui"
               >
                 <svg
                   class="hero-link-icon"
@@ -333,7 +335,7 @@
                 >
                   <path d="M5 12h12M13 6l6 6-6 6" />
                 </svg>
-                Open reference guides
+                Reference guides
               </a>
               <a
                 class="hero-link-btn hero-link-tools focus-ring"
@@ -346,7 +348,7 @@
                 >
                   <path d="M5 12h12M13 6l6 6-6 6" />
                 </svg>
-                Resources
+                Design tools
               </a>
             </div>
           </div>
@@ -414,42 +416,37 @@
             <article class="uicard" aria-labelledby="prompting-title">
               <div class="card-img" aria-hidden="true">
                 <svg
-                  class="card-graphic"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 1024 1024"
+                  class="card-graphic icon"
+                  version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill="var(--p1)"
-                    d="M22 7.662l1-1V18h-7v4.745L11.255 18H1V2h16.763l-1 1H2v14h9.668L15 20.331V17h7z"
-                  />
+                    d="M229.8 191.8h556c12.8 0 23.2 10.4 23.2 23.2v590.8c0 12.8-10.4 23.2-23.2 23.2h-556c-12.8 0-23.2-10.4-23.2-23.2V215c0-12.8 10.4-23.2 23.2-23.2z"
+                    fill="#F9F5FF"
+                  ></path>
                   <path
-                    fill="var(--a1)"
-                    d="M23.657 2.47a.965.965 0 0 1 .03 1.385l-9.325 9.324-4.097 1.755a.371.371 0 0 1-.487-.487l1.755-4.097 9.31-9.309a.98.98 0 0 1 1.385 0zm-10.1 9.965l-1.28-1.28-.961 2.24zm7.243-7.11l-1.414-1.413-6.469 6.47 1.414 1.413zm1.865-2.445l-.804-.838a.42.42 0 0 0-.6-.006l-1.168 1.168 1.414 1.415 1.152-1.152a.42.42 0 0 0 .006-.587z"
-                  />
+                    d="M784.6 828.9H231c-13.4 0-24.4-10.9-24.4-24.4V216.1c0-13.4 10.9-24.4 24.4-24.4h553.6c13.4 0 24.4 10.9 24.4 24.4v588.4c-0.1 13.5-11 24.4-24.4 24.4z m-507.3-46.4h461c13.4 0 24.4-10.9 24.4-24.4V262.5c0-13.4-10.9-24.4-24.4-24.4h-461c-13.4 0-24.4 10.9-24.4 24.4v495.7c0 13.4 10.9 24.3 24.4 24.3z"
+                    fill="#6B4E71"
+                  ></path>
+                  <path
+                    d="M369.2 296h287.9c25.9 0 46.8 21 46.8 46.8V459c0 25.9-21 46.8-46.8 46.8H369.2c-25.9 0-46.8-21-46.8-46.8V342.9c0-25.9 21-46.9 46.8-46.9z"
+                    fill="#D66853"
+                  ></path>
+                  <path
+                    d="M657.7 505.9H368.8c-25.6 0-46.3-20.8-46.3-46.3V342.4c0-25.5 20.8-46.3 46.3-46.3h288.9c25.6 0 46.3 20.8 46.3 46.3v117.2c0 25.5-20.8 46.3-46.3 46.3zM368.8 342.4v117.2h288.9V342.4H368.8zM345.6 666.7h335.2c12.8 0 23.2 10.4 23.2 23.2 0 12.8-10.4 23.2-23.2 23.2H345.6c-12.8 0-23.2-10.4-23.2-23.2 0-12.8 10.4-23.2 23.2-23.2zM438.3 562.5h144.5c12.8 0 23.2 10.4 23.2 23.2 0 12.8-10.4 23.2-23.2 23.2H438.3c-12.8 0-23.2-10.4-23.2-23.2 0-12.9 10.4-23.2 23.2-23.2z"
+                    fill="#6B4E71"
+                  ></path>
                 </svg>
               </div>
 
-              <h3 class="card-title" id="prompting-title">Clear prompts win</h3>
-              <div class="chip-row" aria-label="Key skills">
-                <span class="chip">Takeaway 1</span>
-                <span class="chip">Clarity</span>
-              </div>
+              <h3 class="card-title" id="prompting-title">
+                Consistent design with frameworks
+              </h3>
               <p class="card-subtitle">
-                Be specific about what to change, where to change it, and what
-                should stay the same.
+                CSS frameworks make it easier to polish your page and keep the
+                design consistent across sections.
               </p>
-
-              <div class="card-divider" aria-hidden="true"></div>
-
-              <div class="card-footer">
-                <span class="card-meta">Outcome: fewer rewrites</span>
-                <a class="card-btn" href="#reference"
-                  >Jump
-                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h12M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
             </article>
           </div>
 
@@ -461,44 +458,46 @@
             <article class="uicard" aria-labelledby="styling-title">
               <div class="card-img" aria-hidden="true">
                 <svg
-                  class="card-graphic"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 1024 1024"
+                  class="card-graphic icon"
+                  version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill="var(--p3)"
-                    d="M5 4h1v1H5V4zm2 1h1V4H7v1zm15-3v10h-1v-1H3v3h9v1H2V2h20zm-1 5H3v3h18V7zm0-4H3v3h18V3zM6 8H5v1h1V8zm2 0H7v1h1V8zm-3 4v1h1v-1H5zm2 0v1h1v-1H7zm2-7h1V4H9v1zm1 3H9v1h1V8zm-1 4v1h1v-1H9z"
-                  />
+                    d="M816.4 771.2H185.8c-11.5 0-20-10.9-17-22.1l45.7-173.7c2-7.7 9-13.1 17-13.1h539.1c8 0 15 5.4 17 13.1l45.7 173.7c3 11.2-5.4 22.1-16.9 22.1z m-573.5-43.9h516.4c11.5 0 20-10.9 17-22.1l-22.6-85.8c-2-7.7-9-13.1-17-13.1H265.4c-8 0-15 5.4-17 13.1l-22.6 85.8c-2.9 11.1 5.5 22.1 17.1 22.1z"
+                    fill="#6B4E71"
+                  ></path>
                   <path
-                    fill="var(--a1)"
-                    d="M23 13v10H13V13h10zm-3 1v2h2v-2h-2zm0 5h2v-2h-2v2zm-3-5v2h2v-2h-2zm0 5h2v-2h-2v2zm-3-5v2h2v-2h-2zm2 3h-2v2h2v-2zm0 5v-2h-2v2h2zm3 0v-2h-2v2h2zm3 0v-2h-2v2h2z"
-                  />
+                    d="M259.6 210.5h483.8c12.1 0 22 9.8 22 22v318.9c0 12.1-9.8 22-22 22H259.6c-12.1 0-22-9.8-22-22v-319c0-12.1 9.9-21.9 22-21.9z"
+                    fill="#F9F5FF"
+                  ></path>
+                  <path
+                    d="M787.4 595.3H215.6V232.4c0-24.3 19.7-44 44-44h483.8c24.3 0 44 19.7 44 44v362.9zM259.6 232.4v318.9h483.8V232.4H259.6z"
+                    fill="#6B4E71"
+                  ></path>
+                  <path
+                    d="M569.943 598.468l43.67-5.364 17.42 141.828-43.67 5.364zM372.01 735.071l17.42-141.828 43.67 5.364-17.42 141.828z"
+                    fill="#6B4E71"
+                  ></path>
+                  <path d="M215.6 639.3h582.8v44H215.6z" fill="#6B4E71"></path>
+                  <path
+                    d="M351.1 276.4h300.8c26.3 0 47.5 21.3 47.5 47.5v146.8c0 26.3-21.3 47.5-47.5 47.5H351.1c-26.3 0-47.5-21.3-47.5-47.5V324c0-26.3 21.3-47.6 47.5-47.6z"
+                    fill="#D66853"
+                  ></path>
+                  <path
+                    d="M655.5 518.3H347.6c-24.3 0-44-19.7-44-44V320.4c0-24.3 19.7-44 44-44h307.9c24.3 0 44 19.7 44 44v153.9c0 24.3-19.8 44-44 44zM347.6 320.4v153.9h307.9V320.4H347.6z"
+                    fill="#6B4E71"
+                  ></path>
                 </svg>
               </div>
 
               <h3 class="card-title" id="styling-title">
-                Small visual tweaks matter
+                Smarter edits with DevTools
               </h3>
-              <div class="chip-row" aria-label="Key skills">
-                <span class="chip">Takeaway 2</span>
-                <span class="chip">Polish</span>
-              </div>
               <p class="card-subtitle">
-                Fonts, spacing, and color contrast quickly turn a plain page
-                into something readable and intentional.
+                DevTools helps with accessibility and screen size checks, and it
+                helps you name the exact thing you want AI to change.
               </p>
-
-              <div class="card-divider" aria-hidden="true"></div>
-
-              <div class="card-footer">
-                <span class="card-meta">Outcome: cleaner design</span>
-                <a class="card-btn" href="#reference-ui"
-                  >Jump
-                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h12M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
             </article>
           </div>
 
@@ -510,85 +509,243 @@
             <article class="uicard" aria-labelledby="debugging-title">
               <div class="card-img" aria-hidden="true">
                 <svg
-                  class="card-graphic"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 1024 1024"
+                  class="card-graphic icon"
+                  version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill="var(--p1)"
-                    d="M5.947 8a13.059 13.059 0 0 0-.912 4H2v1h3a13.656 13.656 0 0 0 .589 4H3.15l-1.378 3.727.938.347L3.849 18h2.098c1.213 2.984 3.47 5 6.053 5s4.84-2.016 6.053-5h2.098l1.138 3.074.938-.347L20.849 17H18.41a13.656 13.656 0 0 0 .59-4h3v-1h-3.035a13.059 13.059 0 0 0-.912-4h2.796l1.378-3.727-.938-.347L20.151 7h-2.564a8.187 8.187 0 0 0-2.748-3.132l2.515-2.514-.707-.707-2.74 2.74a4.893 4.893 0 0 0-3.813 0L7.354.647l-.707.706L9.16 3.868A8.187 8.187 0 0 0 6.413 7H3.85L2.71 3.926l-.938.347L3.151 8z"
-                  />
+                    d="M448.4 687.5l-165 84.9c-13.7 7-30.5 1.7-37.6-12-2.8-5.4-3.7-11.6-2.7-17.6l31.2-178.1c1.6-9.2-1.5-18.6-8.2-25L134.3 413.9c-11.1-10.6-11.6-28.3-0.9-39.4a28.3 28.3 0 0 1 16.3-8.4L332.9 340c9-1.3 16.9-6.9 21-15.1l82.4-163.4c6.9-13.7 23.7-19.2 37.5-12.2 5.3 2.7 9.7 7 12.3 12.3L568.5 325c4.1 8.1 11.9 13.8 21 15.1l183.2 26.1c15.3 2.2 25.9 16.3 23.7 31.5-0.9 6.2-3.8 11.9-8.4 16.3L656.3 539.6c-6.7 6.4-9.8 15.8-8.2 25l31.2 178.1c2.7 15.2-7.5 29.6-22.7 32.3-6 1.1-12.2 0.1-17.6-2.7l-165-84.9c-8-4-17.5-4-25.6 0.1z"
+                    fill="#D66853"
+                  ></path>
                   <path
-                    fill="var(--a1)"
-                    d="M12 4c2.449 0 4.556 2.214 5.488 5.375a12.684 12.684 0 0 0-10.976 0C7.444 6.216 9.552 4 12 4zm0 18a4.196 4.196 0 0 1-1.848-.441L12 11.987l1.848 9.572A4.196 4.196 0 0 1 12 22zm2.756-1.015l-2.094-10.848a10.973 10.973 0 0 0-1.324 0L9.244 20.985C7.319 19.485 6 16.472 6 13a13.191 13.191 0 0 1 .216-2.355l.356-.197h.001a11.622 11.622 0 0 1 10.854 0l.358.197A13.191 13.191 0 0 1 18 13c0 3.472-1.32 6.485-3.244 7.985z"
-                  />
+                    d="M270.7 803.4c-20.3 0-39.8-11.1-49.7-30.3-5.5-10.7-7.4-23.2-5.3-35.2l31.2-178.1-131.8-125.7c-10.8-10.3-16.9-24.2-17.3-39.1-0.3-14.9 5.1-29 15.4-39.8 8.6-9 20.1-15 32.5-16.7L329 312.4 411.4 149c13.8-27.5 47.5-38.5 74.9-24.7 10.8 5.4 19.3 14 24.7 24.7l82.4 163.4 183.3 26.1c30.5 4.3 51.7 32.6 47.4 63.1-1.7 12.3-7.7 23.9-16.7 32.5L675.5 559.8 706.7 738c5.3 30.3-15 59.3-45.3 64.6-11.9 2.1-24.4 0.2-35.2-5.3l-165-84.9-165 84.9c-8.2 4.1-16.9 6.1-25.5 6.1z m190.5-146.9c8.8 0 17.5 2.1 25.5 6.2l165 84.9-31.2-178.1c-3.2-18.4 2.9-37.1 16.4-50l131.8-125.7-183.2-26.1c-18.1-2.6-33.8-13.8-42-30.1l-82.3-163.4-82.4 163.4c-8.2 16.3-23.9 27.5-42 30.1l-183.2 26 131.8 125.7c13.5 12.9 19.7 31.6 16.5 50l-31.2 178.1 165-84.9c8-4 16.7-6.1 25.5-6.1z"
+                    fill="#6B4E71"
+                  ></path>
+                  <path
+                    d="M714.2 420.2C823.4 420.2 912 508.8 912 618c0 109.2-88.5 197.8-197.8 197.8-109.2 0-197.8-88.5-197.8-197.8 0-109.2 88.6-197.8 197.8-197.8z"
+                    fill="#F9F5FF"
+                  ></path>
+                  <path
+                    d="M714.2 815.8c-109.1 0-197.8-88.7-197.8-197.8s88.7-197.8 197.8-197.8S912 509 912 618s-88.7 197.8-197.8 197.8z m0-339.8c-78.3 0-142 63.7-142 142s63.7 142 142 142 142-63.7 142-142-63.7-142-142-142z"
+                    fill="#6B4E71"
+                  ></path>
+                  <path
+                    d="M687.2 591.1v-36c0-14.9 12.1-27 27-27s27 12.1 27 27v36h36c14.9 0 27 12.1 27 27s-12.1 27-27 27h-36v36c0 14.9-12.1 27-27 27s-27-12.1-27-27v-36h-36c-14.9 0-27-12.1-27-27s12.1-27 27-27h36z"
+                    fill="#6B4E71"
+                  ></path>
                 </svg>
               </div>
 
               <h3 class="card-title" id="debugging-title">
-                Target edits with DevTools
+                Build a custom look with free resources
               </h3>
-              <div class="chip-row" aria-label="Key skills">
-                <span class="chip">Takeaway 3</span>
-                <span class="chip">Precision</span>
-              </div>
               <p class="card-subtitle">
-                Find the exact part of the page first, then ask AI to edit only
-                that one part.
+                There are many tools you can combine to build a custom design:
+                colors, fonts, icons, UI patterns, and framework docs.
               </p>
-
-              <div class="card-divider" aria-hidden="true"></div>
-
-              <div class="card-footer">
-                <span class="card-meta">Outcome: predictable edits</span>
-                <a class="card-btn" href="#accessibility"
-                  >Jump
-                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h12M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- REFERENCE -->
-      <section id="reference" class="mt-5">
-        <div class="card shadow-sm border-0 card-border-p3">
+      <!-- RESOURCES -->
+      <section id="resources" class="mt-5">
+        <div class="card shadow-sm border-0 card-border-green">
           <div class="card-body">
-            <h2 class="h5 a11y-title">Prompting + Frameworks</h2>
-            <p class="text-secondary mb-3">
-              Use these quick reminders when you prompt Gemini. Keep requests
-              specific and beginner-friendly.
-            </p>
-            <div class="row g-3">
-              <article class="col-12 col-lg-6">
-                <div class="challenge-item h-100">
-                  <h3 class="h6 mb-2">How to ask AI</h3>
-                  <p class="small mb-2">
-                    Good prompts include three parts:
-                    <strong>what to change</strong>, <strong>where</strong>, and
-                    <strong>what to keep the same</strong>.
-                  </p>
-                  <p class="small mb-0">
-                    Example: "In the resources card, add more padding and keep
-                    the current colors."
-                  </p>
+            <div class="tools-simple">
+              <h2 class="h5 a11y-title">Resources</h2>
+              <div
+                id="toolsCarousel"
+                class="tools-carousel"
+                aria-label="Tools carousel"
+              >
+                <div class="tools-viewport">
+                  <div class="tools-track">
+                    <article class="tools-slide-card cat-colors">
+                      <p class="tools-meta">
+                        Color Picker <span>Palette</span>
+                      </p>
+                      <h3 class="tools-title">
+                        <a class="focus-ring" href="https://coolors.co/"
+                          >Coolors</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Build quick color palettes and export hex values for
+                        your design tokens.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-colors">
+                      <p class="tools-meta">Color Wheel <span>Harmony</span></p>
+                      <h3 class="tools-title">
+                        <a class="focus-ring" href="https://color.adobe.com/"
+                          >Adobe Color</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Explore color harmony rules and create classroom-ready
+                        schemes.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-icons">
+                      <p class="tools-meta">Icons <span>Library</span></p>
+                      <h3 class="tools-title">
+                        <a class="focus-ring" href="https://fontawesome.com/"
+                          >Font Awesome</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Add scalable icons to nav bars, buttons, and feature
+                        cards.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-components">
+                      <p class="tools-meta">UI Ideas <span>Components</span></p>
+                      <h3 class="tools-title">
+                        <a class="focus-ring" href="https://uiverse.io/elements"
+                          >UIverse</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Browse component inspiration you can adapt with your own
+                        theme tokens.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-icons">
+                      <p class="tools-meta">SVG Icons <span>Free</span></p>
+                      <h3 class="tools-title">
+                        <a class="focus-ring" href="https://www.svgrepo.com/"
+                          >SVG Repo</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Search and download editable SVG icons for web and print
+                        projects.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-patterns">
+                      <p class="tools-meta">Read List <span>Patterns</span></p>
+                      <h3 class="tools-title">
+                        <a
+                          class="focus-ring"
+                          href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
+                          >UI Design Patterns</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Read a curated list of UI pattern resources for layout,
+                        navigation, and interaction ideas.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-patterns">
+                      <p class="tools-meta">
+                        Read List <span>UI Elements</span>
+                      </p>
+                      <h3 class="tools-title">
+                        <a
+                          class="focus-ring"
+                          href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
+                          >UXPin UI Elements</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Quick reference guide to common UI elements and where
+                        they fit in interface design.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-systems">
+                      <p class="tools-meta">
+                        Framework <span>Framework Docs</span>
+                      </p>
+                      <h3 class="tools-title">
+                        <a
+                          class="focus-ring"
+                          href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                          >Bootstrap</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Component-heavy framework for fast, responsive page
+                        layouts and utility-based styling.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-systems">
+                      <p class="tools-meta">
+                        Framework <span>Framework Docs</span>
+                      </p>
+                      <h3 class="tools-title">
+                        <a
+                          class="focus-ring"
+                          href="https://bulma.io/documentation/"
+                          >Bulma</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Clean class names and straightforward layout patterns
+                        that are easy for beginners to edit.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-systems">
+                      <p class="tools-meta">
+                        Framework <span>Framework Docs</span>
+                      </p>
+                      <h3 class="tools-title">
+                        <a class="focus-ring" href="https://picocss.com/docs/"
+                          >Pico CSS</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Minimal framework with strong defaults for typography,
+                        spacing, and readable content pages.
+                      </p>
+                    </article>
+                    <article class="tools-slide-card cat-fonts">
+                      <p class="tools-meta">Typography <span>Fonts</span></p>
+                      <h3 class="tools-title">
+                        <a class="focus-ring" href="https://fonts.google.com/"
+                          >Google Fonts</a
+                        >
+                      </h3>
+                      <p class="tools-desc">
+                        Browse and pair web fonts to improve readability and
+                        visual hierarchy in your pages.
+                      </p>
+                    </article>
+                  </div>
                 </div>
-              </article>
-              <article class="col-12 col-lg-6">
-                <div class="challenge-item h-100">
-                  <h3 class="h6 mb-2">Framework quick guide</h3>
-                  <ul class="small mb-0">
-                    <li><strong>Bootstrap:</strong> polished app-like look</li>
-                    <li><strong>Bulma:</strong> clean, readable class names</li>
-                    <li>
-                      <strong>Pico:</strong> simple styling with less setup
-                    </li>
-                  </ul>
-                </div>
-              </article>
+
+                <button
+                  class="tools-control tools-control-prev"
+                  type="button"
+                  data-tools="prev"
+                  aria-label="Previous tool"
+                >
+                  <svg
+                    class="tools-arrow"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M15 5l-7 7 7 7" />
+                  </svg>
+                </button>
+                <button
+                  class="tools-control tools-control-next"
+                  type="button"
+                  data-tools="next"
+                  aria-label="Next tool"
+                >
+                  <svg
+                    class="tools-arrow"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+
+                <div class="tools-dots" aria-label="Tool slide positions"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -863,208 +1020,6 @@
                     </p>
                   </div>
                 </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- RESOURCES -->
-      <section id="resources" class="mt-5">
-        <div class="card shadow-sm border-0 card-border-green">
-          <div class="card-body">
-            <div class="tools-simple">
-              <h2 class="h5 a11y-title">Resources</h2>
-              <div
-                id="toolsCarousel"
-                class="tools-carousel"
-                aria-label="Tools carousel"
-              >
-                <div class="tools-viewport">
-                  <div class="tools-track">
-                    <article class="tools-slide-card cat-colors">
-                      <p class="tools-meta">
-                        Color Picker <span>Palette</span>
-                      </p>
-                      <h3 class="tools-title">
-                        <a class="focus-ring" href="https://coolors.co/"
-                          >Coolors</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Build quick color palettes and export hex values for
-                        your design tokens.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-colors">
-                      <p class="tools-meta">Color Wheel <span>Harmony</span></p>
-                      <h3 class="tools-title">
-                        <a class="focus-ring" href="https://color.adobe.com/"
-                          >Adobe Color</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Explore color harmony rules and create classroom-ready
-                        schemes.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-icons">
-                      <p class="tools-meta">Icons <span>Library</span></p>
-                      <h3 class="tools-title">
-                        <a class="focus-ring" href="https://fontawesome.com/"
-                          >Font Awesome</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Add scalable icons to nav bars, buttons, and feature
-                        cards.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-components">
-                      <p class="tools-meta">UI Ideas <span>Components</span></p>
-                      <h3 class="tools-title">
-                        <a class="focus-ring" href="https://uiverse.io/elements"
-                          >UIverse</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Browse component inspiration you can adapt with your own
-                        theme tokens.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-icons">
-                      <p class="tools-meta">SVG Icons <span>Free</span></p>
-                      <h3 class="tools-title">
-                        <a class="focus-ring" href="https://www.svgrepo.com/"
-                          >SVG Repo</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Search and download editable SVG icons for web and print
-                        projects.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-patterns">
-                      <p class="tools-meta">Read List <span>Patterns</span></p>
-                      <h3 class="tools-title">
-                        <a
-                          class="focus-ring"
-                          href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns?srsltid=AfmBOoqn1mNcWA4lZZCJNqpy1WdioMpyqV9PAGZHdIlP1ZvfRh7rrJ5p"
-                          >UI Design Patterns</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Read a curated list of UI pattern resources for layout,
-                        navigation, and interaction ideas.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-patterns">
-                      <p class="tools-meta">
-                        Read List <span>UI Elements</span>
-                      </p>
-                      <h3 class="tools-title">
-                        <a
-                          class="focus-ring"
-                          href="https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/"
-                          >UXPin UI Elements</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Quick reference guide to common UI elements and where
-                        they fit in interface design.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-systems">
-                      <p class="tools-meta">
-                        Framework <span>Framework Docs</span>
-                      </p>
-                      <h3 class="tools-title">
-                        <a
-                          class="focus-ring"
-                          href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-                          >Bootstrap</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Component-heavy framework for fast, responsive page
-                        layouts and utility-based styling.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-systems">
-                      <p class="tools-meta">
-                        Framework <span>Framework Docs</span>
-                      </p>
-                      <h3 class="tools-title">
-                        <a
-                          class="focus-ring"
-                          href="https://bulma.io/documentation/"
-                          >Bulma</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Clean class names and straightforward layout patterns
-                        that are easy for beginners to edit.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-systems">
-                      <p class="tools-meta">
-                        Framework <span>Framework Docs</span>
-                      </p>
-                      <h3 class="tools-title">
-                        <a class="focus-ring" href="https://picocss.com/docs/"
-                          >Pico CSS</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Minimal framework with strong defaults for typography,
-                        spacing, and readable content pages.
-                      </p>
-                    </article>
-                    <article class="tools-slide-card cat-fonts">
-                      <p class="tools-meta">Typography <span>Fonts</span></p>
-                      <h3 class="tools-title">
-                        <a class="focus-ring" href="https://fonts.google.com/"
-                          >Google Fonts</a
-                        >
-                      </h3>
-                      <p class="tools-desc">
-                        Browse and pair web fonts to improve readability and
-                        visual hierarchy in your pages.
-                      </p>
-                    </article>
-                  </div>
-                </div>
-
-                <button
-                  class="tools-control tools-control-prev"
-                  type="button"
-                  data-tools="prev"
-                  aria-label="Previous tool"
-                >
-                  <svg
-                    class="tools-arrow"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M15 5l-7 7 7 7" />
-                  </svg>
-                </button>
-                <button
-                  class="tools-control tools-control-next"
-                  type="button"
-                  data-tools="next"
-                  aria-label="Next tool"
-                >
-                  <svg
-                    class="tools-arrow"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                <div class="tools-dots" aria-label="Tool slide positions"></div>
               </div>
             </div>
           </div>

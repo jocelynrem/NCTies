@@ -1088,19 +1088,18 @@
         fill: #efb2a5;
       }
 
-      .feature-cards
-        article[aria-labelledby='debugging-title']
-        .card-graphic
-        path:first-child {
-        fill: #53687e;
+      /* Keep top-card icon colors consistent in dark mode:
+         outlines/details -> near-white, fills -> primary/coral */
+      body.theme-dark .feature-cards .card-graphic path[fill='#6B4E71'] {
+        fill: #f9f5ff;
       }
 
-      body.theme-dark
-        .feature-cards
-        article[aria-labelledby='debugging-title']
-        .card-graphic
-        path:first-child {
-        fill: #53687e;
+      body.theme-dark .feature-cards .card-graphic path[fill='#F9F5FF'] {
+        fill: #6b4e71;
+      }
+
+      body.theme-dark .feature-cards .card-graphic path[fill='#D66853'] {
+        fill: #d66853;
       }
 
       /* Reduce motion */
@@ -1175,7 +1174,7 @@
 }
 
 .card-border-green {
-  border-left: 6px solid #809848 !important;
+  border-left: 6px solid #d66853 !important;
 }
 
 .card-border-challenge {
