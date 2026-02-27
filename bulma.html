@@ -334,13 +334,24 @@
                 </div>
                 <h2 class="title is-5">Bulma quick tip</h2>
                 <p class="has-text-grey">
-                  Use Bulma components first, then add only a small amount of
-                  custom CSS for final polish.
+                  Start with Bulma's default layout and styles first. If
+                  something still needs to change, make one small style update
+                  at a time.
                 </p>
               </div>
             </div>
           </section>
         </div>
+
+        <section class="mt-4" aria-label="Bulma callout">
+          <article class="message is-link is-light mb-0">
+            <div class="message-body py-2">
+              If your page feels crowded, keep your content the same and ask AI
+              to add more space between sections and improve button readability.
+              Small spacing changes can make your page look much more polished.
+            </div>
+          </article>
+        </section>
 
         <section class="box mt-4" id="prompt" aria-labelledby="prompt-title">
           <h2 id="prompt-title" class="title is-5 section-title-line">
@@ -353,11 +364,6 @@
             Copy this prompt exactly to convert your Baseline page into a Bulma
             version.
           </p>
-          <article class="message is-link is-light mb-4">
-            <div class="message-body py-2">
-              Keep your content the same; we'll update the styling layer.
-            </div>
-          </article>
           <button
             class="button is-link is-light is-small mb-3"
             type="button"
@@ -367,12 +373,10 @@
             Copy Prompt
           </button>
           <pre class="prompt-pre" id="bulma-prompt-text">
-Take my current Baseline page and make a new version that uses Bulma styling.
+Take out the Bootstrap styling and create a new version that uses Bulma styling.
 Keep the same topic and content (same sections, same links, same overall message).
 
-Make it look cleaner using Bulma-style layout, cards, buttons, and spacing.
-Do not add complicated layout changes or animations.
-Keep basic accessibility (headings in order, skip link, and visible keyboard focus).
+Make it look like a polished Bulma design, show me what a good Bulma styled page could look like.
 
 Please include whatever is needed in the HTML file so Bulma styling works when I open the page in a browser.
 Output a single bulma.html file.</pre
@@ -430,8 +434,8 @@ Output a single bulma.html file.</pre
                     easy-to-read class names
                   </li>
                   <li>
-                    <strong>Next step:</strong> open Resources and choose colors,
-                    icons, and UI patterns
+                    <strong>Next step:</strong> open Resources and choose
+                    colors, icons, and UI patterns
                   </li>
                   <li>
                     <strong>Final:</strong> mix Pico/Bootstrap/Bulma ideas in
@@ -461,11 +465,11 @@ Output a single bulma.html file.</pre
     </footer>
     <script>
       (() => {
-        const copyButtons = document.querySelectorAll("[data-copy-target]");
+        const copyButtons = document.querySelectorAll('[data-copy-target]');
 
         copyButtons.forEach((button) => {
-          button.addEventListener("click", async () => {
-            const targetId = button.getAttribute("data-copy-target");
+          button.addEventListener('click', async () => {
+            const targetId = button.getAttribute('data-copy-target');
             const target = targetId ? document.getElementById(targetId) : null;
             if (!target) return;
 
@@ -474,15 +478,15 @@ Output a single bulma.html file.</pre
 
             try {
               await navigator.clipboard.writeText(promptText);
-              button.innerHTML = "Copied!";
+              button.innerHTML = 'Copied!';
             } catch (_error) {
-              const tempTextArea = document.createElement("textarea");
+              const tempTextArea = document.createElement('textarea');
               tempTextArea.value = promptText;
               document.body.appendChild(tempTextArea);
               tempTextArea.select();
-              document.execCommand("copy");
+              document.execCommand('copy');
               document.body.removeChild(tempTextArea);
-              button.innerHTML = "Copied!";
+              button.innerHTML = 'Copied!';
             }
 
             window.setTimeout(() => {
