@@ -292,8 +292,8 @@
               <a
                 class="btn btn-primary rounded-pill px-4 focus-ring"
                 href="#prompt"
-                ><i class="bi bi-clipboard-check me-2" aria-hidden="true"></i>Copy
-                Prompt</a
+                ><i class="bi bi-clipboard-check me-2" aria-hidden="true"></i
+                >Copy Prompt</a
               >
               <a
                 class="btn btn-outline-primary rounded-pill px-4 focus-ring"
@@ -328,7 +328,8 @@
         <section class="col-12 col-lg-4" role="listitem">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <span class="badge text-bg-primary-subtle text-primary-emphasis mb-2"
+              <span
+                class="badge text-bg-primary-subtle text-primary-emphasis mb-2"
                 ><i class="bi bi-grid-3x3-gap me-1" aria-hidden="true"></i
                 >Component-first</span
               >
@@ -343,7 +344,8 @@
         <section class="col-12 col-lg-4" role="listitem">
           <div class="card shadow-sm h-100">
             <div class="card-body">
-              <span class="badge text-bg-success-subtle text-success-emphasis mb-2"
+              <span
+                class="badge text-bg-success-subtle text-success-emphasis mb-2"
                 ><i class="bi bi-bookmark-check me-1" aria-hidden="true"></i
                 >Content-safe</span
               >
@@ -364,8 +366,9 @@
               >
               <h2 class="h5">Bootstrap quick tip</h2>
               <p class="text-secondary mb-0">
-                Let Bootstrap handle layout with containers/rows/cols before
-                adding extra custom CSS.
+                Start with Bootstrap's default layout and styles first. If
+                something still needs to change, make one small style update at
+                a time.
               </p>
             </div>
           </div>
@@ -373,13 +376,19 @@
       </div>
 
       <section class="mt-3" aria-labelledby="callout-title">
-        <div class="alert alert-info d-flex align-items-start gap-2 mb-0" role="note">
+        <div
+          class="alert alert-info d-flex align-items-start gap-2 mb-0"
+          role="note"
+        >
           <i class="bi bi-info-circle-fill mt-1" aria-hidden="true"></i>
           <div>
-            <h2 id="callout-title" class="h6 mb-1">Bootstrap Callout Example</h2>
+            <h2 id="callout-title" class="h6 mb-1">
+              Bootstrap Callout Example
+            </h2>
             <p class="mb-0">
-              This uses Bootstrap’s built-in <code>alert</code> component for a
-              quick callout pattern.
+              If your page feels crowded, keep your content the same and ask AI
+              to add more space between sections and improve button readability.
+              Small spacing changes can make your page look much more polished.
             </p>
           </div>
         </div>
@@ -404,13 +413,14 @@
             >
               Copy Prompt
             </button>
-            <pre class="p-3 rounded bg-light border prompt-pre" id="bootstrap-prompt-text">
-Take my current Baseline page and make a new version that uses Bootstrap styling.
+            <pre
+              class="p-3 rounded bg-light border prompt-pre"
+              id="bootstrap-prompt-text"
+            >
+Take out the Pico styling and create a new version that uses Bootstrap styling.
 Keep the same topic and content (same sections, same links, same overall message).
 
-Make it look more polished using Bootstrap-style layout, cards, buttons, and spacing.
-Do not add complicated layout changes or animations.
-Keep basic accessibility (headings in order, skip link, and visible keyboard focus).
+Make it look like a polished Bootstrap design, show me what a good Bootstrap styled page could look like.
 
 Please include whatever is needed in the HTML file so Bootstrap styling works when I open the page in a browser.
 Output a single bootstrap.html file.</pre
@@ -424,12 +434,12 @@ Output a single bootstrap.html file.</pre
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <h2 id="topic-title" class="h5">
-                <i class="bi bi-pencil-square me-2" aria-hidden="true"></i>Choose
-                your own page idea (optional)
+                <i class="bi bi-pencil-square me-2" aria-hidden="true"></i
+                >Choose your own page idea (optional)
               </h2>
               <p class="text-secondary">
-                If you picked your own topic in your Baseline page, keep it simple
-                here too.
+                If you picked your own topic in your Baseline page, keep it
+                simple here too.
               </p>
               <ul class="text-secondary mb-0">
                 <li>Keep the same one-page structure</li>
@@ -441,7 +451,11 @@ Output a single bootstrap.html file.</pre
           </div>
         </section>
 
-        <section class="col-12 col-lg-6" id="system" aria-labelledby="system-title">
+        <section
+          class="col-12 col-lg-6"
+          id="system"
+          aria-labelledby="system-title"
+        >
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <h2 id="system-title" class="h5">
@@ -449,9 +463,9 @@ Output a single bootstrap.html file.</pre
                 happens next
               </h2>
               <p class="text-secondary">
-                Bootstrap shows what a component-heavy framework feels like. Next
-                you will compare this same page in Bulma, then use Resources
-                before combining ideas in Frankenstein.
+                Bootstrap shows what a component-heavy framework feels like.
+                Next you will compare this same page in Bulma, then use
+                Resources before combining ideas in Frankenstein.
               </p>
               <ul class="text-secondary mb-0">
                 <li>
@@ -459,8 +473,8 @@ Output a single bootstrap.html file.</pre
                   predictable components
                 </li>
                 <li>
-                  <strong>Next step:</strong> rebuild this same page in Bulma for a
-                  cleaner class-based style
+                  <strong>Next step:</strong> rebuild this same page in Bulma
+                  for a cleaner class-based style
                 </li>
                 <li>
                   <strong>Then:</strong> use Resources to choose colors, icons,
@@ -475,7 +489,6 @@ Output a single bootstrap.html file.</pre
           </div>
         </section>
       </div>
-
     </main>
 
     <footer class="border-top">
@@ -498,11 +511,11 @@ Output a single bootstrap.html file.</pre
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       (() => {
-        const copyButtons = document.querySelectorAll("[data-copy-target]");
+        const copyButtons = document.querySelectorAll('[data-copy-target]');
 
         copyButtons.forEach((button) => {
-          button.addEventListener("click", async () => {
-            const targetId = button.getAttribute("data-copy-target");
+          button.addEventListener('click', async () => {
+            const targetId = button.getAttribute('data-copy-target');
             const target = targetId ? document.getElementById(targetId) : null;
             if (!target) return;
 
@@ -511,15 +524,15 @@ Output a single bootstrap.html file.</pre
 
             try {
               await navigator.clipboard.writeText(promptText);
-              button.innerHTML = "Copied!";
+              button.innerHTML = 'Copied!';
             } catch (_error) {
-              const tempTextArea = document.createElement("textarea");
+              const tempTextArea = document.createElement('textarea');
               tempTextArea.value = promptText;
               document.body.appendChild(tempTextArea);
               tempTextArea.select();
-              document.execCommand("copy");
+              document.execCommand('copy');
               document.body.removeChild(tempTextArea);
-              button.innerHTML = "Copied!";
+              button.innerHTML = 'Copied!';
             }
 
             window.setTimeout(() => {
