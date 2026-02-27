@@ -195,6 +195,40 @@ body.with-side-rail {
   color: #f9f5ff;
 }
 
+/* Example link icon: no circle by default/current, only on hover */
+.side-rail-link.example-link .icon {
+  background: transparent;
+}
+
+.side-rail-link.example-link .icon .material-symbols-outlined {
+  font-size: 26px;
+  color: #6b4e71;
+}
+
+.side-rail-link.example-link[aria-current='page'] .icon {
+  background: transparent;
+}
+
+.side-rail-link.example-link[aria-current='page'] .icon .material-symbols-outlined {
+  color: #6b4e71;
+  -webkit-font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 24 !important;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 24 !important;
+}
+
+@media (max-width: 991.98px) {
+  .side-rail-link.example-link .icon .material-symbols-outlined {
+    font-size: 18px;
+  }
+}
+
 .side-rail-link.basics-link[aria-current='page'] .icon {
   background: transparent;
 }
