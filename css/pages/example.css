@@ -1203,6 +1203,15 @@
   border-left: 6px solid var(--p2) !important;
 }
 
+/* Keep main-content section spacing consistent and roomy */
+#main > section {
+  margin-top: 0 !important;
+}
+
+#main > section + section {
+  margin-top: 4rem !important;
+}
+
 .challenge-grid .challenge-item {
   border: 1px solid var(--border);
   background: var(--surface-2);
