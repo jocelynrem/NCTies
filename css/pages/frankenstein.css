@@ -1105,11 +1105,8 @@
 
       /* Reduce motion */
       @media (prefers-reduced-motion: reduce) {
-        .hero-actions .hero-link-btn,
-        .theme-mode-button,
         .feature-cards .uicard,
         .feature-cards .card-img,
-        .feature-cards .card-btn,
         .badge-soft {
           transition: none !important;
         }
@@ -1118,21 +1115,6 @@
         }
         .feature-cards .uicard:hover .card-img {
           transform: none;
-        }
-        .hero-actions .hero-link-btn:hover,
-        .hero-actions .hero-link-btn:focus {
-          transform: none;
-          box-shadow: none;
-        }
-        .hero-actions .hero-link-btn::after {
-          transition: none;
-        }
-        .theme-mode-button:hover .button__icon {
-          width: 40px;
-          transform: translateX(130px);
-        }
-        .theme-mode-button:hover .button__text {
-          color: inherit;
         }
         .feature-cards .card-btn:hover {
           transform: none;
