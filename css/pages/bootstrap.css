@@ -57,3 +57,76 @@
   white-space: pre-wrap;
   overflow: auto;
 }
+
+.challenge-band {
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.3);
+  border-left: 8px solid rgba(var(--bs-primary-rgb), 0.7);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(var(--bs-primary-rgb), 0.08),
+      rgba(var(--bs-primary-rgb), 0.02)
+    ),
+    #fff;
+}
+
+.challenge-band #challenges-title {
+  color: var(--bs-primary-text-emphasis);
+  font-weight: 700;
+}
+
+.workflow-band {
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.22);
+  background: #fff;
+}
+
+.devtools-simple {
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.28);
+  border-radius: 14px;
+  padding: 16px;
+  background: rgba(var(--bs-primary-rgb), 0.03);
+}
+
+.devtools-shortcuts {
+  margin-bottom: 10px;
+}
+
+.devtools-tools-callout {
+  border-left: 4px solid rgba(var(--bs-primary-rgb), 0.7);
+  padding-left: 10px;
+  margin-bottom: 12px;
+}
+
+.devtools-tool-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.devtools-tool-line:last-child {
+  margin-bottom: 0;
+}
+
+.devtools-tool-line .material-symbols-outlined {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.devtools-action-box {
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.24);
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.devtools-action-box:last-child {
+  margin-bottom: 0;
+}
+
+.devtools-action-heading {
+  font-size: 1rem;
+  margin: 0 0 8px;
+  font-weight: 700;
+}

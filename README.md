@@ -7,15 +7,15 @@
   - `pico.html`
   - `bootstrap.html`
   - `bulma.html`
-  - `resources.html`
-  - `frankenstein.html`
+  - `customization.html`
+  - `example.html`
 - Workshop flow order:
   - `index.html` (Baseline start)
   - `pico.html`
   - `bootstrap.html`
   - `bulma.html`
-  - `resources.html`
-  - `frankenstein.html` (capstone/challenges)
+  - `customization.html`
+  - `example.html` (capstone/challenges)
 - CSS is split by purpose:
   - `css/pages/` for page-specific styles
   - `css/shared/` for shared styles used by all pages
@@ -30,7 +30,7 @@
   - `css/pages/bootstrap.css`
   - `css/pages/bulma.css`
   - `css/pages/resources.css`
-  - `css/pages/frankenstein.css`
+  - `css/pages/example.css`
 
 ## How To Add A New Page
 

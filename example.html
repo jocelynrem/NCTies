@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <link rel="stylesheet" href="css/pages/frankenstein.css" />
+    <link rel="stylesheet" href="css/pages/example.css" />
     <link rel="stylesheet" href="css/shared/styles.css" />
   </head>
 
@@ -51,9 +51,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link focus-ring" href="#reference">Reference</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link focus-ring" href="#devtools">DevTools</a>
             </li>
             <li class="nav-item">
               <a class="nav-link focus-ring" href="#resources">Resources</a>
@@ -217,7 +214,7 @@
           </span>
           <span class="label">Bulma</span>
         </a>
-        <a class="side-rail-link focus-ring" href="resources.html">
+        <a class="side-rail-link focus-ring" href="customization.html">
           <span class="icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -249,11 +246,11 @@
               </text>
             </svg>
           </span>
-          <span class="label">Resources</span>
+          <span class="label">Customize</span>
         </a>
         <a
           class="side-rail-link focus-ring"
-          href="frankenstein.html"
+          href="example.html"
           aria-current="page"
         >
           <span class="icon" aria-hidden="true">
@@ -287,7 +284,7 @@
               </text>
             </svg>
           </span>
-          <span class="label">Frankenstein</span>
+          <span class="label">Example</span>
         </a>
       </nav>
     </aside>
@@ -297,15 +294,15 @@
         <div class="row align-items-center g-4">
           <div class="col-12 col-lg-8">
             <span class="badge badge-soft rounded-pill px-3 py-2"
-              >Bootstrap layout • custom components • DevTools workflow</span
+              >Example page • one possible customization</span
             >
 
             <h1 class="display-6 fw-semibold mt-3 mb-2">
-              Understand, edit, and polish AI-generated code
+              Example: one way to customize the workshop page
             </h1>
 
             <p class="mb-0 strong-lead">
-              NCTIES • 45 minutes • Hands-on • Bring a laptop
+              Use this for inspiration, not as the required workflow steps.
             </p>
 
             <p class="lead mb-4">
@@ -323,7 +320,7 @@
                 >
                   <path d="M5 12h12M13 6l6 6-6 6" />
                 </svg>
-                Start with the cards
+                View the takeaways
               </a>
               <a
                 class="hero-link-btn hero-link-prompt focus-ring"
@@ -544,7 +541,7 @@
 
               <div class="card-footer">
                 <span class="card-meta">Outcome: predictable edits</span>
-                <a class="card-btn" href="#devtools"
+                <a class="card-btn" href="#accessibility"
                   >Jump
                   <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h12M13 6l6 6-6 6" />
@@ -798,122 +795,6 @@
                   </p>
                 </div>
               </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="local-file-setup" class="mt-4">
-        <div class="card shadow-sm border-0 card-border-challenge">
-          <div class="card-body">
-            <h2 class="h5 a11y-title">Before DevTools: Save your page file</h2>
-            <p class="text-secondary mb-3">
-              DevTools works on a page opened in your browser. First, copy your
-              code from Gemini into a text editor and save it as an HTML file on
-              your Desktop.
-            </p>
-            <div class="row g-3">
-              <article class="col-12 col-lg-6">
-                <div class="challenge-item h-100">
-                  <h3 class="h6 mb-2">Mac steps</h3>
-                  <ol class="small mb-0">
-                    <li>Open TextEdit.</li>
-                    <li>Choose Format -> Make Plain Text.</li>
-                    <li>Paste your code from Gemini.</li>
-                    <li>
-                      Save to Desktop with a name like
-                      <code>my-page.html</code>.
-                    </li>
-                    <li>Double-click the file to open it in your browser.</li>
-                  </ol>
-                </div>
-              </article>
-              <article class="col-12 col-lg-6">
-                <div class="challenge-item h-100">
-                  <h3 class="h6 mb-2">Windows steps</h3>
-                  <ol class="small mb-0">
-                    <li>Open Notepad.</li>
-                    <li>Paste your code from Gemini.</li>
-                    <li>
-                      Save to Desktop as <code>my-page.html</code> (set Save as
-                      type to All Files if needed).
-                    </li>
-                    <li>Double-click the file to open it in your browser.</li>
-                  </ol>
-                </div>
-              </article>
-            </div>
-            <p class="small text-secondary mb-0 mt-3">
-              This file is local on your computer only. It is not a public
-              website that other people can open unless you publish it online.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- DEVTOOLS -->
-      <section id="devtools" class="mt-5">
-        <div class="card shadow-sm border-0 card-border-a1">
-          <div class="card-body">
-            <div class="devtools-simple">
-              <h2 class="h5 a11y-title">DevTools workflow</h2>
-              <p class="text-secondary small mb-2 devtools-shortcuts">
-                <span
-                  >Mac: <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd></span
-                >
-                <span
-                  >PC: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></span
-                >
-              </p>
-              <div class="small mb-2 devtools-tools-callout">
-                <p class="devtools-tool-line">
-                  <span class="material-symbols-outlined" aria-hidden="true"
-                    >ink_selection</span
-                  >
-                  <span
-                    >Select element: click this, then click a part of the page
-                    to find its name/class.</span
-                  >
-                </p>
-                <p class="devtools-tool-line">
-                  <span class="material-symbols-outlined" aria-hidden="true"
-                    >devices</span
-                  >
-                  <span
-                    >Toggle device toolbar: preview how the page looks on
-                    phone/tablet widths.</span
-                  >
-                </p>
-              </div>
-              <div class="devtools-action-box">
-                <h3 class="devtools-action-heading">
-                  Action 1: Find the element name for AI
-                </h3>
-                <ol class="mb-0">
-                  <li>
-                    Open DevTools (shortcut above or Right-click → Inspect)
-                  </li>
-                  <li>
-                    Use Select element, then click the part you want to change
-                  </li>
-                  <li>Find the class or element name in the inspector</li>
-                  <li>Ask AI to edit <em>only</em> that named part</li>
-                  <li>Paste AI's update into your file → refresh</li>
-                </ol>
-              </div>
-
-              <div class="devtools-action-box">
-                <h3 class="devtools-action-heading">
-                  Action 2: Check different screen sizes
-                </h3>
-                <ol class="mb-0">
-                  <li>Click Toggle device toolbar</li>
-                  <li>Switch between phone/tablet widths</li>
-                  <li>
-                    Ask AI to adjust spacing or layout if anything looks off
-                  </li>
-                </ol>
-              </div>
             </div>
           </div>
         </div>
