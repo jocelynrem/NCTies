@@ -97,12 +97,37 @@
       .btn.ghost {
         background: transparent;
       }
-      main {
-        padding: 22px 0 38px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
+main {
+  padding: 22px 0 38px;
+}
+
+.gemini-callout {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border: 1px solid color-mix(in srgb, var(--brand) 28%, var(--border));
+  border-left: 6px solid var(--brand);
+  border-radius: 12px;
+  background: linear-gradient(90deg, #eef5ff, #f8fbff);
+  box-shadow: var(--shadow);
+}
+
+.gemini-callout h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.gemini-callout p {
+  margin: 0;
+  color: #23384f;
+}
+
+.gemini-callout a {
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
         gap: 16px;
       }
       .card {
