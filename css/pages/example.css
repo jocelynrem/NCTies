@@ -1394,6 +1394,106 @@
   color: var(--heading-color);
 }
 
+.ui-section-label {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--p3) 78%, var(--p2));
+}
+
+.ui-types-note {
+  max-width: 70ch;
+}
+
+.ui-foundation-card,
+.ui-kind-card {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+.ui-kind-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--surface) 94%, var(--p4) 6%),
+    color-mix(in srgb, var(--surface) 84%, var(--p1) 16%)
+  );
+}
+
+.ui-kind-badge {
+  display: inline-block;
+  align-self: flex-start;
+  width: auto;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--p2);
+  border: 1px solid color-mix(in srgb, var(--a1) 34%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--a1) 13%, var(--surface));
+  padding: 3px 8px;
+}
+
+.ui-illustration {
+  display: block;
+  border: 1px solid color-mix(in srgb, var(--p3) 28%, transparent);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #ffffff 96%, var(--p4) 4%),
+    color-mix(in srgb, #ffffff 90%, var(--p4) 10%)
+  );
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 8px 18px rgba(58, 68, 84, 0.08);
+}
+
+.ui-illustration text {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.ui-example-list {
+  padding-left: 1rem;
+}
+
+.ui-example-list li + li {
+  margin-top: 0.2rem;
+}
+
+body.theme-dark .ui-section-label {
+  color: color-mix(in srgb, #f2eef7 86%, var(--a1) 14%);
+}
+
+body.theme-dark .ui-kind-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--surface) 90%, black),
+    color-mix(in srgb, var(--surface) 78%, var(--p1) 22%)
+  );
+}
+
+body.theme-dark .ui-kind-badge {
+  color: #f2eef7;
+  border-color: rgba(214, 104, 83, 0.5);
+  background: rgba(214, 104, 83, 0.24);
+}
+
+body.theme-dark .ui-illustration {
+  border-color: rgba(242, 238, 247, 0.2);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface) 92%, black),
+    color-mix(in srgb, var(--surface) 84%, var(--p1) 16%)
+  );
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 10px 22px rgba(0, 0, 0, 0.3);
+}
+
 .tooltip-demo {
   aspect-ratio: 220 / 90;
   min-height: 0;
@@ -1517,7 +1617,7 @@
 
 @media (min-width: 992px) {
   .ui-elements-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
