@@ -1259,6 +1259,19 @@
                 Accessibility means making your page easier for more people to
                 read and use. Use this as a quick confidence check.
               </p>
+              <div class="a11y-video-launch mb-3">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary focus-ring a11y-video-trigger"
+                  data-bs-toggle="modal"
+                  data-bs-target="#a11yVideoModal"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >smart_display</span
+                  >
+                  Watch Web Accessibility Guide
+                </button>
+              </div>
               <div class="row g-3">
                 <article class="col-12 col-lg-6">
                   <div class="challenge-item h-100">
@@ -1354,6 +1367,71 @@
         </div>
       </section>
     </main>
+
+    <div
+      class="modal fade"
+      id="a11yVideoModal"
+      tabindex="-1"
+      aria-labelledby="a11yVideoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content a11y-video-modal">
+          <div class="modal-header">
+            <h2 class="modal-title h5 mb-0" id="a11yVideoModalLabel">
+              Web Accessibility Guide
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <video
+              id="a11y-guide-video"
+              class="a11y-video-player"
+              controls
+              preload="metadata"
+            >
+              <source src="Web_Accessibility_Guide.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <div
+              class="a11y-video-speed"
+              role="group"
+              aria-label="Playback speed controls"
+            >
+              <span class="small speed-label">Playback speed</span>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary"
+                data-video-action="slower"
+              >
+                Slower
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary"
+                data-video-action="normal"
+              >
+                1x
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary"
+                data-video-action="faster"
+              >
+                Faster
+              </button>
+              <output id="a11y-video-rate" class="a11y-video-rate">1x</output>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="border-top">
       <div
@@ -1578,6 +1656,49 @@
 
         renderDots();
         reorderToIndex(0);
+      })();
+
+      (function () {
+        const video = document.getElementById('a11y-guide-video');
+        const modalEl = document.getElementById('a11yVideoModal');
+        const rateReadout = document.getElementById('a11y-video-rate');
+        const speedButtons = document.querySelectorAll('[data-video-action]');
+        if (!video || !modalEl || !rateReadout || !speedButtons.length) return;
+
+        const MIN_RATE = 0.5;
+        const MAX_RATE = 2;
+        const STEP = 0.25;
+
+        function formatRate(rate) {
+          const rounded = Math.round(rate * 100) / 100;
+          return Number.isInteger(rounded) ? `${rounded}x` : `${rounded}x`;
+        }
+
+        function setRate(nextRate) {
+          const clamped = Math.min(MAX_RATE, Math.max(MIN_RATE, nextRate));
+          video.playbackRate = clamped;
+          rateReadout.value = formatRate(clamped);
+          rateReadout.textContent = formatRate(clamped);
+        }
+
+        speedButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const action = button.getAttribute('data-video-action');
+            if (action === 'slower') setRate(video.playbackRate - STEP);
+            if (action === 'normal') setRate(1);
+            if (action === 'faster') setRate(video.playbackRate + STEP);
+          });
+        });
+
+        video.addEventListener('ratechange', () => {
+          rateReadout.value = formatRate(video.playbackRate);
+          rateReadout.textContent = formatRate(video.playbackRate);
+        });
+
+        modalEl.addEventListener('hidden.bs.modal', () => {
+          video.pause();
+          video.currentTime = 0;
+        });
       })();
     </script>
   </body>
