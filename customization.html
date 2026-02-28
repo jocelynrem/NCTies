@@ -205,7 +205,9 @@
         </a>
         <a class="side-rail-link focus-ring example-link" href="example.html">
           <span class="icon" aria-hidden="true">
-            <span class="material-symbols-outlined" aria-hidden="true">sentiment_very_satisfied</span>
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >sentiment_very_satisfied</span
+            >
           </span>
           <span class="label">Example</span>
         </a>
@@ -263,128 +265,7 @@
     </header>
 
     <main id="main" class="container py-4">
-      <section
-        class="mt-4 workflow-band p-3 rounded-4"
-        id="local-file-setup"
-        aria-labelledby="setup-title"
-      >
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h2 id="setup-title" class="h4">
-              <i class="bi bi-save2 me-2" aria-hidden="true"></i>Before
-              DevTools: Save your page file
-            </h2>
-            <p class="text-secondary mb-3">
-              DevTools works on a page opened in your browser. First, copy your
-              Gemini code into a text editor and save it to your Desktop as an
-              HTML file.
-            </p>
-            <div class="row g-3">
-              <article class="col-12 col-lg-6">
-                <div class="border rounded p-3 bg-light h-100">
-                  <h3 class="h6">Mac steps</h3>
-                  <ol class="mb-0">
-                    <li>Open TextEdit.</li>
-                    <li>Choose Format -> Make Plain Text.</li>
-                    <li>Paste your code from Gemini.</li>
-                    <li>Save to Desktop as <code>my-page.html</code>.</li>
-                    <li>Double-click the file to open it in your browser.</li>
-                  </ol>
-                </div>
-              </article>
-              <article class="col-12 col-lg-6">
-                <div class="border rounded p-3 bg-light h-100">
-                  <h3 class="h6">Windows steps</h3>
-                  <ol class="mb-0">
-                    <li>Open Notepad.</li>
-                    <li>Paste your code from Gemini.</li>
-                    <li>
-                      Save to Desktop as <code>my-page.html</code> (set Save as
-                      type to All Files if needed).
-                    </li>
-                    <li>Double-click the file to open it in your browser.</li>
-                  </ol>
-                </div>
-              </article>
-            </div>
-            <p class="small text-secondary mb-0 mt-3">
-              This file is local on your computer only. It is not a public
-              website unless you publish it online.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="mt-4 workflow-band p-3 rounded-4"
-        id="devtools"
-        aria-labelledby="devtools-title"
-      >
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h2 id="devtools-title" class="h4">
-              <i class="bi bi-tools me-2" aria-hidden="true"></i>DevTools
-              workflow
-            </h2>
-            <p class="text-secondary small mb-2 devtools-shortcuts">
-              <span
-                >Mac: <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd></span
-              >
-              <span class="ms-3"
-                >PC: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></span
-              >
-            </p>
-            <div class="small mb-2 devtools-tools-callout">
-              <p class="devtools-tool-line">
-                <span class="material-symbols-outlined" aria-hidden="true"
-                  >ink_selection</span
-                >
-                <span
-                  >Select element: click this, then click a part of the page to
-                  find its name/class.</span
-                >
-              </p>
-              <p class="devtools-tool-line">
-                <span class="material-symbols-outlined" aria-hidden="true"
-                  >devices</span
-                >
-                <span
-                  >Toggle device toolbar: preview how the page looks on
-                  phone/tablet widths.</span
-                >
-              </p>
-            </div>
-            <div class="devtools-action-box">
-              <h3 class="devtools-action-heading">
-                Action 1: Find the element name for AI
-              </h3>
-              <ol class="mb-0">
-                <li>Open DevTools (shortcut above or Right-click → Inspect)</li>
-                <li>
-                  Use Select element, then click the part you want to change
-                </li>
-                <li>Find the class or element name in the inspector</li>
-                <li>Ask AI to edit only that named part</li>
-                <li>Paste AI's update into your file and refresh</li>
-              </ol>
-            </div>
-            <div class="devtools-action-box">
-              <h3 class="devtools-action-heading">
-                Action 2: Check accessibility and screen sizes
-              </h3>
-              <ol class="mb-0">
-                <li>Check text contrast so content is easy to read</li>
-                <li>Click Toggle device toolbar</li>
-                <li>Switch between phone/tablet widths</li>
-                <li>
-                  Ask AI to adjust spacing or layout if anything looks off
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <!-- challenges -->
       <section
         class="mt-4 challenge-band p-3 rounded-4"
         id="challenges"
@@ -494,6 +375,133 @@
               </div>
             </div>
           </section>
+        </div>
+      </section>
+
+      <!-- save page -->
+      <section
+        class="mt-4 workflow-band p-3 rounded-4"
+        id="local-file-setup"
+        aria-labelledby="setup-title"
+      >
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 id="setup-title" class="h4">
+              <i class="bi bi-save2 me-2" aria-hidden="true"></i>Before
+              DevTools: Save your page file
+            </h2>
+            <p class="text-secondary mb-3">
+              We are using DevTools in the Chrome browser. First, copy your
+              Gemini code into a text editor and save it to your Desktop as an
+              HTML file.
+            </p>
+            <div class="row g-3">
+              <article class="col-12 col-lg-6">
+                <div class="border rounded p-3 bg-light h-100">
+                  <h3 class="h6">Mac steps</h3>
+                  <ol class="mb-0">
+                    <li>Open TextEdit.</li>
+                    <li>Choose Format -> Make Plain Text.</li>
+                    <li>Paste your code from Gemini.</li>
+                    <li>Save to Desktop as <code>my-page.html</code>.</li>
+                    <li>Double-click the file to open it in your browser.</li>
+                  </ol>
+                </div>
+              </article>
+              <article class="col-12 col-lg-6">
+                <div class="border rounded p-3 bg-light h-100">
+                  <h3 class="h6">Windows steps</h3>
+                  <ol class="mb-0">
+                    <li>Open Notepad.</li>
+                    <li>Paste your code from Gemini.</li>
+                    <li>
+                      Save to Desktop as <code>my-page.html</code> (set Save as
+                      type to All Files if needed).
+                    </li>
+                    <li>Double-click the file to open it in your browser.</li>
+                  </ol>
+                </div>
+              </article>
+            </div>
+            <p class="small text-secondary mb-0 mt-3">
+              This file is local on your computer only. It is not a public
+              website unless you publish it online.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- devtools -->
+      <section
+        class="mt-4 workflow-band p-3 rounded-4"
+        id="devtools"
+        aria-labelledby="devtools-title"
+      >
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 id="devtools-title" class="h4">
+              <i class="bi bi-tools me-2" aria-hidden="true"></i>DevTools
+              workflow
+            </h2>
+            <p class="text-secondary small mb-2">
+              Use Chrome browser for these DevTools steps.
+            </p>
+            <p class="text-secondary small mb-2 devtools-shortcuts">
+              <span
+                >Mac: <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd></span
+              >
+              <span class="ms-3"
+                >PC: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></span
+              >
+            </p>
+            <div class="small mb-2 devtools-tools-callout">
+              <p class="devtools-tool-line">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >ink_selection</span
+                >
+                <span
+                  >Select element: click this, then click a part of the page to
+                  find its name/class.</span
+                >
+              </p>
+              <p class="devtools-tool-line">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >devices</span
+                >
+                <span
+                  >Toggle device toolbar: preview how the page looks on
+                  phone/tablet widths.</span
+                >
+              </p>
+            </div>
+            <div class="devtools-action-box">
+              <h3 class="devtools-action-heading">
+                Action 1: Find the element name for AI
+              </h3>
+              <ol class="mb-0">
+                <li>Open DevTools (shortcut above or Right-click → Inspect)</li>
+                <li>
+                  Use Select element, then click the part you want to change
+                </li>
+                <li>Find the class or element name in the inspector</li>
+                <li>Ask AI to edit only that named part</li>
+                <li>Paste AI's update into your file and refresh</li>
+              </ol>
+            </div>
+            <div class="devtools-action-box">
+              <h3 class="devtools-action-heading">
+                Action 2: Check accessibility and screen sizes
+              </h3>
+              <ol class="mb-0">
+                <li>Check text contrast so content is easy to read</li>
+                <li>Click Toggle device toolbar</li>
+                <li>Switch between phone/tablet widths</li>
+                <li>
+                  Ask AI to adjust spacing or layout if anything looks off
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
       </section>
 
