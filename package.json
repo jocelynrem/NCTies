@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "build:css": "node scripts/minify-css.js",
     "dev": "serve -l 3000 ."
   },
   "devDependencies": {

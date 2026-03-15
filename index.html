@@ -8,8 +8,10 @@
       content="Baseline NCTIES workshop page for comparing plain HTML with Pico, Bootstrap, Bulma, and a customized example."
     />
     <title>NCTIES Workshop: AI Coding + CSS Frameworks (Baseline)</title>
-    <link rel="stylesheet" href="css/pages/index.css" />
-    <link rel="stylesheet" href="css/shared/styles.css" />
+    <link rel="preload" href="css/pages/index.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="css/shared/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="css/pages/index.min.css" /></noscript>
+    <noscript><link rel="stylesheet" href="css/shared/styles.min.css" /></noscript>
   </head>
   <body class="with-side-rail">
     <a class="skip" href="#main">Skip to content</a>
