@@ -191,20 +191,44 @@ body.with-side-rail {
   background: transparent;
 }
 
-.side-rail-link.example-link .icon .material-symbols-outlined {
-  font-size: 31.7px;
-  line-height: 1;
-  color: #6b4e71;
+.side-rail-link.example-link .icon svg {
+  width: 31.7px;
+  height: 31.7px;
+  display: block;
+}
+
+.side-rail-link.example-link .icon .face {
+  fill: transparent;
+  stroke: #6b4e71;
+  stroke-width: 2;
+}
+
+.side-rail-link.example-link .icon .eye {
+  fill: #6b4e71;
+}
+
+.side-rail-link.example-link .icon .smile {
+  fill: none;
+  stroke: #6b4e71;
+  stroke-width: 2;
+  stroke-linecap: round;
 }
 
 .side-rail-link.example-link[aria-current='page'] .icon {
   background: transparent;
 }
 
-.side-rail-link.example-link[aria-current='page'] .icon .material-symbols-outlined {
-  color: #f9f5ff;
-  -webkit-text-fill-color: #6b4e71;
-  -webkit-text-stroke: 0.8px #f9f5ff;
+.side-rail-link.example-link[aria-current='page'] .icon .face {
+  fill: #6b4e71;
+  stroke: #6b4e71;
+}
+
+.side-rail-link.example-link[aria-current='page'] .icon .eye {
+  fill: #f9f5ff;
+}
+
+.side-rail-link.example-link[aria-current='page'] .icon .smile {
+  stroke: #f9f5ff;
 }
 
 .side-rail-link.basics-link[aria-current='page'] .icon {
