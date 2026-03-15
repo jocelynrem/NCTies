@@ -239,25 +239,27 @@ body.with-side-rail {
     border-bottom: 1px solid #dadce0;
     box-shadow: none;
     background: #ffffff;
+    overflow: visible;
   }
 
   .side-rail-links {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 0.65rem;
   }
 
   .side-rail-link {
-    width: auto;
-    flex: 0 0 auto;
-    border-radius: 999px;
+    width: calc(50% - 0.4rem);
+    max-width: 10rem;
+    flex: 1 1 calc(50% - 0.4rem);
+    border-radius: 16px;
     padding: 6px 10px;
     font-size: 13px;
     min-height: 2.5rem;
+    justify-content: center;
   }
 
   .side-rail-link .icon {
