@@ -192,7 +192,8 @@ body.with-side-rail {
 }
 
 .side-rail-link.example-link .icon .material-symbols-outlined {
-  font-size: 20px;
+  font-size: 31.7px;
+  line-height: 1;
   color: #6b4e71;
 }
 
@@ -201,8 +202,9 @@ body.with-side-rail {
 }
 
 .side-rail-link.example-link[aria-current='page'] .icon .material-symbols-outlined {
-  color: #6b4e71;
-  filter: invert(1);
+  color: #f9f5ff;
+  -webkit-text-fill-color: #6b4e71;
+  -webkit-text-stroke: 0.8px #f9f5ff;
 }
 
 .side-rail-link.basics-link[aria-current='page'] .icon {
