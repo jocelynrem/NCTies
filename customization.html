@@ -22,9 +22,15 @@
     </a>
 
     <aside class="side-rail" aria-label="Workshop pages">
-      <details class="side-rail-menu">
-        <summary class="side-rail-toggle">Workshop pages</summary>
-        <nav class="side-rail-links">
+      <button
+        class="side-rail-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="workshop-nav"
+      >
+        Workshop pages
+      </button>
+      <nav class="side-rail-links" id="workshop-nav">
         <a class="side-rail-link focus-ring" href="index.html">
           <span class="icon" aria-hidden="true">
             <svg
@@ -205,8 +211,7 @@
           </span>
           <span class="label">Example</span>
         </a>
-        </nav>
-      </details>
+      </nav>
     </aside>
 
     <header class="bg-gradient-soft border-bottom">
@@ -541,5 +546,6 @@
         </span>
       </div>
     </footer>
+    <script src="js/side-rail.js" defer></script>
   </body>
 </html>
