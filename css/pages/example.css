@@ -703,7 +703,7 @@
       }
 
       .a11y-video-dialog {
-        width: min(960px, calc(100vw - 2rem));
+        width: min(760px, calc(100vw - 2rem));
         max-width: 100%;
         padding: 0;
         border: 0;
@@ -753,7 +753,7 @@
         overflow: hidden;
         border-radius: 12px;
         background: #000;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 4 / 3;
       }
 
       .a11y-video-note {
