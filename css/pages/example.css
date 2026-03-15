@@ -559,7 +559,7 @@
       }
 
       .palette-ref .palette-heading {
-        font-weight: 900;
+        font-weight: 700;
         letter-spacing: 6px;
         font-size: 1.05rem;
         position: relative;
@@ -601,7 +601,7 @@
           ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
           'Liberation Mono', 'Courier New', monospace;
         text-transform: uppercase;
-        font-weight: 900;
+        font-weight: 700;
         opacity: 0.95;
       }
 
@@ -666,7 +666,7 @@
       }
 
       .a11y-title {
-        font-weight: 900;
+        font-weight: 700;
         margin-bottom: 8px;
       }
 
@@ -926,7 +926,7 @@
         margin: 0 0 8px;
         font-size: 1.3rem;
         line-height: 1.12;
-        font-weight: 900;
+        font-weight: 700;
       }
 
       .tools-title a {
@@ -1099,7 +1099,7 @@
       .feature-cards .card-title {
         margin: 2px 0 0;
         font-size: 18px;
-        font-weight: 850;
+        font-weight: 700;
         text-align: center;
         color: var(--heading-color);
         letter-spacing: 0.2px;
@@ -1401,7 +1401,7 @@ body.theme-dark #accessibility > .card {
 }
 
 #accessibility .challenge-item h3 {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /* Keep main-content section spacing consistent and roomy */
@@ -1431,7 +1431,7 @@ body.theme-dark #accessibility > .card {
 
 .ui-section-label {
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: color-mix(in srgb, var(--p3) 78%, var(--p2));
@@ -1462,7 +1462,7 @@ body.theme-dark #accessibility > .card {
   align-self: flex-start;
   width: auto;
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--p2);
