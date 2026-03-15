@@ -29,6 +29,17 @@
         border: 0;
       }
 
+      .bootstrap-nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        align-items: center;
+      }
+
+      .bootstrap-nav-links .nav-link {
+        padding: 0.5rem 0;
+      }
+
       @media (max-width: 991.98px) {
         .side-rail {
           position: fixed !important;
@@ -50,6 +61,11 @@
 
         .navbar {
           margin-top: 56px !important;
+        }
+
+        .bootstrap-nav-links {
+          width: 100%;
+          margin-top: 0.75rem;
         }
       }
 
