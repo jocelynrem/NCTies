@@ -86,10 +86,27 @@
   flex: 1 1 auto;
 }
 
+.message.is-warning .message-body,
+.message.is-warning .message-body .has-text-grey,
+.message.is-warning .message-body p,
+.message.is-warning .message-body li {
+  color: #4a5565 !important;
+}
+
 .prompt-pre {
   white-space: pre-wrap;
   overflow: auto;
   padding: 12px;
   border-radius: 12px;
   background: #f7f7f7;
+}
+
+.footer .content.has-text-grey,
+.footer .content.has-text-grey a,
+.footer .content.has-text-grey p {
+  color: #4a5565 !important;
+}
+
+.footer .content.has-text-grey a:hover {
+  color: #2f3946 !important;
 }

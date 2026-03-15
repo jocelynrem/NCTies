@@ -625,7 +625,7 @@
       }
       .palette-ref .row-a1 {
         background: var(--a1);
-        color: var(--p2);
+        color: #241b22;
       }
       .palette-ref .row-accent {
         background: color-mix(in srgb, var(--accent-text) 92%, var(--p2));

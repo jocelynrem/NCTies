@@ -67,10 +67,18 @@
 
 .footer-row {
   padding: 1.5rem 0;
-  opacity: 0.75;
+  color: #425469;
   display: flex;
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.footer-row a {
+  color: #1f4f86;
+}
+
+.footer-row a:hover {
+  color: #163a64;
 }
