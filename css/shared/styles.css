@@ -95,7 +95,7 @@ body.with-side-rail {
   font-size: 32px;
 }
 
-.side-rail-link .icon svg circle:not([fill]) {
+.side-rail-link:not(.example-link) .icon svg circle:not([fill]) {
   display: none;
 }
 
@@ -104,7 +104,7 @@ body.with-side-rail {
   opacity: 0.1;
 }
 
-.side-rail-link .icon svg circle[fill] {
+.side-rail-link:not(.example-link) .icon svg circle[fill] {
   fill: #ffffff !important;
   opacity: 1;
   stroke: #6b4e71;

@@ -1624,45 +1624,29 @@
             ></button>
           </div>
           <div class="modal-body">
-            <video
-              id="a11y-guide-video"
-              class="a11y-video-player"
-              controls
-              preload="metadata"
-            >
-              <source src="Web_Accessibility_Guide.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <div
-              class="a11y-video-speed"
-              role="group"
-              aria-label="Playback speed controls"
-            >
-              <span class="small speed-label">Playback speed</span>
-              <button
-                type="button"
-                class="btn btn-sm btn-outline-secondary"
-                data-video-action="slower"
-              >
-                Slower
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm btn-outline-secondary"
-                data-video-action="normal"
-              >
-                1x
-              </button>
-              <button
-                type="button"
-                class="btn btn-sm btn-outline-secondary"
-                data-video-action="faster"
-              >
-                Faster
-              </button>
-              <output id="a11y-video-rate" class="a11y-video-rate">1x</output>
+            <div class="a11y-video-frame">
+              <iframe
+                id="a11y-guide-video"
+                class="a11y-video-player"
+                title="Web Accessibility Guide video"
+                data-video-src="https://www.youtube-nocookie.com/embed/6rXA9qD6kUQ?cc_load_policy=1&cc_lang_pref=en&rel=0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
             </div>
+            <p class="a11y-video-note mb-0">
+              Captions are available in the YouTube player.
+              <a
+                class="focus-ring"
+                href="https://youtu.be/6rXA9qD6kUQ?si=Ymb089Gz4APs4vag"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open on YouTube
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -1900,13 +1884,25 @@
         const closeButton = document.querySelector(
           '[data-dialog-close="a11yVideoModal"]',
         );
-        const video = document.getElementById('a11y-guide-video');
+        const videoFrame = document.getElementById('a11y-guide-video');
         const modalEl = document.getElementById('a11yVideoModal');
-        const rateReadout = document.getElementById('a11y-video-rate');
-        const speedButtons = document.querySelectorAll('[data-video-action]');
+
+        function loadVideo() {
+          if (!videoFrame) return;
+          const src = videoFrame.getAttribute('data-video-src');
+          if (src && videoFrame.getAttribute('src') !== src) {
+            videoFrame.setAttribute('src', src);
+          }
+        }
+
+        function unloadVideo() {
+          if (!videoFrame) return;
+          videoFrame.removeAttribute('src');
+        }
 
         if (dialog && openButton) {
           openButton.addEventListener('click', () => {
+            loadVideo();
             if (typeof dialog.showModal === 'function') {
               dialog.showModal();
             } else {
@@ -1936,41 +1932,8 @@
           });
         }
 
-        if (!video || !modalEl || !rateReadout || !speedButtons.length) return;
-
-        const MIN_RATE = 0.5;
-        const MAX_RATE = 2;
-        const STEP = 0.25;
-
-        function formatRate(rate) {
-          const rounded = Math.round(rate * 100) / 100;
-          return Number.isInteger(rounded) ? `${rounded}x` : `${rounded}x`;
-        }
-
-        function setRate(nextRate) {
-          const clamped = Math.min(MAX_RATE, Math.max(MIN_RATE, nextRate));
-          video.playbackRate = clamped;
-          rateReadout.value = formatRate(clamped);
-          rateReadout.textContent = formatRate(clamped);
-        }
-
-        speedButtons.forEach((button) => {
-          button.addEventListener('click', () => {
-            const action = button.getAttribute('data-video-action');
-            if (action === 'slower') setRate(video.playbackRate - STEP);
-            if (action === 'normal') setRate(1);
-            if (action === 'faster') setRate(video.playbackRate + STEP);
-          });
-        });
-
-        video.addEventListener('ratechange', () => {
-          rateReadout.value = formatRate(video.playbackRate);
-          rateReadout.textContent = formatRate(video.playbackRate);
-        });
-
         modalEl.addEventListener('close', () => {
-          video.pause();
-          video.currentTime = 0;
+          unloadVideo();
         });
       })();
     </script>
