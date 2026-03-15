@@ -46,12 +46,29 @@
 }
 
 .section-title-line .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1rem;
   font-size: 1.1rem;
+  font-family:
+    "Segoe UI Symbol",
+    "Apple Symbols",
+    "Noto Sans Symbols 2",
+    sans-serif;
 }
 
 .button .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem;
   margin-right: 0.25rem;
+  font-family:
+    "Segoe UI Symbol",
+    "Apple Symbols",
+    "Noto Sans Symbols 2",
+    sans-serif;
 }
 
 .is-fullheight-card {

@@ -1,5 +1,4 @@
 /* Shared left rail across all pages */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
 
 body.with-side-rail {
   padding-left: 92px;
@@ -35,22 +34,12 @@ body.with-side-rail {
   text-decoration: none;
   color: #6b4e71;
   font-size: 12px;
-  font-family: 'Roboto Flex', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-variation-settings:
-    'slnt' 0,
-    'wdth' 25,
-    'GRAD' 0,
-    'XOPQ' 96,
-    'XTRA' 468,
-    'YOPQ' 79,
-    'YTAS' 750,
-    'YTDE' -203,
-    'YTFI' 738,
-    'YTLC' 514,
-    'YTUC' 712;
+  font-family:
+    'Avenir Next',
+    'Segoe UI',
+    Arial,
+    sans-serif;
+  font-weight: 400;
   border-radius: 999px;
   padding: 6px 4px;
   transition: background-color 140ms ease;
@@ -79,25 +68,18 @@ body.with-side-rail {
 }
 
 .side-rail-link .icon .material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1em;
   line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+  font-family:
+    'Segoe UI Symbol',
+    'Apple Symbols',
+    'Noto Sans Symbols 2',
+    sans-serif;
+  font-weight: 700;
   font-size: 20px;
-  line-height: 1;
   color: #6b4e71;
 }
 
@@ -131,21 +113,26 @@ body.with-side-rail {
   font-size: 16px;
   dominant-baseline: middle;
   alignment-baseline: middle;
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-family:
+    'Avenir Next Condensed',
+    'Arial Narrow',
+    'Segoe UI',
+    sans-serif;
+  font-weight: 700;
 }
 
 .side-rail-link .label {
   display: block;
+  min-height: 1.35rem;
   margin: 0;
   padding: 0;
   color: #6b4e71;
-  font-family: 'Roboto Flex', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  font-family:
+    'Avenir Next',
+    'Segoe UI',
+    Arial,
+    sans-serif;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.05;
   letter-spacing: normal;
@@ -211,16 +198,7 @@ body.with-side-rail {
 
 .side-rail-link.example-link[aria-current='page'] .icon .material-symbols-outlined {
   color: #6b4e71;
-  -webkit-font-variation-settings:
-    'FILL' 1,
-    'wght' 500,
-    'GRAD' 0,
-    'opsz' 24 !important;
-  font-variation-settings:
-    'FILL' 1,
-    'wght' 500,
-    'GRAD' 0,
-    'opsz' 24 !important;
+  transform: scale(1.03);
 }
 
 @media (max-width: 991.98px) {
@@ -235,11 +213,7 @@ body.with-side-rail {
 
 .side-rail-link.basics-link[aria-current='page'] .icon .material-symbols-outlined {
   color: #6b4e71;
-  font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24 !important;
+  transform: scale(1.03);
 }
 
 .side-rail-link:focus {
@@ -283,6 +257,7 @@ body.with-side-rail {
     border-radius: 999px;
     padding: 6px 10px;
     font-size: 13px;
+    min-height: 2.5rem;
   }
 
   .side-rail-link .icon {

@@ -28,10 +28,15 @@
       }
       a {
         color: var(--brand);
-        text-decoration: none;
+        text-decoration: underline;
+        text-underline-offset: 0.16em;
+        text-decoration-thickness: 0.08em;
       }
       a:hover {
-        text-decoration: underline;
+        text-decoration-thickness: 0.12em;
+      }
+      .btn {
+        text-decoration: none;
       }
       .wrap {
         max-width: var(--max);

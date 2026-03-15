@@ -109,8 +109,17 @@
 }
 
 .devtools-tool-line .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1rem;
   font-size: 20px;
   line-height: 1.2;
+  font-family:
+    "Segoe UI Symbol",
+    "Apple Symbols",
+    "Noto Sans Symbols 2",
+    sans-serif;
 }
 
 .devtools-action-box {

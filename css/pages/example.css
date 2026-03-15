@@ -96,9 +96,21 @@
       /* AA-safe link color */
       a {
         color: var(--accent-text);
+        text-decoration: underline;
+        text-underline-offset: 0.16em;
+        text-decoration-thickness: 0.08em;
       }
       a:hover {
         color: var(--a1);
+        text-decoration-thickness: 0.12em;
+      }
+
+      .btn,
+      .button,
+      .navbar-brand,
+      .nav-link,
+      .side-rail-link {
+        text-decoration: none;
       }
 
       body.theme-dark p,
@@ -1317,7 +1329,7 @@
         fill: #d66853;
       }
 
-      /* Page-only font swap: use Red Hat Display for visible page typography */
+      /* Page-only font swap: use local/system display faces for visible page typography */
       h1,
       h2,
       h3,
@@ -1332,7 +1344,11 @@
       .a11y-title,
       .tools-title,
       .palette-ref .palette-name {
-        font-family: 'Red Hat Display', sans-serif;
+        font-family:
+          'Avenir Next',
+          'Trebuchet MS',
+          'Segoe UI',
+          sans-serif;
       }
 
       .lead strong {
@@ -1538,11 +1554,15 @@ body.theme-dark #accessibility > .card {
     0 8px 18px rgba(58, 68, 84, 0.08);
 }
 
-.ui-illustration text {
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0;
-}
+      .ui-illustration text {
+        font-family:
+          'Avenir Next',
+          'Trebuchet MS',
+          'Segoe UI',
+          sans-serif;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
 
 .ui-example-list {
   padding-left: 1rem;
