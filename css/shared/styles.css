@@ -182,7 +182,7 @@ body.with-side-rail {
   color: #f9f5ff;
 }
 
-/* Example link icon: no circle by default/current, only on hover */
+/* Example link icon: no circle by default */
 .side-rail-link.example-link .icon {
   background: transparent;
 }
@@ -193,11 +193,11 @@ body.with-side-rail {
 }
 
 .side-rail-link.example-link[aria-current='page'] .icon {
-  background: transparent;
+  background: #6b4e71;
 }
 
 .side-rail-link.example-link[aria-current='page'] .icon .material-symbols-outlined {
-  color: #6b4e71;
+  color: #f9f5ff;
   transform: scale(1.03);
 }
 
