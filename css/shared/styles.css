@@ -192,23 +192,17 @@ body.with-side-rail {
 }
 
 .side-rail-link.example-link .icon .material-symbols-outlined {
-  font-size: 26px;
+  font-size: 20px;
   color: #6b4e71;
 }
 
 .side-rail-link.example-link[aria-current='page'] .icon {
-  background: #6b4e71;
+  background: transparent;
 }
 
 .side-rail-link.example-link[aria-current='page'] .icon .material-symbols-outlined {
-  color: #f9f5ff;
-  transform: scale(1.03);
-}
-
-@media (max-width: 991.98px) {
-  .side-rail-link.example-link .icon .material-symbols-outlined {
-    font-size: 18px;
-  }
+  color: #6b4e71;
+  filter: invert(1);
 }
 
 .side-rail-link.basics-link[aria-current='page'] .icon {
