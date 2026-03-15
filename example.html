@@ -32,19 +32,7 @@
       <div class="container">
         <a class="navbar-brand fw-semibold" href="#">NCTIES • AI Coding</a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#nav"
-          aria-controls="nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="nav">
+        <div class="example-nav-links ms-auto mt-3 mt-lg-0">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link focus-ring" href="#cards">Takeaways</a>
@@ -341,27 +329,27 @@
                 </div>
 
                 <div class="palette-row row-p1">
-                  <span class="palette-name">Primary (p1)</span>
+                  <span class="palette-name">Primary</span>
                   <span class="palette-hex">#6B4E71</span>
                 </div>
 
                 <div class="palette-row row-p2">
-                  <span class="palette-name">Text (p2)</span>
+                  <span class="palette-name">Text</span>
                   <span class="palette-hex">#3A4454</span>
                 </div>
 
                 <div class="palette-row row-p3">
-                  <span class="palette-name">Secondary (p3)</span>
+                  <span class="palette-name">Secondary</span>
                   <span class="palette-hex">#53687E</span>
                 </div>
 
                 <div class="palette-row row-p4">
-                  <span class="palette-name">Background (p4)</span>
+                  <span class="palette-name">Background</span>
                   <span class="palette-hex">#F9F5FF</span>
                 </div>
 
                 <div class="palette-row row-a1">
-                  <span class="palette-name">Accent (a1)</span>
+                  <span class="palette-name">Accent</span>
                   <span class="palette-hex">#D66853</span>
                 </div>
               </div>
@@ -378,6 +366,9 @@
         class="my-5 feature-cards"
         aria-labelledby="cards-title"
       >
+        <h2 id="cards-title" class="h5 a11y-title text-center mb-4">
+          Workshop Takeaways
+        </h2>
         <div
           class="row g-4 justify-content-center"
           role="list"
@@ -1499,8 +1490,8 @@
                 <button
                   type="button"
                   class="btn btn-sm btn-outline-secondary focus-ring a11y-video-trigger"
-                  data-bs-toggle="modal"
-                  data-bs-target="#a11yVideoModal"
+                  data-dialog-open="a11yVideoModal"
+                  aria-controls="a11yVideoModal"
                 >
                   <span class="material-symbols-outlined" aria-hidden="true"
                     >▶</span
@@ -1604,12 +1595,10 @@
       </section>
     </main>
 
-    <div
-      class="modal fade"
+    <dialog
+      class="a11y-video-dialog"
       id="a11yVideoModal"
-      tabindex="-1"
       aria-labelledby="a11yVideoModalLabel"
-      aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content a11y-video-modal">
@@ -1620,7 +1609,7 @@
             <button
               type="button"
               class="btn-close"
-              data-bs-dismiss="modal"
+              data-dialog-close="a11yVideoModal"
               aria-label="Close"
             ></button>
           </div>
@@ -1667,7 +1656,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </dialog>
 
     <footer class="border-top">
       <div
@@ -1699,7 +1688,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       (function () {
         const toggle = document.getElementById('checkbox');
@@ -1895,10 +1883,49 @@
       })();
 
       (function () {
+        const dialog = document.getElementById('a11yVideoModal');
+        const openButton = document.querySelector(
+          '[data-dialog-open="a11yVideoModal"]',
+        );
+        const closeButton = document.querySelector(
+          '[data-dialog-close="a11yVideoModal"]',
+        );
         const video = document.getElementById('a11y-guide-video');
         const modalEl = document.getElementById('a11yVideoModal');
         const rateReadout = document.getElementById('a11y-video-rate');
         const speedButtons = document.querySelectorAll('[data-video-action]');
+
+        if (dialog && openButton) {
+          openButton.addEventListener('click', () => {
+            if (typeof dialog.showModal === 'function') {
+              dialog.showModal();
+            } else {
+              dialog.setAttribute('open', 'open');
+            }
+          });
+        }
+
+        if (dialog && closeButton) {
+          closeButton.addEventListener('click', () => {
+            dialog.close();
+          });
+        }
+
+        if (dialog) {
+          dialog.addEventListener('click', (event) => {
+            const bounds = dialog.getBoundingClientRect();
+            const isBackdropClick =
+              event.clientX < bounds.left ||
+              event.clientX > bounds.right ||
+              event.clientY < bounds.top ||
+              event.clientY > bounds.bottom;
+
+            if (isBackdropClick) {
+              dialog.close();
+            }
+          });
+        }
+
         if (!video || !modalEl || !rateReadout || !speedButtons.length) return;
 
         const MIN_RATE = 0.5;
@@ -1931,7 +1958,7 @@
           rateReadout.textContent = formatRate(video.playbackRate);
         });
 
-        modalEl.addEventListener('hidden.bs.modal', () => {
+        modalEl.addEventListener('close', () => {
           video.pause();
           video.currentTime = 0;
         });
