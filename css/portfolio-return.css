@@ -1,0 +1,13 @@
+.portfolio-return-row {
+  display: block;
+  margin-inline-start: auto;
+  text-align: right;
+}
+
+.portfolio-return-row a {
+  display: inline-block;
+  padding-block: 0.3rem;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
